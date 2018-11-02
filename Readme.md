@@ -37,7 +37,7 @@ Telemetry REST API 관련 내용은 [제작자 github (영문)](https://github.c
 
 ### 지원하는 운영체제
 
-- **Windows Vista, Windows 7, 8 혹은 10 (32-bit or 64-bit)**. Windows XP는 지원되지 않습니다.
+- **Windows Vista, Windows 7, 8 혹은 10 (32-bit 혹은 64-bit)**. Windows XP는 지원되지 않습니다.
 - **.NET Framework 4.5** (Windows 8 이상은 기본 설치). 만약 설치되있지 않다면 아마 서버 실행 전에 알림이 뜰껍니다.
 
 ### 지원하는 게임
@@ -66,7 +66,7 @@ Telemetry REST API 관련 내용은 [제작자 github (영문)](https://github.c
 
 1. 게임을 설치된 경로를 찾고, 거기에 ets2-telemetry-server.dll 플러그인을 복사합니다.
 2. 25555번 포트에 대한 로컬 서브넷 허용 규칙을 "ETS2 TELEMETRY SERVER (PORT 25555)" 이름으로 엽니다. (참고로 외부 인터넷에선 이걸 따로 볼수 없습니다. 그래서 안전합니다.)
-3. OWIN's httpListener ([자세한 내용](http://msdn.microsoft.com/en-us/library/ms733768%28v=vs.110%29.aspx))가 25555번 포트를 통해 사용을 위해 새로운 ACL 규칙을 만듭니다.
+3. Microsoft OWIN의 httpListener ([자세한 내용](http://msdn.microsoft.com/en-us/library/ms733768%28v=vs.110%29.aspx))가 25555번 포트를 통해 사용을 위해 새로운 ACL 규칙을 만듭니다.
 4. 어플리케이션 설정 파일을 만듭니다. "\Users\USERNAME\AppData\Local\Ets2 Telemetry Server".
 
 서버는 모든 것을 로그 파일 (Ets2Temetry.log)에 기록합니다. 로그에 잘 나와있습니다. (이 역시 한글)
