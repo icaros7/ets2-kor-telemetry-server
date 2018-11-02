@@ -443,11 +443,11 @@
                         var dys = d.getUTCDate() - 1;
                         var hrs = d.getUTCHours();
                         var mnt = d.getUTCMinutes();
-                        var o = dys > 1 ? dys + ' days ' : (dys != 0 ? dys + ' day ' : '');
+                        var o = dys > 1 ? dys + ' 일 ' : (dys != 0 ? dys + ' 일 ' : '');
                         if (hrs > 0)
-                            o += hrs > 1 ? hrs + ' hours ' : hrs + ' hour ';
+                            o += hrs > 1 ? hrs + ' 시간 ' : hrs + ' 시 ';
                         if (mnt > 0)
-                            o += mnt > 1 ? mnt + ' minutes' : mnt + ' minute';
+                            o += mnt > 1 ? mnt + ' 분' : mnt + ' 분';
                         if (!o)
                             o = Telemetry.Strings.noTimeLeft;
                         return o;

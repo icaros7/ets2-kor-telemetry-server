@@ -15,127 +15,105 @@
   
     GET http://localhost:25555/api/ets2/telemetry
 
-Returns structured JSON object with the latest telemetry data read from the game: 
-
-    {    
-		"game": {
-			"connected": true,
-			"paused": false,
-			"gameName": "ETS2",
-			"time": "0001-01-08T21:09:00Z",
-			"timeScale": 19.0,
-			"nextRestStopTime": "0001-01-01T10:11:00Z",
-			"version": "1.10",
-			"telemetryPluginVersion": "7"
-		},
-		"truck":{
-			"id": "man",
-			"make": "MAN",
-			"model": "TGX",
-			"speed": 53.82604,
-			... 
-    }
-
-The state is updated upon every API call. You may use this REST API for your own Applications. 
-
-**The complete telemetry property reference is available [here](Telemetry.md).**
-
-Please note that GET responses may be cached by your HTTP client. To avoid caching you may use some random query string parameter or POST method which returns exactly the same result.
+Telemetry REST API 관련 내용은 [제작자 github (영문)](https://github.com/Funbit/ets2-telemetry-server)에서 보실 수 있습니다.
 
 ### HTML5 모바일 대시보드 어플리케이션
     http://localhost:25555/
 
-This HTML5 dashboard application is designed for mobile and desktop browsers. You should be able to use the dashboard just by navigating to the URL in your Mobile Safari (iOS 8+), Android 4+ browsers (Default or Chrome) or any modern desktop browser. 
+이 HTML5 대시보드 어플리케이션은 모바일과 데스크탑을 위해 디자인 되었습니다. 이 어플리케이션은 모바일 사파리(iOS 8 이상), 안드로이드 4.0 이상 브라우저(기본 브라우저나 크롬 등)이나 아무 데스크탑 브라우저에서 URL에 들어가는 것만으로 이용 할 수있습니다.
 
-Here is a screenshot of how your mobile dashboard will look like in a browser:
+모바일 대시보드는 브라우저에서 아래와 같이 뜹니다....만 사진이 안뜨네요.
 
 ![](https://raw.githubusercontent.com/Funbit/ets2-telemetry-server/master/source/Funbit.Ets.Telemetry.Mobile/skins/default/dashboard.jpg)
 
-The package contains other photo realistic skins as well. For example, this is a skin for MAN-TGX:
+
+패키지엔 다른 현실적인 스킨도 포함되어있습니다. 예시로 MAN-TGX 스킨 사진:
 
 ![](https://raw.githubusercontent.com/Funbit/ets2-telemetry-server/master/server/Html/skins/man-tgx/dashboard.jpg)
 
-As you can see dashboard design is completely customizable. With some basic knowledge of the HTML and CSS you can create your own skins. See Dashboard skin tutorial below for more information. 
+그리고 대시보드 디자인은 완전히 커스텀 할 수 있습니다. HTML과 CSS에 대한 아주 기초적인 지식만 있다면 직접 자신만의 스킨을 만들수도 있습니다. 더 자세한 내용은 대시보드 스킨 튜토리얼을 따르세요.
 
-## Setup
+## 설정
 
-### Supported OS
+### 지원하는 운영체제
 
-- **Windows Vista, Windows 7, 8 or 10 (32-bit or 64-bit)**. Windows XP is not supported.
-- **.NET Framework 4.5** (pre-installed in Windows 8+). If it is not installed you will be prompted to install it when you run the server. 
+- **Windows Vista, Windows 7, 8 혹은 10 (32-bit or 64-bit)**. Windows XP는 지원되지 않습니다.
+- **.NET Framework 4.5** (Windows 8 이상은 기본 설치). 만약 설치되있지 않다면 아마 서버 실행 전에 알림이 뜰껍니다.
 
-### Supported games
+### 지원하는 게임
 
-- Euro Truck Simulator 2 (32-bit or 64-bit) version 1.15+ (Steam or Standalone). Multiplayer versions are supported as well. 
-- American Truck Simulator (Steam or Standalone)
+- 스팀 혹은 단일 버전의 1.15 버전 이상 Euro Truck Simulator 2 (32-bit 혹은 64-Bit) 멀티 플레이 버전도 잘 지원됩니다.
+- 스팀 혹은 단일 버전의 American Truck Simulator
 
-### Tested browsers
+### 확인된 브라우저
 
-- iOS 8+ running Mobile Safari (highly recommended, best user experience)
-- Latest Firefox, Chrome or IE11 (Firefox or Chrome is recommended though)
-- Android 4+ (4.4+ highly recommended) Default or Chrome browsers (see FAQ if you have performance issues)
+- iOS 8 이상의 모바일 사파리 (가장 최고의 사용자 경험을 위해 강력 추천함)
+- 최신의 파이어폭스, 크롬 혹은 인터넷 익스플로러 11 (파이어폭스와 크롬 권장)
+- 안드로이드 4.0 이상 (안드로이드 4.4 이상 권장)의 기본 브라우저 혹은 크롬 브라우저 (성능 관련 문제가 있다면 FAQ 참고)
 
-### Installation
+### 설치
 
-1. Download bundle by clicking **Download ZIP** button at the right side of this page. 
-2. **Unpack downloaded ZIP** file *anywhere* you want.
-3. Run **server\Ets2Telemetry.exe** 
-4. Click "**Install**" button to perform the installation 
-5. When installation finishes click "**OK**", select your network interface and click "**HTML5 App URL**" link to open your dashboard
-6. **Done** (now you may read *Usage* topic to understand how to use the server)
+1. 이 페이지의 **Download ZIP** 버튼을 클릭하여 번들 파일을 받습니다.
+2. *아무곳이나* 다운로로드 받은 파일의 **압축을 풉니다.**
+3. **server\Ets2Telemetry.exe** 를 실행합니다.
+4. 설치를 하기 위해 **설치** 버튼을 누릅니다.
+5. 설치가 끝난 경우 "**확인**" 버튼을 누르고, 네트워크 인터페이스를 고른 다음 "**HTML5 앱 URL**" 링크를 눌러 대시보드를 엽니다.
+6. **완료!** (이제 사용법 항목으로 가서 서버 사용법에 대해 알아봅니다)
 
-Android users may install the provided "Ets2 Dashboard" application. The APK file is located in **mobile/Android/Ets2Dashboard.apk**. Copy it to your device and install via Android's File Manager. The application will prevent your device from going into sleep mode and will remember server IP address which is very useful if you are going to use the app frequently.
+안드로이드 사용자는 미리 제공된 "Ets2 Dashboard" 앱을 설치 할 수 있습니다. (한글화는 안되었습니다.) APK 파일은 **mobile/Android/Ets2Dashboard.apk** 에 있습니다. 이 파일을 기기에 복사하고 안드로이드의 파일 매니저를 이용하여 설치 하면 됩니다. 이 어플리케이션은 사용 중 화면이 자동으로 꺼지는 걸 방지하고, 서버 주소를 저장해 둡니다.
 
-***Security notes***: The installation must be done only once and requires Administrator privileges. If you mind what exactly server does to the system at this point here is the detailed information:
+***보안 관련*** : 설치 과정은 꼭 관리자 권한으로 실행하셔야만 합니다. 서버가 시스템에 어떤 영향을 주는지를 알고 싶다면 아래를 참고 해주세요.
 
-1. Tries to find your ETS2 game directory and copy ets2-telemetry-server.dll plugin there
-2. Creates a new Firewall rule for 25555 port named "ETS2 TELEMETRY SERVER (PORT 25555)" opened only for local subnet (i.e. it won't be visible from Internet, so you are safe)
-3. Creates a new ACL rule for HTTP URL bound on 25555 port for OWIN's HttpListener ([more details](http://msdn.microsoft.com/en-us/library/ms733768%28v=vs.110%29.aspx))
-4. Creates a new file for storing application settings inside "\Users\USERNAME\AppData\Local\Ets2 Telemetry Server".
+1. 게임을 설치된 경로를 찾고, 거기에 ets2-telemetry-server.dll 플러그인을 복사합니다.
+2. 25555번 포트에 대한 로컬 서브넷 허용 규칙을 "ETS2 TELEMETRY SERVER (PORT 25555)" 이름으로 엽니다. (참고로 외부 인터넷에선 이걸 따로 볼수 없습니다. 그래서 안전합니다.)
+3. OWIN's httpListener ([자세한 내용](http://msdn.microsoft.com/en-us/library/ms733768%28v=vs.110%29.aspx))가 25555번 포트를 통해 사용을 위해 새로운 ACL 규칙을 만듭니다.
+4. 어플리케이션 설정 파일을 만듭니다. "\Users\USERNAME\AppData\Local\Ets2 Telemetry Server".
 
-The server also reports everything to the log file (Ets2Telemetry.log), so you may see the details there as well.
+서버는 모든 것을 로그 파일 (Ets2Temetry.log)에 기록합니다. 로그에 잘 나와있습니다. (이 역시 한글)
 
-Also, if you don't trust my compiled ets2-telemetry-server.dll you may compile it by yourself using [plugin's source code](https://github.com/Funbit/ets2-sdk-plugin) and Visual Studio 2013+.
+또한 제작자의 미리 컴파일된 ets2-telemetry-server.dll이 미심적다면, [플러그인 소스코드](https://github.com/Funbit/ets2-sdk-plugin)를 비주얼 스튜디오 2013 이상의 버전에서 직접 컴파일 해 사용 가능합니다.
 
-### Skin Installation
+### 스킨 설치
 
-If you downloaded some third-party skin (which is folder, containing dashboard.html, css, js and image files, but **no EXE files**!) you may install it just by **copying to server/Html/skins** directory. It should appear in the skin menu as soon as you refresh your browser.
+만약 제3자 스킨 (다른곳에서 받은 경우 dashboard.html, css, js 와 이미지 파일이 있습니다. 하지만 **절대 EXE 파일은 없습니다!!**)을 설치 하고싶은 경우 그냥 **server/Html/skins** 폴더에 복사하세요. 새로고침 하시면 스킨 선택 메뉴에 바로 뜰껍니다.
 
-### Upgrade
+### 업그레이드
 
-If you already have a previous version installed, it is recommended to leave it as is and **unpack the new version into a separate directory**. This way you will never lose your configuration files, logs, etc. 
+만약 이전 버전이 설치된 경우, 해당 버전은 놔둔채로 **다른 폴더에 새 버전을 압축을 풉니다.** 이 방법은 여러분들의 설정 파일이나 로그 등을 절대로 잃을 일이 없습니다.
 
-However, please keep in mind that if you plan to return back to previous version you have to uninstall the latest one first!
+만약에 이전 버전으로 돌아가려 하려면, 먼저 새 버전을 제거하는걸 잊지마세요!
 
-### Uninstallation
+### 제거
 
-If server hasn't fulfilled your expectations and you decide to uninstall it, then:
+만약 서버가 기대에 못미치로 제거하기로 마음 먹으셨다면...
 
-1. Exit from the Euro Truck Simulator / American Truck Simulator
-2. Select from the server's menu: Server -> Uninstall
-3. Click "**Uninstall**" button in the popped up window
-4. **Done**
+1. Euro Truck Simulator / American Truck Simulator를 종료해 주세요.
+2. 데스크탑 서버 프로그램의 메뉴 중 "서버 -> 설치제거"를 누릅니다.
+3. 팝업 윈도우의 "**제거**" 버튼을 누릅니다.
+4. **제거 완료**
 
-At this moment your system will be in exactly the same state as it were before the installation. 
+시스템이 제거 완료 시점에서는 설치 하기전과 완벽하게 같아집니다.
 
-## Usage
+## 사용법
 
-1. Run **server/Ets2Telemetry.exe**  
-2. Run Euro Truck Simulator 2 / American Truck Simulator.
-3. **Desktop users**: connect your notebook to the same Wi-Fi/LAN network as your PC, open Firefox, Chrome or IE and navigate to the "*HTML5 App URL*" displayed by the server. 
-3. **iOS users**: connect your iPhone or iPad to the same Wi-Fi network as your PC, open Safari and navigate to the "*HTML5 App URL*" displayed by the server. 
-4. **Android users**: run "*Ets2 Dashboard*" application, enter server IP (*without http and port*, exactly in the same format as displayed by the server) and press OK. If IP address is correct it will be remembered for the next time.
-5. **Enjoy** your mobile dashboard while playing your favorite simulator! ;)
+1. **server/Ets2Telemetry.exe**  를 실행합니다.
+2. Euro Truck Simulator 2 / American Truck Simulator 를 실행합니다. (**순서가 바뀌면 안됨**)
+3. **데스크탑 사용자** : Wi-Fi 혹은 랜을 통해 같은 네트워크(공유기)에 연결하세요. 다음 HTML5 앱 URL로 크롬, 파이어폭스, IE 등을 이용하여 이동하시면 사용 가능합니다.
+3. **iOS 사용자** : Wi-Fi 혹은 랜을 통해 같은 네트워크(공유기)에 연결하세요. 다음 HTML5 앱 URL로 사파리, 크롬 등을 이용하여 이동하시면 사용 가능합니다.
+4. **Android 웹 사용자** : Wi-Fi 혹은 랜을 통해 같은 네트워크(공유기)에 연결하세요. 다음 HTML5 앱 URL로 크롬, 파이어폭스, IE 등을 이용하여 이동하시면 사용 가능합니다.
+5. **Android 앱 사용자** : "*ETS2 Dashboard*" 어플리케이션을 실행한 다음, 서버 IP (*http 와 포트 제외*, 서버 프로그램에 뜨는 것과 동일하게 입력)를 입력 한 후 OK를 누릅니다. 만약 IP 주소가 제대로 되었다면 앞으로 저장 될껍니다.
+6. **Enjoy** 모바일 대시보드를 좋아하는 시뮬레이터를 하는 동안 즐기세요!
 
 ## FAQ
 
-> I ran the server and opened HTML5 App URL on a device but browser says "Page not found". What should I do?
+> 서버를 실행하고 HTML5 앱을 열었는데, "페이지를 찾을 수 없음"이 떠요. 뭘 해야하죠?
 
-First of all, make sure that your device is using Wi-Fi connection instead of mobile internet (3G, 4G, etc.). Then, make sure that you selected correct "Network interface" on the main server screen. You must select the interface that is directly connected to your Wi-Fi network, *usually* it is named as "Wi-Fi", "Ethernet" or "LAN". Also, make sure that "AP Isolation" is disabled on your Wi-Fi router ([more info](http://www.howtogeek.com/179089/lock-down-your-wi-fi-network-with-your-routers-wireless-isolation-option/)). If you still can't connect - try to temporarily disable firewalls (especially from 3rd-parties) or anti-viruses and check again. If problem persists then you should contact to your Administrator... 
+우선, 셀룰러 (데이터, 3G, 4G 등) 대신 Wi-Fi를 꼭 사용해야합니다. 그런 다음 알맞은 "네트워크 인터페이스"를 서버 화면에서 선택하세요. Wi-Fi 네트워크에 직접 연결된 네트워크를 선택해야 합니다. *주로* "Wi-Fi"나 "이더넷" 혹은 "LAN"이라고 되있습니다. 또한 공유기에서 "AP 격리"가 꺼져 있어야합니다. [자세한 내용보기 (영문)](http://www.howtogeek.com/179089/lock-down-your-wi-fi-network-with-your-routers-wireless-isolation-option/). 
+만약 여전히 연결 할 수 없다면... 잠깐 방화벽이나 백신을 꺼보세요. (특히 제3자 프로그램의!) 만약 문제가 계속된다면 시스템 관리자에게 연락 해보세요.
 
-> I installed provided Android application, but it always shows "Could not connect to the server" or "Disconnected" status. How do I fix that?
+> 제공된 안드로이드 어플리케이션을 깔았습니다.  하지만 계속 "Could not connect to the server"나 "Disconnected" 상태 입니다. 뭘 해야하죠?
 
-Please check if you can connect to the dashboard from a browser first (read the answer above). If you are able to connect via browser then there is something wrong with the application (or Android environment). You may try to restart it or reinstall.
+앱 말고 브라우저에서 한번 연결을 시도해봐주세요(위 답변을 참고). 만약에 브라우저에서는 사용 가능하다면 어플리케이션이 뭔가 잘못된겁니다. 다시시작이나 재설치를 해보세요..
 
 > I started the game but dashboard is displaying "Connected, waiting for the drive..." message. What is wrong?
 
@@ -169,211 +147,52 @@ No. There is a chance that it will work, but it won't be supported.
 
 Starting from version 3.0.0 this is possible, but I haven't yet had time to update the default skins to display it. But I will ;)
 
-## Dashboard skin tutorial
+## 대시보드 스킨 튜토리얼
 
-The tutorial is included in the ZIP package (see "Dashboard Skin Tutorial.pdf"). You may download it separately from [here](https://raw.githubusercontent.com/Funbit/ets2-telemetry-server/master/Dashboard%20Skin%20Tutorial.pdf).
+튜토리얼은 ZIP 안에 포함되어 있습니다. ("Dashboard Skin Tutorial.pdf" 영문 파일). 아니면 [여기]를 눌러 해당 파일만 보실 수 있습니다.(https://raw.githubusercontent.com/Funbit/ets2-telemetry-server/master/Dashboard%20Skin%20Tutorial.pdf).
 
-## Support
+## 지원
 
-The ETS2 Telemetry Web Server has evolved into a pretty complex open-source project that requires singificant amount of time to support. If you are interested in its future you may provide the author with some material support by clicking the button below.
+이제 ETS2 Telemetry 웹 서버는 만드는데 엄청난 시간을 요구하는 꽤 복잡한 오픈 소스 프로젝트로 진화했습니다. 관심이 있다면 아래 버튼을 클릭하여 약간의 실질적인 지원을 제작자에게 줄수있습니다.
 
 [![](https://raw.githubusercontent.com/Funbit/ets2-telemetry-server/master/server/Html/images/donate-link.png)](http://funbit.info/ets2/donate.htm)
 
-Thank you!
+감사합니다!
 
-## Version history
+## 버전 체인지로그
 
 ### 3.2.5
 
 - Another improvement for job information reset code (plugin DLL update).
 
-### 3.2.4
+이전 버전 기록은 [제작자 github (영문)](https://github.com/Funbit/ets2-telemetry-server)에서 보실 수 있습니다.
 
-- Added support for SVG, GIF, TTF and WOFF content types.
+## 한글화
 
-### 3.2.3
+꽤 오래전에 사용하던 녀석인데 갑자기 유로트럭 하고 싶어 하다가 생각나서 다시 사용 중 이었습니다. 그러던중 그냥 한글화 한번 하고싶어서 해봤습니다. 다만 업데이트가 안된지 한참 되서 안되는 일부 화물이나 표기가 안나옵니다...일부...
 
-- Added support for up to 9 levels of sub directories for skins to use (previous version allowed only 5).
-- Minor code refactoring.
+### 관련 변경 사항
 
-### 3.2.2
+- 소스코드를 VS2017으로 마이그레이션
 
-- Fixed occasional bug in latest job information reset code (new job info might have been reset).
+## 외부 링크
 
-### 3.2.1
+포럼
 
-- Updated telemetry plugin DLL and fixed job information reset when job is done (trailer detached).
-- Added support for sending UserId/Password for telemetry broadcaster to allow user identification.
-- Fixed typo in property name: adblueAverageConsumption (was adblueAverageConsumpton).
+- [공식 SCS 토론 포럼 (영문)](http://forum.scssoft.com/viewtopic.php?f=41&t=171000)
 
-### 3.2.0
+비디오
 
-- Added support for American Truck Simulator
-- Added two new skins: MAN TGX (MPH) and Peterbilt 579 by NightstalkerPL, Lisek Chytrusek (by WEBX.PL)
-- Added application menu to ease uninstallation and extending for future updates
-- Added new GameName property to the telemetry (proposed by mkoch227)
-- Fixed CPU overhead issue for some users (when CPU goes above 1%)
-- Updated all project files for Visual Studio 2015 and C# 6.0
-
-### 3.0.7
-
-- Fixed 'Dynamic' skin size display issue.
-
-### 3.0.6
-
-- Fixed minor bug in the telemetry plugin with wrong hshifter.selector usage.
-- Added new 'Dynamic' skin size type, cursor fixes and other refactorings (thanks to denilsonsa & Phil0499!).
-
-### 3.0.5
-
-- Removed small visual padding around skins. Now skins takes full canvas space (thanks to James).
-- Fixed rounding problem with speed limit value, sometimes it was displayed as 79 instead of 80, etc (thanks to R0adrunner).
-
-### 3.0.4
-
-- Restored truck.engineOn property (separated from truck.electricOn).
-
-### 3.0.3
-
-- Removed truck.engineOn property which was a duplicate for truck.electricOn property causing it not to work properly inside the telemetry plugin (thanks to ivanrichwalski).
-
-### 3.0.2
-
-- Fixed bug with parsing date-min/max HTML attributes.
-- Changed property name format inside date-min/max HTML attributes, object separation character was changed from '-' to '.', for example: **date-max="truck-fuelCapacity"** must be changed to: **date-max="truck.fuelCapacity"**. 
-
-### 3.0.1
-
-- Fixed iOS Safari window reload bug (window gets reloaded several times in a row).
-- Added new skin "rd-info" created by van_argiano. Thank you very much!
-
-### 3.0.0
-
-- Changed telemetry JSON object structure by introducing complex nested types. If you develop or use 3rd party custom skin please note that it will not work as is with the new server version! You will have to update your skin files first. I have created a handy tool that will do 99% (or usually even 100%) work for you. You may [download the tool here](http://funbit.info/ets2/Telemetry-Dashboard-3.0.0-Skin-Upgrader.zip). Just drop your skin files to the  SkinFileUpgrader.exe and you will get the updated version of it (you need to upgrade dashboard.html, css and js files). The source code is included in the ZIP files as well, just in case.
-- New telemetry JSON structure. All properties are now structurized in several categories: game, truck, trailer, job and navigation. To understand the new system better please refer to the [updated skin tutorial](https://raw.githubusercontent.com/Funbit/ets2-telemetry-server/master/Dashboard%20Skin%20Tutorial.pdf) and [complete telemetry property reference](Telemetry.md). 
-- Removed hasJob property. You should use *trailer.attached* property instead (or add a custom *data.hasJob = data.trailer.attached;* to your dashboard.js).
-- Added support for new telemetry properties: game.nextRestStopTime, game.timeScale, truck.forwardGears, truck.reverseGears, navigation.estimatedTime, navigation.estimatedDistance, navigation.speedLimit.
-- Added [complete telemetry property reference](Telemetry.md). 
-- Fixed aux light indicators (roof and front indicators didn't work)
-- [Forked ETS2 telemetry plugin](https://github.com/Funbit/ets2-sdk-plugin) to make it a custom part of the server.
-- Some bug fixes and improvements.
-
-### 2.2.6
-
-- Fixed trailerAttached property so it is properly changed when trailer is attached/detached. 
-- Changed hasJob property, now it equals to the trailerAttached value.
-- Fixed odometer for default MPH skin (was showing kilometers) *(thanks to kevindwood)* 
-
-### 2.2.5
-
-- Fixed truck speed rounding to avoid jumps between 0 and 1 km/h 
-- Created new MPH version of the default skin
-- Fixed minor bug with cruise control speed displayed as NaN sometimes (default skin)
-
-### 2.2.4
-
-- Fixed speedometer for Scania and Volvo skins (made the needle movement smoother) 
-- Fixed floating point rendering (truck speed sometimes might have been displayed as XX.YYYY) *(big thanks to Jorji_costava and sketch)*
-
-### 2.2.3
-
-- Fixed speedometer for all built-in skins (DAF, MAN, Mercedes, Volvo)
-- Implemented automatic window reloading on resize (for PC) *(greetings to denilsonsa)*
-- Added skin ability to control user clicks (back to menu link moved to dashboard.js) *(greetings to mkoch227)*
-- Changed speed rounding algorithm to match game's speed *(greetings to 
-maysaraahmad)*
-- Minor comment and typo fixes
-
-### 2.2.2
-
-- Fixed bug in Android APK (no IP address prompt)
-- Fixed Scania skin (invalid speed limit)
-
-### 2.2.1
-
-- Completely revamped dashboard core, including rendering and connection layers. The mobile dashboard now reflects game changes almost instantly (within 5-10ms)!
-- Removed refreshRate option (now it is adjusted automatically)
-- Fixed fuelWarning telemetry property (updated telemetry plugin DLL)
-- Fixed NaN trailer mass when dashboard is disconnected (default skin only)
-- Added some utility functions to dashboard.js (see Skin Tutorial for more info)
-- Added new server status: "Connected to Ets2TestTelemetry.json"
-
-### 2.2.0
-
-- Added Dashboard Skin Tutorial!
-- Fixed support for Cruise Control indicator and added Cruise Control Speed
-- Fixed deadline time bug
-- Made speed value always positive (even when reversing)
-- Significantly improved skin loading speed
-- Added ability to skip certain setup steps to support 3rd-party firewalls
-- Added ability to manually select ETS2 game path using standard UI when it is not detected automatically
-- Added wear indicators to the default skin
-- Added additional status message to check if server is connected to the telemetry plugin
-- Added 5 new photo realistic skins made by Klauzzy (DAF-XF, MAN-TGX, Mercedes-Atego, Scania, Volvo-FH)
-- Added simple template skin
-- Changed telemetry plugin DLL name from ets2-telemetry.dll to ets2-telemetry-server.dll (previous version is not compatible anymore)
-- Various refactoring and improvements
-
-### 2.1.0
-
-- Moved to WebSockets for low-latency data updates
-- Optimized UI animation (now it is SUPER SMOOTH, especially in Desktop and Mobile Safari browsers)  
-- Minor fixes
-
-### 2.0.0
-
-- Completely rewritten client side application. All code is now written in Typescript. 
-- Full support for custom skins
-- Automated server installer
-- Telemetry broadcasting to external URLs (see Ets2Telemetry.exe.config)
-- Updated default dashboard skin
-- Administrator rights are now required only for installation. Server starts under user privileges.
-
-### 1.0.4
-
-- Added server IP to the server window
-- Minor logging improvements
-- Fixed IE behavior with ajax requests (should fix Windows Phone issues)
-
-### 1.0.3
-
-- Fixed bug with invalid day of the week
-- Improved connection stability
-- Completely decoupled gauge design and gauge update engine (coded in Typescript)
-- Added some scripts to simplify the installation
-
-### 1.0.2
-- Refactored gauge screen fitting algorithm, the app should work in any modern browser now 
-- Added logging
-- Added support for binding on a particular network interface
-- Added Cordova mobile application (compiled Android APK is included in the bundle)
-- Various fixes and improvements
-- Made HTML5 application URL shorter
-
-### 1.0.1
-- Fixed bug with multiple network interfaces (thanks to thorerik)
-- Made application run under Administrator by default (thanks to thorerik)
-- Updated application icon and added it to the HTML app
-- Minor refactoring and bug fixes 
-
-## External links
-
-Forums
-
-- [Discussion on the official SCS forum](http://forum.scssoft.com/viewtopic.php?f=41&t=171000)
-
-Video
-
-- [Dashboard overview from SimplySimulators](https://www.youtube.com/watch?v=mM13wfTYfM8)
-- [Dashboard usage with OBS from A JonC](https://www.youtube.com/watch?v=yLFu4DPixCM)
-- [Dashboard overview from MrSoundwaves Cubes](https://www.youtube.com/watch?v=2OCs9RwA0AI)
+- [Dashboard overview from SimplySimulators (영어)](https://www.youtube.com/watch?v=mM13wfTYfM8)
+- [Dashboard usage with OBS from A JonC (영어)](https://www.youtube.com/watch?v=yLFu4DPixCM)
+- [Dashboard overview from MrSoundwaves Cubes (영어)](https://www.youtube.com/watch?v=2OCs9RwA0AI)
 - [Dashboard usage from z5teve](https://www.youtube.com/watch?v=gdwpTwhzZIg)
-- [Dashboard overview from Driver Geo (Romanian)](https://www.youtube.com/watch?v=zcrmyD5wq10)
-- [Dashboard overview from MaRKiToX12 (Spanish)](https://www.youtube.com/watch?v=J_SpwY8RIX4)
-- [Dashboard overview from Branislav Rác (Slovak)](https://www.youtube.com/watch?v=LpKyuNWxJTU)
-- [Dashboard overview from 1Tera Games (Portuguese)](https://www.youtube.com/watch?v=hfUMWmuLToQ)
-- [Обзор от Саши Плотникова (на русском)](https://www.youtube.com/watch?v=mmNm27eTTBs)
+- [Dashboard overview from Driver Geo (루마니아어)](https://www.youtube.com/watch?v=zcrmyD5wq10)
+- [Dashboard overview from MaRKiToX12 (스페인어)](https://www.youtube.com/watch?v=J_SpwY8RIX4)
+- [Dashboard overview from Branislav Rác (슬로바키아어)](https://www.youtube.com/watch?v=LpKyuNWxJTU)
+- [Dashboard overview from 1Tera Games (포르투칼어)](https://www.youtube.com/watch?v=hfUMWmuLToQ)
+- [Обзор от Саши Плотникова (러시아어)](https://www.youtube.com/watch?v=mmNm27eTTBs)
   
-## License
+## 라이센스
 
 [GNU General Public License v3 (GPL-3)](https://tldrlegal.com/license/gnu-general-public-license-v3-%28gpl-3%29).
