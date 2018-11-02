@@ -40,14 +40,14 @@ namespace Funbit.Ets.Telemetry.Server.Helpers
 
             var exited = false;
 
-            Log.InfoFormat("Running command line: \r\n{0} {1}", exeFileName, arguments);
+            Log.InfoFormat("실행 명령어 : \r\n{0} {1}", exeFileName, arguments);
 
             using (var outputWaitHandle = new AutoResetEvent(false))
             using (var errorWaitHandle = new AutoResetEvent(false))
             using (var process = Process.Start(info))
             {
                 if (process == null || process.Handle == IntPtr.Zero)
-                    throw new Exception("Failed to start process: " + exeFileName);
+                    throw new Exception("실행 실패한 프로세스 : " + exeFileName);
 
                 // ReSharper disable AccessToDisposedClosure
                 process.OutputDataReceived += (sender, a) =>

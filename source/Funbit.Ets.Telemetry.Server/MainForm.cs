@@ -48,7 +48,7 @@ namespace Funbit.Ets.Telemetry.Server
             {
                 if (Program.UninstallMode && SetupManager.Steps.All(s => s.Status == SetupStatus.Uninstalled))
                 {
-                    MessageBox.Show(this, @"Server is not installed, nothing to uninstall.", @"Done",
+                    MessageBox.Show(this, @"서버가 설치되어 있지 않습니다. 제거 할 수 없습니다.", @"완료",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Environment.Exit(0);
                 }
@@ -67,7 +67,7 @@ namespace Funbit.Ets.Telemetry.Server
             catch (Exception ex)
             {
                 Log.Error(ex);
-                ex.ShowAsMessageBox(this, @"Setup error");
+                ex.ShowAsMessageBox(this, @"설치 오류");
             }
         }
 
@@ -112,14 +112,14 @@ namespace Funbit.Ets.Telemetry.Server
             catch (Exception ex)
             {
                 Log.Error(ex);
-                ex.ShowAsMessageBox(this, @"Network error", MessageBoxIcon.Exclamation);
+                ex.ShowAsMessageBox(this, @"네트워크 오류", MessageBoxIcon.Exclamation);
             }
         }
         
         void MainForm_Load(object sender, EventArgs e)
         {
             // log current version for debugging
-            Log.InfoFormat("Running application on {0} ({1}) {2}", Environment.OSVersion, 
+            Log.InfoFormat("{0} ({1}) {2}에서 실행중", Environment.OSVersion, 
                 Environment.Is64BitOperatingSystem ? "64-bit" : "32-bit",
                 Program.UninstallMode ? "[UNINSTALL MODE]" : "");
             Text += @" " + AssemblyHelper.Version;
@@ -153,29 +153,29 @@ namespace Funbit.Ets.Telemetry.Server
             {
                 if (UseTestTelemetryData)
                 {
-                    statusLabel.Text = @"Connected to Ets2TestTelemetry.json";
+                    statusLabel.Text = @"Ets2TestTelemetry.json에 연결됨";
                     statusLabel.ForeColor = Color.DarkGreen;
                 } 
                 else if (Ets2ProcessHelper.IsEts2Running && Ets2TelemetryDataReader.Instance.IsConnected)
                 {
-                    statusLabel.Text = $"Connected to the simulator ({Ets2ProcessHelper.LastRunningGameName})";
+                    statusLabel.Text = $"시뮬레이터에 연결됨 ({Ets2ProcessHelper.LastRunningGameName})";
                     statusLabel.ForeColor = Color.DarkGreen;
                 }
                 else if (Ets2ProcessHelper.IsEts2Running)
                 {
-                    statusLabel.Text = $"Simulator is running ({Ets2ProcessHelper.LastRunningGameName})";
+                    statusLabel.Text = $"시뮬레이터가 실행중 ({Ets2ProcessHelper.LastRunningGameName})";
                     statusLabel.ForeColor = Color.Teal;
                 }
                 else
                 {
-                    statusLabel.Text = @"Simulator is not running";
+                    statusLabel.Text = @"시뮬레이터가 실행중이 아닙니다.";
                     statusLabel.ForeColor = Color.FromArgb(240, 55, 30);
                 }
             }
             catch (Exception ex)
             {
                 Log.Error(ex);
-                ex.ShowAsMessageBox(this, @"Process error");
+                ex.ShowAsMessageBox(this, @"프로세스 에러");
                 statusUpdateTimer.Enabled = false;
             }
         }
@@ -195,8 +195,8 @@ namespace Funbit.Ets.Telemetry.Server
             ShowInTaskbar = WindowState != FormWindowState.Minimized;
             if (!ShowInTaskbar && trayIcon.Tag == null)
             {
-                trayIcon.ShowBalloonTip(1000, @"ETS2/ATS Telemetry Server", @"Double-click to restore.", ToolTipIcon.Info);
-                trayIcon.Tag = "Already shown";
+                trayIcon.ShowBalloonTip(1000, @"ETS2/ATS Telemetry 서버", @"Double-click to restore.", ToolTipIcon.Info);
+                trayIcon.Tag = "이미 보여짐";
             }
         }
 
@@ -245,12 +245,22 @@ namespace Funbit.Ets.Telemetry.Server
 
         void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProcessHelper.OpenUrl("https://github.com/Funbit/ets2-telemetry-server");
+            ProcessHelper.OpenUrl("https://github.com/icaros7/ets2-kor-telemetry-server");
         }
 
         void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // TODO: implement later
+        }
+
+        private void contextMenuStrip_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void 번역ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("한글화 : hominlab@minnote.net");
         }
     }
 }

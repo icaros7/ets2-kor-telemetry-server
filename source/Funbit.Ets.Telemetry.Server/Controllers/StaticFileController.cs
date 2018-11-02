@@ -17,7 +17,7 @@ namespace Funbit.Ets.Telemetry.Server.Controllers
             // basic safety check (do not serve files outside base www directory)
             var path = directory + fileName;
             if (path.Contains("..") || path.Contains(":") || path.Contains("//") || path.Contains(@"\\"))
-                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Page not found!");
+                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "페이지를 찾을 수 없음!");
 
             string extension = Path.GetExtension(fileName);
             string contentType;
@@ -94,7 +94,7 @@ namespace Funbit.Ets.Telemetry.Server.Controllers
             }
             catch 
             {
-                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Server error.");
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, "서버 에러");
             }
         }
 

@@ -27,17 +27,17 @@ namespace Funbit.Ets.Telemetry.Server
             string port = ConfigurationManager.AppSettings["Port"];
             if (Program.UninstallMode)
             {
-                pluginStatusLabel.Text = @"Uninstall ETS2/ATS telemetry plugin DLL";
-                firewallStatusLabel.Text = $@"Delete firewall rule for {port} port";
-                urlReservationStatusLabel.Text = $@"Delete ACL rule for http://+:{port}/";
-                okButton.Text = @"Uninstall";
+                pluginStatusLabel.Text = @"ETS2/ATS telemetry 플러그인 DLL을 지웁니다.";
+                firewallStatusLabel.Text = $@"{port}번 포트에 대한 방화벽 허용 규칙을 지웁니다.";
+                urlReservationStatusLabel.Text = $@"http://+:{port}/에 대한 ACL 규칙을 지웁니다.";
+                okButton.Text = @"설치 제거";
             }
             else
             {
-                pluginStatusLabel.Text = @"Install ETS2/ATS telemetry plugin DLL";
-                firewallStatusLabel.Text = $@"Add firewall rule for {port} port";
-                urlReservationStatusLabel.Text = $@"Add ACL rule for http://+:{port}/";
-                okButton.Text = @"Install";
+                pluginStatusLabel.Text = @"ETS2/ATS telemetry 플로그인 DLL을 설치합니다.";
+                firewallStatusLabel.Text = $@"{port}번 포트에 대한 방화벽 허용 규칙을 추가합니다.";
+                urlReservationStatusLabel.Text = $@"http://+:{port}/에 대한 ACL 허용 규칙을 추가합니다.";
+                okButton.Text = @"설치";
             }
         }
 
@@ -69,14 +69,14 @@ namespace Funbit.Ets.Telemetry.Server
         private void SetupForm_Load(object sender, EventArgs e)
         {
             // show application version 
-            Text += @" " + AssemblyHelper.Version + @" - Setup";
+            Text += @" " + AssemblyHelper.Version + @" - 설정";
 
             // make sure that game is not running
             if (Ets2ProcessHelper.IsEts2Running)
             {
                 MessageBox.Show(this,
-                    @"In order to proceed the ETS2/ATS game must not be running." + Environment.NewLine +
-                    @"Please exit the game and try again.", @"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    @"설정 과정중엔 ETS2 혹은 ATS가 실행중이면 안됩니다." + Environment.NewLine +
+                    @"게임을 우선 종료하시고, 다시시도 해주세요.", @"경고", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 DialogResult = DialogResult.Abort;
                 return;
             }
@@ -130,7 +130,7 @@ namespace Funbit.Ets.Telemetry.Server
                 {
                     _setupFinished = false;
                     Log.Error(ex);
-                    ex.ShowAsMessageBox(this, @"Setup error");
+                    ex.ShowAsMessageBox(this, @"설정 에러");
                 }
             }
 
@@ -138,24 +138,24 @@ namespace Funbit.Ets.Telemetry.Server
             if (_setupFinished)
             {
                 message = Program.UninstallMode
-                              ? @"Server has been successfully uninstalled. " + Environment.NewLine +
-                                @"Press OK to exit."
-                              : @"Server has been successfully installed. " + Environment.NewLine +
-                                "Press OK to start the server.";
+                              ? @"서버가 성공적으로 제거되었습니다. " + Environment.NewLine +
+                                @"확인을 누르면 종료됩니다."
+                              : @"서버가 성공적으로 설치되었습니다. " + Environment.NewLine +
+                                "확인을 누르시면 서버가 시작됩니다.";
             }
             else
             {
                 message = Program.UninstallMode
-                              ? @"Server has been uninstalled with errors. " + Environment.NewLine +
-                                @"Press OK to exit."
-                              : @"Server has been installed with errors. " + Environment.NewLine +
-                                "Press OK to start the server.";
+                              ? @"서버가 제거되었지만 오류가 있습니다." + Environment.NewLine +
+                                @"확인을 누르시면 종료됩니다."
+                              : @"서버가 설치되었지만 오류가 있습니다." + Environment.NewLine +
+                                "확인을 누르시면 종료됩니다.";
             }
 
             if (Program.UninstallMode)
                 Helpers.Settings.Clear();
 
-            MessageBox.Show(this, message, @"Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(this, message, @"완료", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
 
@@ -167,7 +167,7 @@ namespace Funbit.Ets.Telemetry.Server
 
         private void helpLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ProcessHelper.OpenUrl("https://github.com/Funbit/ets2-telemetry-server");
+            ProcessHelper.OpenUrl("https://github.com/icaros7/ets2-kor-telemetry-server");
         }
     }
 }

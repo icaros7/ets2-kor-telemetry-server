@@ -54,6 +54,8 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.donateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TranslateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.contextMenuStrip.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -73,6 +75,7 @@
             this.closeToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
             this.contextMenuStrip.Size = new System.Drawing.Size(104, 26);
+            this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Opening);
             // 
             // closeToolStripMenuItem
             // 
@@ -100,19 +103,19 @@
             this.groupBox1.Controls.Add(this.apiEndpointUrlTitleLabel);
             this.groupBox1.Controls.Add(this.statusTitleLabel);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 33);
+            this.groupBox1.Location = new System.Drawing.Point(14, 30);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(527, 233);
+            this.groupBox1.Size = new System.Drawing.Size(615, 215);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Server status";
+            this.groupBox1.Text = "서버 상태";
             // 
             // ipAddressLabel
             // 
             this.ipAddressLabel.AutoSize = true;
             this.ipAddressLabel.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ipAddressLabel.ForeColor = System.Drawing.Color.Purple;
-            this.ipAddressLabel.Location = new System.Drawing.Point(139, 131);
+            this.ipAddressLabel.Location = new System.Drawing.Point(165, 121);
             this.ipAddressLabel.Name = "ipAddressLabel";
             this.ipAddressLabel.Size = new System.Drawing.Size(95, 17);
             this.ipAddressLabel.TabIndex = 21;
@@ -124,9 +127,9 @@
             this.interfacesDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.interfacesDropDown.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.interfacesDropDown.FormattingEnabled = true;
-            this.interfacesDropDown.Location = new System.Drawing.Point(144, 91);
+            this.interfacesDropDown.Location = new System.Drawing.Point(168, 84);
             this.interfacesDropDown.Name = "interfacesDropDown";
-            this.interfacesDropDown.Size = new System.Drawing.Size(369, 25);
+            this.interfacesDropDown.Size = new System.Drawing.Size(430, 25);
             this.interfacesDropDown.TabIndex = 20;
             this.interfacesDropDown.TabStop = false;
             this.interfacesDropDown.SelectedIndexChanged += new System.EventHandler(this.interfaceDropDown_SelectedIndexChanged);
@@ -135,27 +138,27 @@
             // 
             this.networkInterfaceTitleLabel.AutoSize = true;
             this.networkInterfaceTitleLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.networkInterfaceTitleLabel.Location = new System.Drawing.Point(18, 94);
+            this.networkInterfaceTitleLabel.Location = new System.Drawing.Point(15, 87);
             this.networkInterfaceTitleLabel.Name = "networkInterfaceTitleLabel";
-            this.networkInterfaceTitleLabel.Size = new System.Drawing.Size(120, 17);
+            this.networkInterfaceTitleLabel.Size = new System.Drawing.Size(136, 17);
             this.networkInterfaceTitleLabel.TabIndex = 19;
-            this.networkInterfaceTitleLabel.Text = "Network Interfaces:";
+            this.networkInterfaceTitleLabel.Text = "네트워크 인터페이스 :";
             // 
             // serverIpTitleLabel
             // 
             this.serverIpTitleLabel.AutoSize = true;
             this.serverIpTitleLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serverIpTitleLabel.Location = new System.Drawing.Point(76, 131);
+            this.serverIpTitleLabel.Location = new System.Drawing.Point(80, 121);
             this.serverIpTitleLabel.Name = "serverIpTitleLabel";
-            this.serverIpTitleLabel.Size = new System.Drawing.Size(62, 17);
+            this.serverIpTitleLabel.Size = new System.Drawing.Size(71, 17);
             this.serverIpTitleLabel.TabIndex = 17;
-            this.serverIpTitleLabel.Text = "Server IP:";
+            this.serverIpTitleLabel.Text = "서버 주소 :";
             // 
             // appUrlLabel
             // 
             this.appUrlLabel.AutoSize = true;
             this.appUrlLabel.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.appUrlLabel.Location = new System.Drawing.Point(140, 163);
+            this.appUrlLabel.Location = new System.Drawing.Point(165, 150);
             this.appUrlLabel.Name = "appUrlLabel";
             this.appUrlLabel.Size = new System.Drawing.Size(72, 17);
             this.appUrlLabel.TabIndex = 16;
@@ -169,17 +172,17 @@
             // 
             this.appUrlTitleLabel.AutoSize = true;
             this.appUrlTitleLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.appUrlTitleLabel.Location = new System.Drawing.Point(31, 163);
+            this.appUrlTitleLabel.Location = new System.Drawing.Point(48, 150);
             this.appUrlTitleLabel.Name = "appUrlTitleLabel";
-            this.appUrlTitleLabel.Size = new System.Drawing.Size(107, 17);
+            this.appUrlTitleLabel.Size = new System.Drawing.Size(103, 17);
             this.appUrlTitleLabel.TabIndex = 15;
-            this.appUrlTitleLabel.Text = "HTML5 App URL:";
+            this.appUrlTitleLabel.Text = "HTML5 앱 주소 :";
             // 
             // apiUrlLabel
             // 
             this.apiUrlLabel.AutoSize = true;
             this.apiUrlLabel.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apiUrlLabel.Location = new System.Drawing.Point(139, 194);
+            this.apiUrlLabel.Location = new System.Drawing.Point(165, 179);
             this.apiUrlLabel.Name = "apiUrlLabel";
             this.apiUrlLabel.Size = new System.Drawing.Size(68, 17);
             this.apiUrlLabel.TabIndex = 14;
@@ -194,31 +197,31 @@
             this.statusLabel.AutoSize = true;
             this.statusLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.statusLabel.Location = new System.Drawing.Point(141, 41);
+            this.statusLabel.Location = new System.Drawing.Point(165, 38);
             this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(69, 17);
+            this.statusLabel.Size = new System.Drawing.Size(56, 17);
             this.statusLabel.TabIndex = 13;
-            this.statusLabel.Text = "Checking...";
+            this.statusLabel.Text = "확인중...";
             // 
             // apiEndpointUrlTitleLabel
             // 
             this.apiEndpointUrlTitleLabel.AutoSize = true;
             this.apiEndpointUrlTitleLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apiEndpointUrlTitleLabel.Location = new System.Drawing.Point(21, 194);
+            this.apiEndpointUrlTitleLabel.Location = new System.Drawing.Point(28, 179);
             this.apiEndpointUrlTitleLabel.Name = "apiEndpointUrlTitleLabel";
-            this.apiEndpointUrlTitleLabel.Size = new System.Drawing.Size(116, 17);
+            this.apiEndpointUrlTitleLabel.Size = new System.Drawing.Size(123, 17);
             this.apiEndpointUrlTitleLabel.TabIndex = 12;
-            this.apiEndpointUrlTitleLabel.Text = "Telemetry API URL:";
+            this.apiEndpointUrlTitleLabel.Text = "Telemetry API 주소 :";
             // 
             // statusTitleLabel
             // 
             this.statusTitleLabel.AutoSize = true;
             this.statusTitleLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusTitleLabel.Location = new System.Drawing.Point(92, 41);
+            this.statusTitleLabel.Location = new System.Drawing.Point(107, 38);
             this.statusTitleLabel.Name = "statusTitleLabel";
-            this.statusTitleLabel.Size = new System.Drawing.Size(46, 17);
+            this.statusTitleLabel.Size = new System.Drawing.Size(41, 17);
             this.statusTitleLabel.TabIndex = 11;
-            this.statusTitleLabel.Text = "Status:";
+            this.statusTitleLabel.Text = "상태 :";
             // 
             // toolTip
             // 
@@ -240,7 +243,8 @@
             this.helpToolStripMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(552, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(644, 24);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -249,14 +253,14 @@
             this.serverToolStripMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.uninstallToolStripMenuItem});
             this.serverToolStripMenu.Name = "serverToolStripMenu";
-            this.serverToolStripMenu.Size = new System.Drawing.Size(51, 20);
-            this.serverToolStripMenu.Text = "Server";
+            this.serverToolStripMenu.Size = new System.Drawing.Size(43, 20);
+            this.serverToolStripMenu.Text = "서버";
             // 
             // uninstallToolStripMenuItem
             // 
             this.uninstallToolStripMenuItem.Name = "uninstallToolStripMenuItem";
-            this.uninstallToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.uninstallToolStripMenuItem.Text = "Uninstall";
+            this.uninstallToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.uninstallToolStripMenuItem.Text = "설치 제거";
             this.uninstallToolStripMenuItem.Click += new System.EventHandler(this.uninstallToolStripMenuItem_Click);
             // 
             // helpToolStripMenu
@@ -264,38 +268,53 @@
             this.helpToolStripMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.helpToolStripMenuItem,
             this.donateToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.aboutToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.TranslateToolStripMenuItem});
             this.helpToolStripMenu.Name = "helpToolStripMenu";
-            this.helpToolStripMenu.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenu.Text = "Help";
+            this.helpToolStripMenu.Size = new System.Drawing.Size(55, 20);
+            this.helpToolStripMenu.Text = "도움말";
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.helpToolStripMenuItem.Text = "도움말";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // donateToolStripMenuItem
             // 
             this.donateToolStripMenuItem.Name = "donateToolStripMenuItem";
-            this.donateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.donateToolStripMenuItem.Text = "Donate";
+            this.donateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.donateToolStripMenuItem.Text = "원 제작자에게 기부";
             this.donateToolStripMenuItem.Click += new System.EventHandler(this.donateToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Text = "이 프로그램은...";
+            this.aboutToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.aboutToolStripMenuItem.Visible = false;
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
+            // TranslateToolStripMenuItem
+            // 
+            this.TranslateToolStripMenuItem.Name = "TranslateToolStripMenuItem";
+            this.TranslateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.TranslateToolStripMenuItem.Text = "한글화";
+            this.TranslateToolStripMenuItem.Click += new System.EventHandler(this.번역ToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 281);
+            this.ClientSize = new System.Drawing.Size(644, 259);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -304,7 +323,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ETS2/ATS Telemetry Server";
+            this.Text = "ETS2/ATS Telemetry Server Korean Edition";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
@@ -344,6 +363,8 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem donateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TranslateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
     }
 }
 

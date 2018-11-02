@@ -10,7 +10,7 @@ namespace Funbit.Ets.Telemetry.Server.Setup
     {
         static readonly log4net.ILog Log = log4net.LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         
-        static readonly string FirewallRuleName = $"ETS2 TELEMETRY SERVER (PORT {ConfigurationManager.AppSettings["Port"]})";
+        static readonly string FirewallRuleName = $"ETS2 TELEMETRY 서버 (포트 {ConfigurationManager.AppSettings["Port"]})";
 
         SetupStatus _status;
 
@@ -26,8 +26,8 @@ namespace Funbit.Ets.Telemetry.Server.Setup
                 {
                     string port = ConfigurationManager.AppSettings["Port"];
                     const string arguments = "advfirewall firewall show rule dir=in name=all";
-                    Log.Info("Checking Firewall rule...");
-                    string output = ProcessHelper.RunNetShell(arguments, "Failed to check Firewall rule status");
+                    Log.Info("방화벽 규칙 확인중...");
+                    string output = ProcessHelper.RunNetShell(arguments, "방화벽 규칙 상태 확인 실패");
                     // this check is kind of lame, but it works in any locale...
                     _status = output.Contains(port) && output.Contains(FirewallRuleName)
                         ? SetupStatus.Installed : SetupStatus.Uninstalled;
@@ -52,8 +52,8 @@ namespace Funbit.Ets.Telemetry.Server.Setup
                 string port = ConfigurationManager.AppSettings["Port"];
                 string arguments = $"advfirewall firewall add rule name=\"{FirewallRuleName}\" " +
                                    $"dir=in action=allow protocol=TCP localport={port} remoteip=localsubnet";
-                Log.Info("Adding Firewall rule...");
-                ProcessHelper.RunNetShell(arguments, "Failed to add Firewall rule");
+                Log.Info("방화벽 규칙 추가중...");
+                ProcessHelper.RunNetShell(arguments, "방화벽 규칙 추가 실패");
                 _status = SetupStatus.Installed;
             }
             catch (Exception ex)
@@ -62,9 +62,9 @@ namespace Funbit.Ets.Telemetry.Server.Setup
                 Log.Error(ex);
                 Settings.Instance.FirewallSetupHadErrors = true;
                 Settings.Instance.Save();
-                throw new Exception("Cannot configure Windows Firewall." + Environment.NewLine +
-                                    "If you are using some 3rd-party firewall please open " +
-                                    ConfigurationManager.AppSettings["Port"] + " TCP port manually!", ex);
+                throw new Exception("윈도우 방화벽에 연결 할 수 없습니다." + Environment.NewLine +
+                                    "만약 제3자 소프트웨어 백신 (V3, 카스퍼스키 등)을 사용중 이라면,  " +
+                                    ConfigurationManager.AppSettings["Port"] + "번 TCP포트를 직접 열어주세요!", ex);
             }
 
             return _status;
@@ -79,17 +79,17 @@ namespace Funbit.Ets.Telemetry.Server.Setup
             try
             {
                 string arguments = $"advfirewall firewall delete rule name=\"{FirewallRuleName}\"";
-                Log.Info("Deleting Firewall rule...");
-                ProcessHelper.RunNetShell(arguments, "Failed to delete Firewall rule");
+                Log.Info("방화벽 규칙 제거중...");
+                ProcessHelper.RunNetShell(arguments, "방화벽 규칙 제거 실패");
                 status = SetupStatus.Uninstalled;
             }
             catch (Exception ex)
             {
                 Log.Error(ex);
                 _status = SetupStatus.Failed;
-                throw new Exception("Cannot configure Windows Firewall." + Environment.NewLine +
-                                    "If you are using some 3rd-party firewall please close " +
-                                    ConfigurationManager.AppSettings["Port"] + " TCP port manually!", ex);
+                throw new Exception("윈도우 방화벽에 연결 할 수 없습니다." + Environment.NewLine +
+                                    "만약 제3자 소프트웨어 백신 (V3, 카스퍼스키 등)을 사용중 이라면,  " +
+                                    ConfigurationManager.AppSettings["Port"] + "번 TCP포트를 직접 닫아주세요!", ex);
             }
             return status;
         }

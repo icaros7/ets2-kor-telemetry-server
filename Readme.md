@@ -1,15 +1,15 @@
-## ETS2 Telemetry Web Server 3.2.5 + Mobile Dashboard
+## ETS2 Telemetry 웹 서버 3.2.5 + 모바일 대시보드 한글 버전
 
-This is a free Telemetry Web Server for [Euro Truck Simulator 2](http://www.eurotrucksimulator2.com/) and [American Truck Simulator](http://www.americantrucksimulator.com/) written in C# based on WebSockets and REST API. The client side consists of a skinnable HTML5 mobile dashboard application that works in any modern desktop or mobile browser. Android users may also use provided native Android application.   
+웹소켓과 REST API에 기반한 C#으로 작성된 [Euro Truck Simulator 2](http://www.eurotrucksimulator2.com/) 와 [American Truck Simulator](http://www.americantrucksimulator.com/)를 위한 무료 Telemetry 웹 서버 입니다. 클라이언트쪽에선 최신 데스크탑과 모바일 브라우저에서 스킨을 씌울 수 있는 HTML5 모바일 대시보드 앱으로 구성됩니다. 또한 안드로이드 사용자의 경우 제공된 안드로이드 앱을 사용 할 수 있습니다만 한글화는 되지 않았습니다.
 
-## Main Features
+## 주요 기능
 
-- Free and open source
-- Automated installation
-- REST API for telemetry data
-- HTML5 dashboard application for live telemetry data streaming based on WebSockets 
-- Powerful support for custom dashboard skins (skin tutorial included)
-- Telemetry data broadcasting to a given URL via HTTP protocol
+- 오픈 소스 및 무료 사용가능
+- 자동 설치
+- Telemetry 데이터를 위한 REST API
+- 웹소켓에 기반한 실시간 telemetry 데이터 스트리밍을 위한 HTML5 대시보드 앱
+- 커스텀 대시보드 스킨을 위한 강력한 지원 (스킨 튜토리얼 내장)
+- Telemetry 데이터 브로드캐스팅을 위해 HTTP 프로토콜을 이용한 URL을 부여
 
 ### Telemetry REST API
   
@@ -42,7 +42,7 @@ The state is updated upon every API call. You may use this REST API for your own
 
 Please note that GET responses may be cached by your HTTP client. To avoid caching you may use some random query string parameter or POST method which returns exactly the same result.
 
-### HTML5 Mobile Dashboard Application
+### HTML5 모바일 대시보드 어플리케이션
     http://localhost:25555/
 
 This HTML5 dashboard application is designed for mobile and desktop browsers. You should be able to use the dashboard just by navigating to the URL in your Mobile Safari (iOS 8+), Android 4+ browsers (Default or Chrome) or any modern desktop browser. 
