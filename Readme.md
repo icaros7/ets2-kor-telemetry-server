@@ -108,44 +108,44 @@ Telemetry REST API 관련 내용은 [제작자 github (영문)](https://github.c
 
 > 서버를 실행하고 HTML5 앱을 열었는데, "페이지를 찾을 수 없음"이 떠요. 뭘 해야하죠?
 
-우선, 셀룰러 (데이터, 3G, 4G 등) 대신 Wi-Fi를 꼭 사용해야합니다. 그런 다음 알맞은 "네트워크 인터페이스"를 서버 화면에서 선택하세요. Wi-Fi 네트워크에 직접 연결된 네트워크를 선택해야 합니다. *주로* "Wi-Fi"나 "이더넷" 혹은 "LAN"이라고 되있습니다. 또한 공유기에서 "AP 격리"가 꺼져 있어야합니다. [자세한 내용보기 (영문)](http://www.howtogeek.com/179089/lock-down-your-wi-fi-network-with-your-routers-wireless-isolation-option/). 
+우선, 셀룰러 (데이터, 3G, 4G 등) 대신 Wi-Fi를 꼭 사용해야합니다. 그런 다음 알맞은 "네트워크 인터페이스"를 서버 화면에서 선택하세요. Wi-Fi 네트워크에 직접 연결된 네트워크를 선택해야 합니다. *주로* "Wi-Fi"나 "이더넷" 혹은 "LAN"이라고 되있습니다. 또한 공유기에서 "AP 격리"가 꺼져 있어야합니다. [자세한 내용보기 (영문)](http://www.howtogeek.com/179089/lock-down-your-wi-fi-network-with-your-routers-wireless-isolation-option/).  
 만약 여전히 연결 할 수 없다면... 잠깐 방화벽이나 백신을 꺼보세요. (특히 제3자 프로그램의!) 만약 문제가 계속된다면 시스템 관리자에게 연락 해보세요.
 
 > 제공된 안드로이드 어플리케이션을 깔았습니다.  하지만 계속 "Could not connect to the server"나 "Disconnected" 상태 입니다. 뭘 해야하죠?
 
 앱 말고 브라우저에서 한번 연결을 시도해봐주세요(위 답변을 참고). 만약에 브라우저에서는 사용 가능하다면 어플리케이션이 뭔가 잘못된겁니다. 다시시작이나 재설치를 해보세요..
 
-> I started the game but dashboard is displaying "Connected, waiting for the drive..." message. What is wrong?
+> 게임을 제대로 시작했지만 대시보드에는 "연결됨. 주행을 기다리는 중..."이 표시됩니다. 뭐가 잘못됬죠?
 
-Please make sure that the server window is showing "Connected to the simulator" status message. If it is showing "Simulator is running" instead - then there is a problem with the telemetry plugin installation (ets2-telemetry-server.dll). If it is showing "Simulator is not running" but simulator is actually running then you have an incompatible ETS2 version.
+데스크탑의 서버 프로그램 창에서 "시뮬레이터에 연결됨" 상태 메시지가 정확히 뜨게 만들어주세요. 만약 "시뮬레이터가 실행되는 중"이 대신 표시된다면 아마 telemetry 플러그인 (ets2-telemetry-server.dll) 설치가 잘못된 것 입니다. 만탹 "시뮬레이터가 실행중이 아님" 이라는 메시지가 뜨지만 실제로는 실행 중인 경우 아마 호환되지 않는 ETS2/ATS 버전을 실행 중일껍니다.
 
-> The dashboard UI animation (meters) sometimes stutters. Is my device not good enough? Is it possible to fix that?
+> 대시보드 UI 애니메이션(속도계)가 종종 끊깁니다. 제 기기 사양이 충분하지 않은건가요? 무엇을 해야하죠?
 
-The HTML5 dashboard is optimized for modern browsers and fast network connections (LAN, local Wi-Fi), so you may experience problems on old devices or devices having old web browsers. 
+HTML5 대시보드는 최근 브라우저와 빠른 인터넷 환경 (유선 연결 및 내부 Wi-Fi 통신. 같은 공유기 내 통신)에 최적화 되어있습니다. 아마 구형 기기나 구버전 웹브라우저에서는 문제를 겪을 수 있습니다.   
 
-Some performance examples:
+몇몇 알려진 성능 예시 :   
 
-The dashboard will work smoothly on Samgung Galaxy Tab S (4.4.2), but not on Galaxy Note 1 or Kindle Fire HD due to slow GPU or turned off GPU graphics acceleration. To achieve the best performance on Androids you may try to use a standalone Chrome browser instead of an app (but you will need to turn off device sleep mode when you use the dashboard). 
+삼성 갤럭시 탭S (4.4.2)에서 매우 동작합니다만, 갤럭시 노트1이나 킨들 파이어HD는 부족한 GPU가 탑제됬거나 (한국용 LTE 지원 갤럭시 노트1) GPU 그래픽 가속이 꺼져있는 경우 제대로 동작하지 않습니다. 안드로이드 기기에서 최고의 성능을 내기 위해서는 기본 탑제된 앱 대신 Chrome 브라우저를 사용해 보세요 (하지만 대시보드를 사용하는 경우 설정에서 화면 꺼짐 시간 설정을 꺼야합니다).   
 
-The dashboard will work very smoothly on iOS 8.X devices (iPhone 6 or new iPads). But it will not properly work on iOS 6.X (iPhone 3GS, old iPods). If you are experiencing slow performance even on new devices you may try to close all opened apps (especially Safari) and try again, that helps a lot.
+iOS 8.0 이상 기기(아이폰6이나 아이패드 에어 이후 기기)에서는 부드럽게 잘 동작합니다. 하지만 iOS6.X 기기 (아이폰3GS, 아이팟 터치 4세대 이하)에서는 제대로 동작하지 않습니다. 만약 새 기기에서도 느린 현상이 나타난다면 앱을 모두 종료하고 다시시도 해주세요 (특히 사파리. 전원버튼을 꾹 눌러 전원 메뉴 상태에서 홈버튼을 5초간 꾹 누르면 모든 앱이 종료됩니다). 아마 이 방법이 크게 도와줄껍니다.   
 
-The dashboard will perfectly work on any PC or laptop inside latest Firefox, Chrome or IE11.  
+최신 파이어폭스, 크롬이나 IE11이 깔린 아무 PC나 노트북에선 완벽하게 잘 될껍니다.   
 
-Also, do not forget to turn off background downloads, especially Torrent clients, because they may dramatically slow your connection between devices!
+또한 백그라운드 다운로드를 잠시 꺼두는 것도 잊지마세요. 특히 토렌트 클라이언트가 기기 간의 인터넷 속도를 현저하게 감소 시킵니다!!
 
-> Is it safe to use the server? Can it crash my game? What about influence on the game performance, say FPS, processor load?
+> 서버를 사용하는 것이 안정적이긴 합니까? 게임을 꺼지게 한다던가 할 수 있나요? 아니면 FPS(초당 프레임 수)나 CPU 사용률 등 게임 성능에도 영향을 주나요?
 
-The server is written very carefully. It will not crash your game, because the telemetry plugin was created by the official developers. It also does not eat CPU (the load is less than 1%) and has small memory footprint (around 20MB). So you won't notice any difference in FPS. 
+서버는 매우 조심스럽게 프러그래밍 되어있어 게임을 꺼지게 한다던가 그러지 않습니다. 왜냐하면 사용되는 telemetry 플러그인은 공인된 개발자들이 만들었거든요. 그리고 CPU를 갈구지도 않고 (사용률 1프로 미만) 메모리도 매우 적게 먹습니다 (20MB 근방). 그러므로 FPS에선 아무 차이를 못느끼실껍니다.   
 
-If you don't trust the compiled exe/dll files you are always welcome to check them for viruses by more than 50 different anti-virus programs on [VirusTotal](https://www.virustotal.com/) site.
+만약 미리 제작자가 컴파일한 exe나 dll파일을 신뢰하지 못한다면 아무떼나 [VirusTotal](https://www.virustotal.com/)에 가셔서 50개가 넘는 다른 백신 프로그램을 돌려보세요.
 
-> Can I use mobile dashboard on Android 2.x devices?
+> 모바일 대시보드를 안드로이드 2.x 기기에서 사용 할 수 있나요?
 
-No. There is a chance that it will work, but it won't be supported.
+아니오. 뭐 동작 될수는 있지만 지원되는 기기는 아닙니다.
 
-> Is it possible to include sleep indicator, remaining distance, ETA, current speed limit (or whatever else)?
+> 피곤 상태나 남은 거리, 도착 예정시간이나 현재 속도 제한같은 아무거나도 다 표시되게 할수 없나요?
 
-Starting from version 3.0.0 this is possible, but I haven't yet had time to update the default skins to display it. But I will ;)
+이미 3.0.0 업데이트 부터 가능합니다! 근데 제작자가 시간이 없어서 스킨에 띄우진 못하고 있습니다. 곧 할껍니다😊 (하지만 제작자 님이 3년 전부터 업데이트를 못하시고 계시네요)
 
 ## 대시보드 스킨 튜토리얼
 
