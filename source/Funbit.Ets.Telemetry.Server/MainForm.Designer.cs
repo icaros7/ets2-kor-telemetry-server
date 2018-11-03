@@ -164,8 +164,8 @@
             this.appUrlLabel.TabIndex = 16;
             this.appUrlLabel.TabStop = true;
             this.appUrlLabel.Text = "appUrlLabel";
-            this.toolTip.SetToolTip(this.appUrlLabel, "Use this URL to view HTML5 mobile dashboard in desktop or mobile browsers (click " +
-        "to open)");
+            this.toolTip.SetToolTip(this.appUrlLabel, "이 URL은 HTML5 대시보드를 열기 위해 데스크탑이나 모바일 브라우저에서 열때 사용합니다. (클릭하여 열기" +
+            ")");
             this.appUrlLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.appUrlLabel_LinkClicked);
             // 
             // appUrlTitleLabel
@@ -188,8 +188,7 @@
             this.apiUrlLabel.TabIndex = 14;
             this.apiUrlLabel.TabStop = true;
             this.apiUrlLabel.Text = "apiUrlLabel";
-            this.toolTip.SetToolTip(this.apiUrlLabel, "Use this URL to develop your own applications based on the REST API (click to ope" +
-        "n)");
+            this.toolTip.SetToolTip(this.apiUrlLabel, "이 URL은 REST API를 사용하여 직접 어플리케이션을 만들때 사용 합니다. (클릭하여 열기)");
             this.apiUrlLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.apiUrlLabel_LinkClicked);
             // 
             // statusLabel
