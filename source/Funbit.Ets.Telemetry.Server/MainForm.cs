@@ -168,7 +168,7 @@ namespace Funbit.Ets.Telemetry.Server
                 }
                 else
                 {
-                    statusLabel.Text = @"시뮬레이터가 실행중이 아닙니다.";
+                    statusLabel.Text = @"시뮬레이터가 실행중이 아님";
                     statusLabel.ForeColor = Color.FromArgb(240, 55, 30);
                 }
             }

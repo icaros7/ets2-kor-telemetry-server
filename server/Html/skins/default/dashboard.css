@@ -322,7 +322,10 @@ table._job td {
   padding-left: 20px;
   text-align: left;
 }
-._jobSource,
+._jobSource {
+  color: #efbd3a;
+  font-size: 10px;
+}
 ._jobDestionation {
   color: #efbd3a;
 }
