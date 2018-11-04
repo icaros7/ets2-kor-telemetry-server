@@ -165,11 +165,11 @@ iOS 8.0 이상 기기(아이폰6이나 아이패드 에어 이후 기기)에서�
 - 한글 작업 (추후 다른 언어를 위해 지역화 예정)
 - Visual Studio 2017 마이그레이션
 
-이전 버전 기록은 [제작자 github (영문)](https://github.com/Funbit/ets2-telemetry-server)에서 보실 수 있습니다.
-
 ### 3.2.5
 
 - Another improvement for job information reset code (plugin DLL update).
+
+이전 버전 기록은 [제작자 github (영문)](https://github.com/Funbit/ets2-telemetry-server)에서 보실 수 있습니다.
 
 ## 한글화
 
