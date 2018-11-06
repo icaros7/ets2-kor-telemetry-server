@@ -1,5 +1,7 @@
 ## ETS2 Telemetry 웹 서버 3.2.5.3 + 모바일 대시보드 한글 버전
 
+이것은 [원본 ETS2 Telemetry 웹 서버](https://github.com/Funbit/ets2-telemetry-server) (@Funbit)을 한글화 및 일부 개선한 포크 입니다.
+
 웹소켓과 REST API에 기반한 C#으로 작성된 [Euro Truck Simulator 2](http://www.eurotrucksimulator2.com/) 와 [American Truck Simulator](http://www.americantrucksimulator.com/)를 위한 무료 Telemetry 웹 서버 입니다. 클라이언트쪽에선 최신 데스크탑과 모바일 브라우저에서 스킨을 씌울 수 있는 HTML5 모바일 대시보드 앱으로 구성됩니다. 또한 안드로이드 사용자의 경우 제공된 안드로이드 앱을 사용 할 수 있습니다만 한글화는 되지 않았습니다.
 
 ## 주요 기능
