@@ -15,9 +15,6 @@
     For more information go to home page: https://github.com/Funbit/ets2-telemetry-server
 
 */
-body {
-  cursor: pointer;
-}
 .hidden {
   visibility: hidden;
 }
@@ -128,6 +125,33 @@ body {
   height: 100px;
   text-align: center;
 }
+.truck-retarderBrake {
+  color: #2491b9;
+  font-family: Courier New, Courier, monospace;
+  font-weight: bold;
+  font-size: 70px;
+  position: absolute;
+  left: 1518px;
+  top: 358px;
+  width: 134px;
+  height: 100px;
+  text-align: center;
+}
+.navigation-speedLimit {
+  color: Black;
+  font-family: Courier New, Courier, monospace;
+  font-weight: bold;
+  font-size: 40px;
+  position: absolute;
+  left: 100px;
+  top: 860px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 105px;
+  background-image: url("images/speed-limit.png");
+  background-size: auto;
+}
 .truck-gear[data-value="N"] {
   color: #2c8a26;
 }
@@ -179,9 +203,21 @@ body {
 .truck-cruiseControlOn.yes {
   background-image: url("images/cruise-on.png");
 }
+.truck-parkBrakeOn {
+  background-image: url("images/parking-off.png");
+  position: absolute;
+  left: 1160px;
+  top: 550px;
+  width: 104px;
+  height: 82px;
+}
+.truck-parkBrakeOn.yes {
+  background-image: url("images/parking-on.png");
+}
 .truck-cruiseControlSpeedRounded {
   color: #24b999;
   top: 431px;
+  left: 460px;
 }
 .truck-lightsBeamHighOn {
   background-image: url("images/highbeam-off.png");
@@ -255,7 +291,9 @@ body {
 .game-time {
   color: #C2D8ED;
 }
-.job-remainingTime {
+.job-remainingTime,
+.game-nextRestStopTime,
+.navigation-estimatedTime {
   color: #54d9a8;
 }
 ._jobIncome {
@@ -273,6 +311,8 @@ body {
 .truck-cruiseControlSpeedRounded[data-value="0"],
 .trailer-mass,
 .trailer-name,
+.navigation-speedLimit,
+.truck-parkBrakeOn,
 ._truckWearInfo,
 ._trailerWearInfo,
 .job-remainingTime,
@@ -290,6 +330,8 @@ body {
 .dashboard.game-connected.yes .truck-gear,
 .dashboard.game-connected.yes ._truckWearInfo,
 .dashboard.game-connected.yes ._trailerWearInfo,
+.dashboard.game-connected.yes .navigation-speedLimit,
+.dashboard.game-connected.yes .truck-parkBrakeOn,
 .dashboard.game-connected.yes .truck-odometer,
 .dashboard.game-connected.yes .truck-speedRounded,
 .dashboard.game-connected.yes .truck-cruiseControlSpeedRounded:not([data-value="0"]) {
@@ -299,14 +341,16 @@ body {
 .hasJob.yes .trailer-name,
 .hasJob.yes .job-remainingTime,
 .hasJob.yes ._jobIncome,
+.hasJob.yes .navigation-estimatedTime,
 .hasJob.yes ._jobSource,
+.hasJob.yes ._estimatedTime,
 .hasJob.yes ._jobDestionation {
   visibility: visible;
 }
 table._job {
   border-collapse: collapse;
   font-family: Courier New, Courier, monospace;
-  font-size: 40px;
+  font-size: 35px;
   position: absolute;
   left: 40px;
   top: 850px;
@@ -315,7 +359,7 @@ table._job {
 }
 table._job th {
   color: #aaa;
-  width: 260px;
+  width: 380px;
   text-align: right;
 }
 table._job td {

@@ -16,6 +16,8 @@
         <div class="truck-odometer"></div>
         <div class="truck-cruiseControlSpeedRounded"></div>
         <div class="truck-gear"></div>
+		<div class="truck-retarderBrake"></div>
+		<div class="navigation-speedLimit"></div>
         <!-- indicators -->
         <div class="truck-blinkerLeftOn"></div>
         <div class="truck-blinkerRightOn"></div>
@@ -26,6 +28,7 @@
         <div class="trailer-attached"></div>
         <div class="trailer-mass"><span class="ton">t</span></div>
         <div class="trailer-name"></div>
+		<div class="truck-parkBrakeOn"></div>
         <!-- job information -->
         <table class="_job">
             <tr>
@@ -33,16 +36,23 @@
                 <td><span class="game-time"></span><span class="statusMessage"></span></td>
             </tr>
             <tr>
-                <th>화물 :</th>
-                <td><span class="hasJob _jobSource"><span class="job-sourceCity"></span> (<span class="job-sourceCompany"></span>)</span></td>
+                <th>출발지 :</th>
+                <td><span class="hasJob _jobSource"><span class="job-sourceCity"></span> <span class="job-sourceCompany"></span></span></td>
             </tr>
             <tr>
                 <th>목적지 :</th>
-                <td><span class="hasJob _jobDestionation"><span class="job-destinationCity"></span> (<span class="job-destinationCompany"></span>)</span></td>
+                <td><span class="hasJob _jobDestionation"><span class="job-destinationCity"></span> <span class="job-destinationCompany"></span></span></td>
             </tr>
             <tr>
-                <th>남은 시간 :</th>
-                <td><span class="job-remainingTime"></span> <span class="_jobIncome">(€<span class="job-income"></span>)</span></td>
+                <th>예상 시간 :</th>
+                <td><span class="hasJob navigation-estimatedTime"></span></td>
+            </tr>
+				<th>다음 휴식 시간 : </th>
+				<td><span class="game-nextRestStopTime"></span></td>
+			</tr>
+            <tr>
+                <th>계약 남은 시간 :</th>
+                <td><span class="hasJob job-remainingTime"></span> <span class="_jobIncome">(€<span class="job-income"></span>)</span></td>
             </tr>
         </table>
         <div class="_truckWearInfo">트럭 <br/>손상도 : <span class="truck-wearSum"></span></div>

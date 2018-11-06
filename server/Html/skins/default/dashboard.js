@@ -15,13 +15,15 @@
         'images/highbeam-off.png', 'images/highbeam-on.png',
         'images/lowbeam-off.png', 'images/lowbeam-on.png',
         'images/parklights-off.png', 'images/parklights-on.png',
-        'images/trailer-off.png', 'images/trailer-on.png'
+        'images/trailer-off.png', 'images/trailer-on.png',
+		'images/parking-off.png', 'images/parking-on.png',
+		'images/speed-limit.png'
     ]);
 
     // return to menu by a click
-    $(document).add('body').on('click', function () {
-        window.history.back();
-    });
+    //$(document).add('body').on('click', function () {
+    //    window.history.back();
+    //});
 }
 
 Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
@@ -33,7 +35,9 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
     // This filter is used to change telemetry data 
     // before it is displayed on the dashboard.
     // You may convert km/h to mph, kilograms to tons, etc.
-
+	
+	data.job.destinationCompany = "(" + data.job.destinationCompany + ")"
+	data.job.sourceCompany = "(" + data.job.sourceCompany + ")"
     data.hasJob = data.trailer.attached;
     // round truck speed
     data.truck.speedRounded = Math.abs(data.truck.speed > 0
@@ -49,7 +53,7 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
     // convert gear to readable format
     data.truck.gear = data.truck.displayedGear; // use displayed gear
     data.truck.gear = data.truck.gear > 0
-        ? 'D' + data.truck.gear
+        ? data.truck.gear
         : (data.truck.gear < 0 ? 'R' + Math.abs(data.truck.gear) : 'N');
     // convert rpm to rpm * 100
     data.truck.engineRpm = data.truck.engineRpm / 100;
@@ -59,6 +63,25 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
     wearSumPercent = Math.min(wearSumPercent, 100);
     data.truck.wearSum = Math.round(wearSumPercent) + '%';
     data.trailer.wear = Math.round(data.trailer.wear * 100) + '%';
+	// convert estimatedDistance to estimatedDistance / 1000
+	data.navigation.estimatedDistance = (data.navigation.estimatedDistance / 1000).toPrecision + "Km";
+	// retarderBrake to retarderBrake / retarderStepCount
+	if (data.truck.retarderStepCount == '0') {
+		data.truck.retarderBrake = '';
+	}
+	else {
+		data.truck.retarderBrake = data.truck.retarderBrake + "/" + data.truck.retarderStepCount;
+	};
+	// Is Own Trailler?
+	if (data.trailer.mass == "0t") {
+		data.trailer.name = "자가 트레일러";
+		data.job.destinationCity = "";
+		data.job.destinationCompany = "";
+		data.job.sourceCity = "";
+		data.job.sourceCompany = "";
+		data.job.income = "0";
+		data.job.remainingTime = 'own'
+	};
     // return changed data to the core for rendering
     return data;
 };

@@ -15,7 +15,7 @@
 
     "config": {
         "name": "template",
-        "title": "Dashboard Skin Template",
+        "title": "대시보드 스킨 템플릿",
         "author": "Funbit",        
         "width": 2048,
         "height": 1152

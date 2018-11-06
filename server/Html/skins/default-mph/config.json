@@ -15,8 +15,8 @@
 
     "config": {
         "name": "default-mph",
-        "title": "Generic Dashboard / MPH",
-        "author": "Funbit",
+        "title": "일반적 대시보드 / MPH",
+        "author": "Funbit / 수정 icaros7",
         "width": 2048,
         "height": 1152
     }    

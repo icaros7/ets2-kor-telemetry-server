@@ -24,11 +24,12 @@
                     '금요일',
                     '토요일'
                 ];
-                Strings.noTimeLeft = '시간초과';
+                Strings.noTimeLeft = '시간 초과';
                 Strings.disconnectedFromServer = '서버로부터 연결 끊김';
                 Strings.couldNotConnectToServer = '서버에 연결 할 수 없습니다.';
                 Strings.connectedAndWaitingForDrive = '연결됬습니다. 주행을 기다리는 중...';
                 Strings.connectingToServer = '서버에 연결중...';
+				Strings.ownTrailler = "자가 트레일러";
                 return Strings;
             })();
             Telemetry.Strings = Strings;
