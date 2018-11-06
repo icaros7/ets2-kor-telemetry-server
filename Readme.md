@@ -1,4 +1,4 @@
-## ETS2 Telemetry 웹 서버 3.2.5.1 + 모바일 대시보드 한글 버전
+## ETS2 Telemetry 웹 서버 3.2.5.2 + 모바일 대시보드 한글 버전
 
 웹소켓과 REST API에 기반한 C#으로 작성된 [Euro Truck Simulator 2](http://www.eurotrucksimulator2.com/) 와 [American Truck Simulator](http://www.americantrucksimulator.com/)를 위한 무료 Telemetry 웹 서버 입니다. 클라이언트쪽에선 최신 데스크탑과 모바일 브라우저에서 스킨을 씌울 수 있는 HTML5 모바일 대시보드 앱으로 구성됩니다. 또한 안드로이드 사용자의 경우 제공된 안드로이드 앱을 사용 할 수 있습니다만 한글화는 되지 않았습니다.
 
@@ -159,6 +159,9 @@ iOS 8.0 이상 기기(아이폰6이나 아이패드 에어 이후 기기)에서�
 감사합니다!
 
 ## 버전 체인지로그
+
+### 3.2.5.2
+- 기본 스킨 트럭 손상도 표기 방식 변경 (변경 전 : 모든 부품 손상도 합계, 변경 후 : ETS2 표기와 동일하게 최대 값)
 
 ### 3.2.5.1
 - 데스크탑 어플리케이션 레이아웃 개선
