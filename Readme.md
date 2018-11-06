@@ -24,7 +24,7 @@ Telemetry REST API 관련 내용은 [제작자 github (영문)](https://github.c
 
 모바일 대시보드는 브라우저에서 아래와 같이 뜹니다.
 
-![](https://raw.githubusercontent.com/Funbit/ets2-telemetry-server/master/server/Html/skins/default/dashboard.jpg)
+![](https://raw.githubusercontent.com/icaros7/ets2-kor-telemetry-server/master/server/Html/skins/default/dashboard.jpg)
 
 
 패키지엔 다른 현실적인 스킨도 포함되어있습니다. 예시로 MAN-TGX 스킨 사진:
