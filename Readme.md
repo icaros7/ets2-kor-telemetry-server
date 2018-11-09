@@ -17,7 +17,7 @@
   
     GET http://localhost:25555/api/ets2/telemetry
 
-Telemetry REST API 관련 내용은 [제작자 github (영문)](https://github.com/Funbit/ets2-telemetry-server)에서 보실 수 있습니다.
+Telemetry REST API 관련 내용은 [원본 제작자 Funbit github (영문)](https://github.com/Funbit/ets2-telemetry-server)에서 보실 수 있습니다.
 
 ### HTML5 모바일 대시보드 어플리케이션
     http://localhost:25555/
@@ -147,7 +147,7 @@ iOS 8.0 이상 기기(아이폰6이나 아이패드 에어 이후 기기)에서�
 
 ## 지원
 
-이제 ETS2 Telemetry 웹 서버는 만드는데 엄청난 시간을 요구하는 꽤 복잡한 오픈 소스 프로젝트로 진화했습니다. 관심이 있다면 아래 버튼을 클릭하여 약간의 실질적인 지원을 제작자에게 줄수있습니다.
+이제 ETS2 Telemetry 웹 서버는 만드는데 엄청난 시간을 요구하는 꽤 복잡한 오픈 소스 프로젝트로 진화했습니다. 관심이 있다면 아래 버튼을 클릭하여 약간의 실질적인 지원을 원본 제작자(@Funbit)에게 줄수있습니다.
 
 [![](https://raw.githubusercontent.com/Funbit/ets2-telemetry-server/master/server/Html/images/donate-link.png)](http://funbit.info/ets2/donate.htm)
 
@@ -180,7 +180,7 @@ iOS 8.0 이상 기기(아이폰6이나 아이패드 에어 이후 기기)에서�
 
 - Another improvement for job information reset code (plugin DLL update).
 
-이전 버전 기록은 [제작자 github (영문)](https://github.com/Funbit/ets2-telemetry-server)에서 보실 수 있습니다.
+이전 버전 기록은 [원본 제작자 Funbit github (영문)](https://github.com/Funbit/ets2-telemetry-server)에서 보실 수 있습니다.
 
 ## 한글화
 
@@ -188,6 +188,10 @@ iOS 8.0 이상 기기(아이폰6이나 아이패드 에어 이후 기기)에서�
 다만 업데이트가 안된지 한참 되서 안되는 일부 화물이나 표기가 안나옵니다...일부...
 
 ## 외부 링크
+
+원본 제작자
+
+[Funbit github (영문)](https://github.com/Funbit/ets2-telemetry-server)
 
 포럼
 
