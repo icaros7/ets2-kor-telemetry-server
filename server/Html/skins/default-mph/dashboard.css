@@ -66,7 +66,7 @@
 }
 .truck-fuel {
   position: absolute;
-  left: 1452px;
+  left: 1380px;
   top: 546px;
   width: 10px;
   height: 60px;
@@ -84,7 +84,7 @@
 }
 .truck-waterTemperature {
   position: absolute;
-  left: 1788px;
+  left: 1668px;
   top: 546px;
   width: 10px;
   height: 60px;
@@ -99,6 +99,49 @@
   -ms-transform-origin: 50% 198px;
   -o-transform-origin: 50% 198px;
   transform-origin: 50% 198px;
+}
+.truck-airPressure {
+  position: absolute;
+  left: 1950px;
+  top: 546px;
+  width: 10px;
+  height: 60px;
+  background-color: #cd0000;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transform-origin: 50% 198px;
+  -moz-transform-origin: 50% 198px;
+  -ms-transform-origin: 50% 198px;
+  -o-transform-origin: 50% 198px;
+  transform-origin: 50% 198px;
+}
+.truck-airPressureEmergencyOn {
+  background-image: url("images/airPressureEmergency-off.png");
+  position: absolute;
+  left: 1860px;
+  top: 675px;
+  width: 104px;
+  height: 82px;
+  opacity: 0.5;
+}
+.truck-airPressureEmergencyOn.yes {
+  background-image: url("images/airPressureEmergency-on.png");
+  opacity: 1.0;
+}
+.truck-fuelAverageConsumption {
+  color: #2491b9;
+  font-family: Courier New, Courier, monospace;
+  font-weight: bold;
+  font-size: 35px;
+  position: absolute;
+  left: 1198px;
+  top: 773px;
+  width: 190px;
+  height: 66px;
+  text-align: right;
 }
 .truck-speedRounded,
 .truck-cruiseControlSpeedRounded {
@@ -206,13 +249,15 @@
 .truck-parkBrakeOn {
   background-image: url("images/parking-off.png");
   position: absolute;
-  left: 1160px;
-  top: 550px;
+  left: 1120px;
+  top: 520px;
   width: 104px;
   height: 82px;
+  opacity: 0.5;
 }
 .truck-parkBrakeOn.yes {
   background-image: url("images/parking-on.png");
+  opacity: 1.0;
 }
 .truck-cruiseControlSpeedRounded {
   color: #24b999;

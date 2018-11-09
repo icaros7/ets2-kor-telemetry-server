@@ -17,7 +17,8 @@
         'images/parklights-off.png', 'images/parklights-on.png',
         'images/trailer-off.png', 'images/trailer-on.png',
 		'images/parking-off.png', 'images/parking-on.png',
-		'images/speed-limit.png'
+		'images/speed-limit.png', 'images/airPressureEmergency-on.png',
+		'images/airPressureEmergency-off.png'
     ]);
 
     // return to menu by a click
@@ -52,6 +53,9 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
     data.trailer.mass = data.hasJob ? (Math.round(data.trailer.mass / 1000.0) + 't') : '';
     // format odometer data as: 00000.0
     data.truck.odometer = utils.formatFloat(data.truck.odometer, 1);
+	// format fuelAverageConsumption data as: 000.0
+	data.truck.fuelAverageConsumption = data.truck.fuelAverageConsumption * 1000;
+	data.truck.fuelAverageConsumption = utils.formatFloat(data.truck.fuelAverageConsumption,1);
     // convert gear to readable format
     data.truck.gear = data.truck.displayedGear; // use displayed gear
     data.truck.gear = data.truck.gear > 0
@@ -71,9 +75,6 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
 	if (data.truck.retarderStepCount == '0') {
 		data.truck.retarderBrake = '';
 	}
-	else {
-		data.truck.retarderBrake = data.truck.retarderBrake + "/" + data.truck.retarderStepCount;
-	};
 	// Is Own Trailler?
 	if (data.trailer.mass == "0t") {
 		data.trailer.name = "자가 트레일러";
@@ -87,13 +88,3 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
     // return changed data to the core for rendering
     return data;
 };
-
-Funbit.Ets.Telemetry.Dashboard.prototype.render = function (data, utils) {
-    //
-    // data - same data object as in the filter function
-    // utils - an object containing several utility functions (see skin tutorial for more information)
-    //
-
-    // we don't have anything custom to render in this skin,
-    // but you may use jQuery here to update DOM or CSS
-}
