@@ -55,7 +55,8 @@ Telemetry REST API 관련 내용은 [원본 제작자 Funbit github (영문)](ht
 
 ### 설치
 
-1. 이 페이지의 **Download ZIP** 버튼을 클릭하여 번들 파일을 받습니다.
+1. [**여기**](https://github.com/icaros7/ets2-kor-telemetry-server/releases/latest) 또는 **Release 탭의 Latest Release**를 클합니다.
+1. 해당 페이지의 **Source code (zip)**을 클릭하여 번들 파일을 받습니다.
 2. *아무곳이나* 다운로로드 받은 파일의 **압축을 풉니다.**
 3. **server\Ets2Telemetry.exe** 를 실행합니다.
 4. 설치를 하기 위해 **설치** 버튼을 누릅니다.
