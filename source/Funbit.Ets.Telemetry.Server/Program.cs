@@ -30,7 +30,7 @@ namespace Funbit.Ets.Telemetry.Server
             bool bAnotherInstanceRunning = GetLastError() == ErrorAlreadyExists;
             if (bAnotherInstanceRunning)
             {
-                MessageBox.Show(@"Another ETS2/ATS Telemetry Server instance is already running!", @"Warning",
+                MessageBox.Show(@"다른 ETS2/ATS Telemetry 서버가 이미 실행 중 입니다!!", @"경고",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }

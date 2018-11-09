@@ -551,6 +551,10 @@ namespace Funbit.Ets.Telemetry.Server.Data
         /// Example: 22
         /// </summary>
         float BatteryVoltageWarningValue { get; }
+        /// <summary>
+        /// Differential ratio of the truck.
+        /// </summary>
+        float differentialRatio { get; }
     }
 
     public interface IEts2Navigation

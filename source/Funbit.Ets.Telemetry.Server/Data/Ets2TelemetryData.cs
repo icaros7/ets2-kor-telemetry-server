@@ -194,6 +194,7 @@ namespace Funbit.Ets.Telemetry.Server.Data
         public bool LightsBeaconOn => _rawData.Struct.lightsBeacon != 0;
         public bool LightsBrakeOn => _rawData.Struct.lightsBrake != 0;
         public bool LightsReverseOn => _rawData.Struct.lightsReverse != 0;
+        public float differentialRatio => _rawData.Struct.differentialRatio;
 
         public IEts2Placement Placement => new Ets2Placement(
             _rawData.Struct.coordinateX,

@@ -220,5 +220,8 @@ namespace Funbit.Ets.Telemetry.Server.Data.Reader
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = MaxSlotCount)]
 		public uint[] slotSelectors;         
         */
+
+        // ***** REVISION 11 ****** //
+        public float differentialRatio;
     }
 }
