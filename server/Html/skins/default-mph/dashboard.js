@@ -57,7 +57,7 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
 	data.truck.fuelAverageConsumption = data.truck.fuelAverageConsumption < 100
 		? data.truck.fuelAverageConsumption * 100
 		: data.truck.fuelAverageConsumption * 1000;
-	data.truck.fuelAverageConsumption = utils.formatFloat(data.truck.fuelAverageConsumption,1);
+	data.truck.fuelAverageConsumption = utils.formatFloat(data.truck.fuelAverageConsumption,2);
     // convert gear to readable format
     data.truck.gear = data.truck.displayedGear; // use displayed gear
     data.truck.gear = data.truck.gear > 0
@@ -72,7 +72,7 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
     data.truck.wearSum = Math.round(wearSumPercent) + '%';
     data.trailer.wear = Math.round(data.trailer.wear * 100) + '%';
 	// convert estimatedDistance to estimatedDistance / 1000
-	data.navigation.estimatedDistance = (data.navigation.estimatedDistance / 1000).toPrecision + "Km";
+	data.navigation.estimatedDistance = Math.floor(data.navigation.estimatedDistance / 1000) + 'Km';
 	// retarderBrake to retarderBrake / retarderStepCount
 	if (data.truck.retarderStepCount == '0') {
 		data.truck.retarderBrake = '';

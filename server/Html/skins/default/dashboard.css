@@ -354,7 +354,8 @@
 }
 .job-remainingTime,
 .game-nextRestStopTime,
-.navigation-estimatedTime {
+.navigation-estimatedTime,
+.navigation-estimatedDistance {
   color: #54d9a8;
 }
 ._jobIncome {
@@ -377,6 +378,7 @@
 ._truckWearInfo,
 ._trailerWearInfo,
 .job-remainingTime,
+.navigation-estimatedDistance,
 ._jobIncome,
 ._jobSource,
 ._jobDestionation {
@@ -401,6 +403,7 @@
 .hasJob.yes .trailer-mass,
 .hasJob.yes .trailer-name,
 .hasJob.yes .job-remainingTime,
+.hasJob.yes .navigation-estimatedDistance,
 .hasJob.yes ._jobIncome,
 .hasJob.yes .navigation-estimatedTime,
 .hasJob.yes ._jobSource,

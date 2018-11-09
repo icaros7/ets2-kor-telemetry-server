@@ -4,6 +4,8 @@
 
 웹소켓과 REST API에 기반한 C#으로 작성된 [Euro Truck Simulator 2](http://www.eurotrucksimulator2.com/) 와 [American Truck Simulator](http://www.americantrucksimulator.com/)를 위한 무료 Telemetry 웹 서버 입니다. 클라이언트쪽에선 최신 데스크탑과 모바일 브라우저에서 스킨을 씌울 수 있는 HTML5 모바일 대시보드 앱으로 구성됩니다.
 
+[마음이 급하시면 여기를 눌러 다운로드 방법 및 설치 방법으로 건너 뜁니다.](#설정)
+
 ## 주요 기능
 
 - 오픈 소스 및 무료 사용가능
@@ -24,14 +26,14 @@ Telemetry REST API 관련 내용은 [원본 제작자 Funbit github (영문)](ht
 
 이 HTML5 대시보드 어플리케이션은 모바일과 데스크탑을 위해 디자인 되었습니다. 이 어플리케이션은 모바일 사파리(iOS 8 이상), 안드로이드 4.0 이상 브라우저(기본 브라우저나 크롬 등)이나 아무 데스크탑 브라우저에서 URL에 들어가는 것만으로 이용 할 수있습니다.
 
-모바일 대시보드는 브라우저에서 아래와 같이 뜹니다.
+대시보드는 브라우저에서 아래와 같이 뜹니다.
 
 ![](https://raw.githubusercontent.com/icaros7/ets2-kor-telemetry-server/master/server/Html/skins/default/dashboard.jpg)
 
 
-패키지엔 다른 현실적인 스킨도 포함되어있습니다. 예시로 MAN-TGX 스킨 사진:
+패키지엔 다른 현실적인 스킨도 포함되어있습니다. 예시로 Peterbilt 579 스킨 사진:
 
-![](https://raw.githubusercontent.com/icaros7/ets2-kor-telemetry-server/master/server/Html/skins/man-tgx/images/bg-on.jpg)
+![](https://raw.githubusercontent.com/icaros7/ets2-kor-telemetry-server/master/server/Html/skins/peterbilt579/dashboard.jpg)
 
 그리고 대시보드 디자인은 완전히 커스텀 할 수 있습니다. HTML과 CSS에 대한 아주 기초적인 지식만 있다면 직접 자신만의 스킨을 만들수도 있습니다. 더 자세한 내용은 대시보드 스킨 튜토리얼을 따르세요.
 
@@ -69,6 +71,8 @@ Telemetry REST API 관련 내용은 [원본 제작자 Funbit github (영문)](ht
 2. 25555번 포트에 대한 로컬 서브넷 허용 규칙을 "ETS2 TELEMETRY SERVER (PORT 25555)" 이름으로 엽니다. (참고로 외부 인터넷에선 이걸 따로 볼수 없습니다. 그래서 안전합니다.)
 3. Microsoft OWIN의 httpListener ([자세한 내용](http://msdn.microsoft.com/en-us/library/ms733768%28v=vs.110%29.aspx))가 25555번 포트를 통해 사용을 위해 새로운 ACL 규칙을 만듭니다.
 4. 어플리케이션 설정 파일을 만듭니다. "\Users\USERNAME\AppData\Local\Ets2 Telemetry Server".
+
+![](https://raw.githubusercontent.com/icaros7/ets2-kor-telemetry-server/master/server/screenshot.png)
 
 서버는 모든 것을 로그 파일 (Ets2Temetry.log)에 기록합니다. 로그에 잘 나와있습니다. (이 역시 한글)
 

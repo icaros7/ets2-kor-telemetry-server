@@ -36,7 +36,6 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
     // This filter is used to change telemetry data 
     // before it is displayed on the dashboard.
     // You may convert km/h to mph, kilograms to tons, etc.
-	
 	data.job.destinationCompany = "(" + data.job.destinationCompany + ")"
 	data.job.sourceCompany = "(" + data.job.sourceCompany + ")"
     data.hasJob = data.trailer.attached;
@@ -55,7 +54,7 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
 	data.truck.fuelAverageConsumption = data.truck.fuelAverageConsumption < 100
 		? data.truck.fuelAverageConsumption * 100
 		: data.truck.fuelAverageConsumption * 1000;
-	data.truck.fuelAverageConsumption = utils.formatFloat(data.truck.fuelAverageConsumption,1);
+	data.truck.fuelAverageConsumption = utils.formatFloat(data.truck.fuelAverageConsumption,2);
     // convert gear to readable format
     data.truck.gear = data.truck.displayedGear; // use displayed gear
     data.truck.gear = data.truck.gear > 0
@@ -70,7 +69,7 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
     data.truck.wearSum = Math.round(wearSumPercent) + '%';
     data.trailer.wear = Math.round(data.trailer.wear * 100) + '%';
 	// convert estimatedDistance to estimatedDistance / 1000
-	data.navigation.estimatedDistance = (data.navigation.estimatedDistance / 1000).toPrecision + "Km";
+	data.navigation.estimatedDistance = ', ' + Math.floor(data.navigation.estimatedDistance / 1000) + 'Km';
 	// retarderBrake to retarderBrake / retarderStepCount
 	if (data.truck.retarderStepCount == '0') {
 		data.truck.retarderBrake = '';
@@ -83,7 +82,8 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
 		data.job.sourceCity = "";
 		data.job.sourceCompany = "";
 		data.job.income = "0";
-		data.job.remainingTime = 'own'
+		data.job.remainingTime = 'own';
+		data.navigation.estimatedDistance = '';
 	};
     // return changed data to the core for rendering
     return data;
