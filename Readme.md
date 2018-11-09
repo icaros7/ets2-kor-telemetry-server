@@ -2,7 +2,7 @@
 
 이것은 [원본 ETS2 Telemetry 웹 서버](https://github.com/Funbit/ets2-telemetry-server) (@Funbit)을 한글화 및 일부 개선한 포크 입니다.
 
-웹소켓과 REST API에 기반한 C#으로 작성된 [Euro Truck Simulator 2](http://www.eurotrucksimulator2.com/) 와 [American Truck Simulator](http://www.americantrucksimulator.com/)를 위한 무료 Telemetry 웹 서버 입니다. 클라이언트쪽에선 최신 데스크탑과 모바일 브라우저에서 스킨을 씌울 수 있는 HTML5 모바일 대시보드 앱으로 구성됩니다. 또한 안드로이드 사용자의 경우 제공된 안드로이드 앱을 사용 할 수 있습니다만 한글화는 되지 않았습니다.
+웹소켓과 REST API에 기반한 C#으로 작성된 [Euro Truck Simulator 2](http://www.eurotrucksimulator2.com/) 와 [American Truck Simulator](http://www.americantrucksimulator.com/)를 위한 무료 Telemetry 웹 서버 입니다. 클라이언트쪽에선 최신 데스크탑과 모바일 브라우저에서 스킨을 씌울 수 있는 HTML5 모바일 대시보드 앱으로 구성됩니다.
 
 ## 주요 기능
 
@@ -103,8 +103,7 @@ Telemetry REST API 관련 내용은 [제작자 github (영문)](https://github.c
 3. **데스크탑 사용자** : Wi-Fi 혹은 랜을 통해 같은 네트워크(공유기)에 연결하세요. 다음 HTML5 앱 URL로 크롬, 파이어폭스, IE 등을 이용하여 이동하시면 사용 가능합니다.
 3. **iOS 사용자** : Wi-Fi 혹은 랜을 통해 같은 네트워크(공유기)에 연결하세요. 다음 HTML5 앱 URL로 사파리, 크롬 등을 이용하여 이동하시면 사용 가능합니다.
 4. **Android 웹 사용자** : Wi-Fi 혹은 랜을 통해 같은 네트워크(공유기)에 연결하세요. 다음 HTML5 앱 URL로 크롬, 파이어폭스, IE 등을 이용하여 이동하시면 사용 가능합니다.
-5. **Android 앱 사용자** : "*ETS2 Dashboard*" 어플리케이션을 실행한 다음, 서버 IP (*http 와 포트 제외*, 서버 프로그램에 뜨는 것과 동일하게 입력)를 입력 한 후 OK를 누릅니다. 만약 IP 주소가 제대로 되었다면 앞으로 저장 될껍니다.
-6. **Enjoy** 모바일 대시보드를 좋아하는 시뮬레이터를 하는 동안 즐기세요!
+5. **Enjoy** 모바일 대시보드를 좋아하는 시뮬레이터를 하는 동안 즐기세요!
 
 ## FAQ
 
