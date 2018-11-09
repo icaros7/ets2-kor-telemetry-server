@@ -1,4 +1,4 @@
-## ETS2 Telemetry 웹 서버 3.2.5.4 + 모바일 대시보드 한글 버전
+## ETS2 Telemetry 웹 서버 3.2.6 + 모바일 대시보드 한글 버전
 
 이것은 [원본 ETS2 Telemetry 웹 서버](https://github.com/Funbit/ets2-telemetry-server) (@Funbit)을 한글화 및 일부 개선한 포크 입니다.
 
@@ -154,7 +154,7 @@ iOS 8.0 이상 기기(아이폰6이나 아이패드 에어 이후 기기)에서�
 감사합니다!
 
 ## 버전 체인지로그
-### 3.2.5.4
+### 3.2.6
 - SCS SDK 1.9 업데이트 (플러그인 DLL 업데이트)
 - 일반적 대시보드 스킨 외 스킨 업데이트 (RenaultDash-Info 제외)
 
