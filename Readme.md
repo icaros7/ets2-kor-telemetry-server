@@ -31,7 +31,7 @@ Telemetry REST API 관련 내용은 [원본 제작자 Funbit github (영문)](ht
 
 패키지엔 다른 현실적인 스킨도 포함되어있습니다. 예시로 MAN-TGX 스킨 사진:
 
-![](https://raw.githubusercontent.com/Funbit/ets2-telemetry-server/master/server/Html/skins/man-tgx/dashboard.jpg)
+![](https://raw.githubusercontent.com/icaros7/ets2-kor-telemetry-server/master/server/Html/skins/man-tgx/images/bg-on.jpg)
 
 그리고 대시보드 디자인은 완전히 커스텀 할 수 있습니다. HTML과 CSS에 대한 아주 기초적인 지식만 있다면 직접 자신만의 스킨을 만들수도 있습니다. 더 자세한 내용은 대시보드 스킨 튜토리얼을 따르세요.
 
@@ -155,6 +155,9 @@ iOS 8.0 이상 기기(아이폰6이나 아이패드 에어 이후 기기)에서�
 감사합니다!
 
 ## 버전 체인지로그
+### 3.2.6.1
+- 업데이트된 원본 플러그인 DLL MD5 누락 해결
+
 ### 3.2.6
 - SCS SDK 1.9 업데이트 (플러그인 DLL 업데이트)
 - 모든 스킨 번역 및 업데이트 (RenaultDash-Info 제외)
