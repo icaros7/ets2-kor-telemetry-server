@@ -1,4 +1,4 @@
-## ETS2 Telemetry 웹 서버 3.2.5.3 + 모바일 대시보드 한글 버전
+## ETS2 Telemetry 웹 서버 3.2.5.4 + 모바일 대시보드 한글 버전
 
 이것은 [원본 ETS2 Telemetry 웹 서버](https://github.com/Funbit/ets2-telemetry-server) (@Funbit)을 한글화 및 일부 개선한 포크 입니다.
 
@@ -73,7 +73,7 @@ Telemetry REST API 관련 내용은 [제작자 github (영문)](https://github.c
 
 서버는 모든 것을 로그 파일 (Ets2Temetry.log)에 기록합니다. 로그에 잘 나와있습니다. (이 역시 한글)
 
-또한 제작자의 미리 컴파일된 ets2-telemetry-server.dll이 미심적다면, [플러그인 소스코드](https://github.com/Funbit/ets2-sdk-plugin)를 비주얼 스튜디오 2013 이상의 버전에서 직접 컴파일 해 사용 가능합니다.
+또한 제작자의 미리 컴파일된 ets2-telemetry-server.dll이 미심적다면, [플러그인 소스코드](https://github.com/icaros7/ets2-sdk-plugin)를 비주얼 스튜디오 2013 이상의 버전에서 직접 컴파일 해 사용 가능합니다.
 
 ### 스킨 설치
 
@@ -157,6 +157,10 @@ iOS 8.0 이상 기기(아이폰6이나 아이패드 에어 이후 기기)에서�
 감사합니다!
 
 ## 버전 체인지로그
+### 3.2.5.4
+- SCS SDK 1.9 업데이트 (플러그인 DLL 업데이트)
+- 일반적 대시보드 스킨 외 스킨 업데이트
+
 ### 3.2.5.3
 - 목적지 까지 남은 시간 추가 (일반적 대시보드 스킨)
 - 다음 휴식 시간 추가 (일반적 대시보드 스킨)
