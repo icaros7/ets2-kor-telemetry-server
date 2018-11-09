@@ -54,7 +54,9 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
     // format odometer data as: 00000.0
     data.truck.odometer = utils.formatFloat(data.truck.odometer, 1);
 	// format fuelAverageConsumption data as: 000.0
-	data.truck.fuelAverageConsumption = data.truck.fuelAverageConsumption * 1000;
+	data.truck.fuelAverageConsumption = data.truck.fuelAverageConsumption < 100
+		? data.truck.fuelAverageConsumption * 100
+		: data.truck.fuelAverageConsumption * 1000;
 	data.truck.fuelAverageConsumption = utils.formatFloat(data.truck.fuelAverageConsumption,1);
     // convert gear to readable format
     data.truck.gear = data.truck.displayedGear; // use displayed gear
