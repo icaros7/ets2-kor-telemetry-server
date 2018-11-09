@@ -15,7 +15,7 @@
 
     "config": {
         "name": "man-tgx-mph",
-        "title": "MAN TGX Dashboard / MPH",
+        "title": "MAN TGX 대시보드 / MPH",
         "author": "Klauzzy & Nino Scholz",
         "width": 2048,
         "height": 1152

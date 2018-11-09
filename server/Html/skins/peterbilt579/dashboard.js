@@ -17,11 +17,6 @@
         'images/trailer-off.png', 'images/trailer-on.png',
         'images/park-on.png', 'images/park-on.png'
     ]);
-
-    // return to menu by a click
-    $(document).add('body').on('click', function () {
-        window.history.back();
-    });
 }
 
 Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
@@ -46,20 +41,16 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
     // convert kg to t
     data.trailer.mass = data.hasJob ? (Math.round(data.trailer.mass / 1000.0) + 't') : '';
     // format odometer data as: 00000.0
-    data.truck.odometer = utils.formatFloat(data.truck.odometer * 0.621371, 1) + " mi";
+    data.truck.odometer = utils.formatFloat(data.truck.odometer * 0.621371, 1) + " 마일";
     // convert gear to readable format
     data.truck.gear = data.truck.displayedGear; // use displayed gear
     data.truck.gear = data.truck.gear > 0
-        ? 'D' + data.truck.gear
+        ? data.truck.gear
         : (data.truck.gear < 0 ? 'R' + Math.abs(data.truck.gear) : 'N');
     // convert rpm to rpm * 100
     data.truck.engineRpm = data.truck.engineRpm / 100;
-    // calculate wear
-    var wearSumPercent = data.truck.wearEngine * 100 +
-        data.truck.wearTransmission * 100 +
-        data.truck.wearCabin * 100 +
-        data.truck.wearChassis * 100 +
-        data.truck.wearWheels * 100;
+	var wearSumList = [data.truck.wearEngine * 100, data.truck.wearTransmission * 100,  data.truck.wearCabin * 100, data.truck.wearChassis * 100, data.truck.wearWheels * 100];
+	var wearSumPercent = Math.max.apply(null, wearSumList);
     wearSumPercent = Math.min(wearSumPercent, 100);
     data.truck.wearSum = Math.round(wearSumPercent) + '%';
     data.trailer.wear = Math.round(data.trailer.wear * 100) + '%';

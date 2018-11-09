@@ -15,7 +15,7 @@
 
     "config": {
         "name": "daf-xf",
-        "title": "DAF XF Dashboard",
+        "title": "DAF XF 대시보드",
         "author": "Klauzzy",
         "width": 2000,
         "height": 1056

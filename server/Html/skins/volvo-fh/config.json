@@ -15,7 +15,7 @@
 
     "config": {
         "name": "volvo-fh",
-        "title": "Volvo FH 2012 Dashboard",
+        "title": "Volvo FH 2012 대시보드",
         "author": "Klauzzy",
         "width": 2000,
         "height": 664

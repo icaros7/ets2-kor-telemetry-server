@@ -1,6 +1,3 @@
-body {
-  cursor: pointer;
-}
 .hidden {
   visibility: hidden;
 }
@@ -296,10 +293,10 @@ body {
   color: #B3A099;
   position: absolute;
   left: 1500px;
-  top: 714px;
+  top: 720px;
   width: 100px;
   height: 57px;
-  font-size: 27px;
+  font-size: 22px;
 }
 .truck-airPressure {
   position: absolute;
