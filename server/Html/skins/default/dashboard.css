@@ -131,6 +131,22 @@
   background-image: url("images/airPressureEmergency-on.png");
   opacity: 1.0;
 }
+.truck-waterTemperatureWarningOn.yes {
+  background-image: url("images/waterTemperatureWarningOn.png");
+  position: absolute;
+  left: 1583px;
+  top: 674px;
+  width: 80px;
+  height: 74px;
+}
+.truck-fuelWarningOn.yes {
+  background-image: url("images/fuelWarningOn.png");
+  position: absolute;
+  left: 1308px;
+  top: 675px;
+  width: 67px;
+  height: 72px;
+}
 .truck-fuelAverageConsumption {
   color: #2491b9;
   font-family: Courier New, Courier, monospace;
