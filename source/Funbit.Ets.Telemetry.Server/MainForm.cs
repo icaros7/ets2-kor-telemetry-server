@@ -260,7 +260,7 @@ namespace Funbit.Ets.Telemetry.Server
 
         private void 번역ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("한글화 : hominlab@minnote.net");
+            MessageBox.Show(this, @"한글화 : hominlab@minnote.net", @"한글화");
         }
     }
 }
