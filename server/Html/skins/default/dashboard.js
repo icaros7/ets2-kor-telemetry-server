@@ -36,8 +36,8 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
     // This filter is used to change telemetry data 
     // before it is displayed on the dashboard.
     // You may convert km/h to mph, kilograms to tons, etc.
-	data.job.destinationCompany = "(" + data.job.destinationCompany + ")"
-	data.job.sourceCompany = "(" + data.job.sourceCompany + ")"
+	data.job.destinationCompany = '(' + data.job.destinationCompany + ')'
+	data.job.sourceCompany = '(' + data.job.sourceCompany + ')'
     data.hasJob = data.trailer.attached;
     // round truck speed
     data.truck.speedRounded = Math.abs(data.truck.speed > 0
@@ -69,19 +69,19 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
     data.truck.wearSum = Math.round(wearSumPercent) + '%';
     data.trailer.wear = Math.round(data.trailer.wear * 100) + '%';
 	// convert estimatedDistance to estimatedDistance / 1000
-	data.navigation.estimatedDistance = ', ' + Math.floor(data.navigation.estimatedDistance / 1000) + 'Km';
+	data.navigation.estimatedDistance = Math.floor(data.navigation.estimatedDistance / 1000) + 'Km';
 	// retarderBrake to retarderBrake / retarderStepCount
 	if (data.truck.retarderStepCount == '0') {
 		data.truck.retarderBrake = '';
 	}
 	// Is Own Trailler?
-	if (data.trailer.mass == "0t") {
-		data.trailer.name = "자가 트레일러";
-		data.job.destinationCity = "";
-		data.job.destinationCompany = "";
-		data.job.sourceCity = "";
-		data.job.sourceCompany = "";
-		data.job.income = "0";
+	if (data.trailer.mass == '0t' || data.navigation.estimatedTime == '시간 초과') {
+		data.trailer.name = '자가 트레일러';
+		data.job.destinationCity = '';
+		data.job.destinationCompany = '';
+		data.job.sourceCity = '';
+		data.job.sourceCompany = '';
+		data.job.income = '0';
 		data.job.remainingTime = 'own';
 		data.navigation.estimatedDistance = '';
 	};

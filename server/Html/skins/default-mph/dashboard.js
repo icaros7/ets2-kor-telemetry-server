@@ -78,7 +78,7 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
 		data.truck.retarderBrake = '';
 	}
 	// Is Own Trailler?
-	if (data.trailer.mass == "0t") {
+	if (data.trailer.mass == '0t' || data.navigation.estimatedTime == '시간 초과') {
 		data.trailer.name = "자가 트레일러";
 		data.job.destinationCity = "";
 		data.job.destinationCompany = "";
