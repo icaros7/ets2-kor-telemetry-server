@@ -468,6 +468,8 @@
                             o += hrs > 1 ? hrs + ' 시간 ' : hrs + ' 시 ';
                         if (mnt > 0)
                             o += mnt > 1 ? mnt + ' 분' : mnt + ' 분';
+                        if (!o)
+                        o = Telemetry.Strings.Arrived;
                         return o;
                     }
                     return date;
