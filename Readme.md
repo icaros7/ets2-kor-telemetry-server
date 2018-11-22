@@ -1,15 +1,15 @@
 ## ETS2 Telemetry 웹 서버 3.2.7 + 모바일 대시보드 한글 버전
 
-이것은 [원본 ETS2 Telemetry 웹 서버](https://github.com/Funbit/ets2-telemetry-server) (@Funbit)을 한글화 및 일부 개선한 포크 입니다.
+이 리포지토리는 [원본 ETS2 Telemetry 웹 서버](https://github.com/Funbit/ets2-telemetry-server) (@Funbit)을 한글화 및 일부 개선한 포크 입니다.
 
-웹소켓과 REST API에 기반한 C#으로 작성된 [Euro Truck Simulator 2](http://www.eurotrucksimulator2.com/) 와 [American Truck Simulator](http://www.americantrucksimulator.com/)를 위한 무료 Telemetry 웹 서버 입니다. 클라이언트쪽에선 최신 데스크탑과 모바일 브라우저에서 스킨을 씌울 수 있는 HTML5 모바일 대시보드 앱으로 구성됩니다.
+[Euro Truck Simulator 2](http://www.eurotrucksimulator2.com/) 와 [American Truck Simulator](http://www.americantrucksimulator.com/)를 위해 웹소켓과 REST API를 기반으로 C#으로 작성된 무료로 이용 가능한 Telmetry 서버 입니다. 사용자 측에서는 최신의 데스크탑이나 모바일의 브라우저를 통해 스킨을 마음대로 고르면서 사용할 수 있는 HTML5 대시보드 앱으로 구성됩니다.
 
 [마음이 급하시면 여기를 눌러 다운로드 방법 및 설치 방법으로 건너 뜁니다.](#설정)
 
 ## 주요 기능
 
 - 오픈 소스 및 무료 사용가능
-- 자동 설치
+- 스팀 라이브러리 탐색을 통한 향상된 자동 설치
 - Telemetry 데이터를 위한 REST API
 - 웹소켓에 기반한 실시간 telemetry 데이터 스트리밍을 위한 HTML5 대시보드 앱
 - 커스텀 대시보드 스킨을 위한 강력한 지원 (스킨 튜토리얼 내장)
@@ -21,39 +21,40 @@
 
 Telemetry REST API 관련 내용은 [원본 제작자 Funbit github (영문)](https://github.com/Funbit/ets2-telemetry-server)에서 보실 수 있습니다.
 
-### HTML5 모바일 대시보드 어플리케이션
+### HTML5 대시보드 어플리케이션
     http://localhost:25555/
 
-이 HTML5 대시보드 어플리케이션은 모바일과 데스크탑을 위해 디자인 되었습니다. 이 어플리케이션은 모바일 사파리(iOS 8 이상), 안드로이드 4.0 이상 브라우저(기본 브라우저나 크롬 등)이나 아무 데스크탑 브라우저에서 URL에 들어가는 것만으로 이용 할 수있습니다.
+HTML5 대시보드 어플리케이션은 데스크탑과 모바일 브라우저를 위해 디자인 되었습니다. 아무 데스크탑 브라우저, 모바일 사파리(iOS8 이상), 안드로이드 브라우저(안드로이드 4.0 이상, 크롬 권장)에서 URL을 들어가는 것만으로도 이용이 가능합니다.
 
 대시보드는 브라우저에서 아래와 같이 뜹니다.
 
 ![](https://raw.githubusercontent.com/icaros7/ets2-kor-telemetry-server/master/server/Html/skins/default/dashboard.jpg)
 
 
-패키지엔 다른 현실적인 스킨도 포함되어있습니다. 예시로 Peterbilt 579 스킨 사진:
+스킨중엔 현실적인 스킨도 포함되어있습니다. 예시로 Peterbilt 579 스킨 사진 입니다.
 
 ![](https://raw.githubusercontent.com/icaros7/ets2-kor-telemetry-server/master/server/Html/skins/peterbilt579/dashboard.jpg)
 
-그리고 대시보드 디자인은 완전히 커스텀 할 수 있습니다. HTML과 CSS에 대한 아주 기초적인 지식만 있다면 직접 자신만의 스킨을 만들수도 있습니다. 더 자세한 내용은 대시보드 스킨 튜토리얼을 따르세요.
+그리고 대시보드 디자인은 완전히 사용자 자유롭게 구성이 가능합니다. HTML과 CSS에 대한 아주 기초적인 지식만 있다면 사용자만의 스킨을 만들수도 있습니다. 더 자세한 내용은 [대시보드 스킨 튜토리얼 (영문)](https://github.com/icaros7/ets2-kor-telemetry-server/blob/master/Dashboard%20Skin%20Tutorial.pdf)을 참고해 주세요.
 
 ## 설정
 
 ### 지원하는 운영체제
 
-- **Windows Vista, Windows 7, 8 혹은 10 (32-bit 혹은 64-bit)**. Windows XP는 지원되지 않습니다.
-- **.NET Framework 4.5** (Windows 8 이상은 기본 설치). 만약 설치되있지 않다면 아마 서버 실행 전에 알림이 뜰껍니다.
+- **Windows Vista, Windows 7, 8 혹은 10 (32비트 혹은 64비트)**. Windows XP는 지원되지 않습니다.
+- **.NET Framework 4.5** (Windows 8 이상은 기본 설치). 만약 설치되있지 않다면 아마 실행 전에 알림이 뜰껍니다.
 
 ### 지원하는 게임
 
-- 스팀 혹은 단일 버전의 1.15 버전 이상 Euro Truck Simulator 2 (32-bit 혹은 64-Bit) 멀티 플레이 버전도 잘 지원됩니다.
+- 스팀 혹은 단일 버전의 1.15 버전 이상 Euro Truck Simulator 2 (멀티 플레이 버전도 지원)
 - 스팀 혹은 단일 버전의 American Truck Simulator
 
 ### 확인된 브라우저
 
-- iOS 8 이상의 모바일 사파리 (가장 최고의 사용자 경험을 위해 강력 추천함)
+- iOS 8 이상의 모바일 사파리 (최고의 성능을 위해 가장 권장)
 - 최신의 파이어폭스, 크롬 혹은 인터넷 익스플로러 11 (파이어폭스와 크롬 권장)
-- 안드로이드 4.0 이상 (안드로이드 4.4 이상 권장)의 기본 브라우저 혹은 크롬 브라우저 (성능 관련 문제가 있다면 FAQ 참고)
+- 안드로이드 4.0 이상 (안드로이드 4.4 이상 권장)의 기본 브라우저 혹은 크롬 브라우저
+- **그 외 성능 관련 문제가 있다면 FAQ 참고**
 
 ### 설치
 
@@ -72,64 +73,61 @@ Telemetry REST API 관련 내용은 [원본 제작자 Funbit github (영문)](ht
 3. Microsoft OWIN의 httpListener ([자세한 내용](http://msdn.microsoft.com/en-us/library/ms733768%28v=vs.110%29.aspx))가 25555번 포트를 통해 사용을 위해 새로운 ACL 규칙을 만듭니다.
 4. 어플리케이션 설정 파일을 만듭니다. "\Users\USERNAME\AppData\Local\Ets2 Telemetry Server".
 
-![](https://raw.githubusercontent.com/icaros7/ets2-kor-telemetry-server/master/server/screenshot.png)
+![](https://raw.githubusercontent.com/icaros7/ets2-kor-telemetry-server/master/server/preview.png)
 
-서버는 모든 것을 로그 파일 (Ets2Temetry.log)에 기록합니다. 로그에 잘 나와있습니다. (이 역시 한글)
+서버는 모든 것을 로그 파일 (Ets2Temetry.log)에 기록합니다. 모든 상황들이 잘 나와있습니다. (이 역시 한글로 읽을 수 있게 해두었습니다.)
 
-또한 제작자의 미리 컴파일된 ets2-telemetry-server.dll이 미심적다면, [플러그인 소스코드](https://github.com/icaros7/ets2-sdk-plugin)를 비주얼 스튜디오 2013 이상의 버전에서 직접 컴파일 해 사용 가능합니다.
+또한 한글판 제작자의 미리 컴파일된 ets2-telemetry-server.dll이 미심적다면, [플러그인 소스코드](https://github.com/icaros7/ets2-sdk-plugin)를 비주얼 스튜디오 2013 이상의 버전에서 직접 컴파일 해 사용 가능합니다.
 
 ### 스킨 설치
 
-만약 제3자 스킨 (다른곳에서 받은 경우 dashboard.html, css, js 와 이미지 파일이 있습니다. 하지만 **절대 EXE 파일은 없습니다!!**)을 설치 하고싶은 경우 그냥 **server/Html/skins** 폴더에 복사하세요. 새로고침 하시면 스킨 선택 메뉴에 바로 뜰껍니다.
+만약 제 3자 스킨 (다른 블로그 등에서 받은 경우 dashboard.html, CSS파일, JS파일과 이지미 파일들은 있지만 **절대로 EXE, BAT, CMD 파일은 없습니다!!**)을 받았다면 **server/Html/skins** 폴더에 복사하세요. 스킨 목록을 새로고침 하면 새로우 스킨이 뜹니다.
 
 ### 업그레이드
 
-만약 이전 버전이 설치된 경우, 해당 버전은 놔둔채로 **다른 폴더에 새 버전을 압축을 풉니다.** 이 방법은 여러분들의 설정 파일이나 로그 등을 절대로 잃을 일이 없습니다.
+만약 이전 버전이 설치가 되어있다면, 그냥 **다른 폴더에 새 버전의 압축을 풀어 사용하세요.** 이렇게 하면 기존 버전의 설정 파일이나 로그 등을 절대 잃지 않습니다.
 
-만약에 이전 버전으로 돌아가려 하려면, 먼저 새 버전을 제거하는걸 잊지마세요!
+만약에 이전 버전으로 돌아가고 싶다면, **꼭 새 버전을 제거 후, 이전 버전을 재설치 해주세요!!**
 
 ### 제거
 
-만약 서버가 기대에 못미치로 제거하기로 마음 먹으셨다면...
+만약에 이 앱이 기대에 못미쳐 제거하기로 하였다면...
 
 1. Euro Truck Simulator / American Truck Simulator를 종료해 주세요.
 2. 데스크탑 서버 프로그램의 메뉴 중 "서버 -> 설치제거"를 누릅니다.
-3. 팝업 윈도우의 "**제거**" 버튼을 누릅니다.
+3. "**제거**" 버튼을 누릅니다.
 4. **제거 완료**
 
 시스템이 제거 완료 시점에서는 설치 하기전과 완벽하게 같아집니다.
 
 ## 사용법
 
-1. **server/Ets2Telemetry.exe**  를 실행합니다.
-2. Euro Truck Simulator 2 / American Truck Simulator 를 실행합니다. (**순서가 바뀌면 안됨**)
-3. **데스크탑 사용자** : Wi-Fi 혹은 랜을 통해 같은 네트워크(공유기)에 연결하세요. 다음 HTML5 앱 URL로 크롬, 파이어폭스, IE 등을 이용하여 이동하시면 사용 가능합니다.
-3. **iOS 사용자** : Wi-Fi 혹은 랜을 통해 같은 네트워크(공유기)에 연결하세요. 다음 HTML5 앱 URL로 사파리, 크롬 등을 이용하여 이동하시면 사용 가능합니다.
-4. **Android 웹 사용자** : Wi-Fi 혹은 랜을 통해 같은 네트워크(공유기)에 연결하세요. 다음 HTML5 앱 URL로 크롬, 파이어폭스, IE 등을 이용하여 이동하시면 사용 가능합니다.
-5. **Enjoy** 모바일 대시보드를 좋아하는 시뮬레이터를 하는 동안 즐기세요!
+1. **server/Ets2Telemetry.exe**  를 **게임보다 먼저** 실행 합니다.
+2. Euro Truck Simulator 2 / American Truck Simulator 를 실행 합니다.
+3. 사용하는 기기에 따라 다음을 따라합니다.
+    1. **데스크탑 사용자** : Wi-Fi 혹은 랜을 통해 같은 네트워크(공유기)에 연결하세요. 다음 HTML5 앱 URL로 크롬, 파이어폭스, IE 등을 이용하여 이동하시면 사용 가능합니다.
+    2. **iOS 사용자** : Wi-Fi 혹은 랜을 통해 같은 네트워크(공유기)에 연결하세요. 다음 HTML5 앱 URL로 사파리, 크롬 등을 이용하여 이동하시면 사용 가능합니다.
+    3. **Android 웹 사용자** : Wi-Fi 혹은 랜을 통해 같은 네트워크(공유기)에 연결하세요. 다음 HTML5 앱 URL로 크롬, 파이어폭스, IE 등을 이용하여 이동하시면 사용 가능합니다.
+4. **끝!** 대시보드를 좋아하는 시뮬레이터를 하는 동안 즐기세요!
 
 ## FAQ
 
-> 서버를 실행하고 HTML5 앱을 열었는데, "페이지를 찾을 수 없음"이 떠요. 뭘 해야하죠?
+> 서버를 실행하고 HTML5 대시보드 URL을 열었는데, "페이지를 찾을 수 없음"이 뜹니다.
 
-우선, 셀룰러 (데이터, 3G, 4G 등) 대신 Wi-Fi를 꼭 사용해야합니다. 그런 다음 알맞은 "네트워크 인터페이스"를 서버 화면에서 선택하세요. Wi-Fi 네트워크에 직접 연결된 네트워크를 선택해야 합니다. *주로* "Wi-Fi"나 "이더넷" 혹은 "LAN"이라고 되있습니다. 또한 공유기에서 "AP 격리"가 꺼져 있어야합니다. [자세한 내용보기 (영문)](http://www.howtogeek.com/179089/lock-down-your-wi-fi-network-with-your-routers-wireless-isolation-option/).  
-만약 여전히 연결 할 수 없다면... 잠깐 방화벽이나 백신을 꺼보세요. (특히 제3자 프로그램의!) 만약 문제가 계속된다면 시스템 관리자에게 연락 해보세요.
-
-> 제공된 안드로이드 어플리케이션을 깔았습니다.  하지만 계속 "Could not connect to the server"나 "Disconnected" 상태 입니다. 뭘 해야하죠?
-
-앱 말고 브라우저에서 한번 연결을 시도해봐주세요(위 답변을 참고). 만약에 브라우저에서는 사용 가능하다면 어플리케이션이 뭔가 잘못된겁니다. 다시시작이나 재설치를 해보세요..
+먼저 본 어플리케이션은 기본적으로는 Wi-Fi 환경에서만 동작합니다. 데이터 네트워크 (셀룰러 데이터, 3G, 4G, LTE 등)을 사용 중 이시라면 서버와 같은 Wi-Fi (혹은 공유기)에 연결해 주세요. 그런 다음 서버에서 알맞은 "네트워크 인터페이스를" 선턱해주세요. Wi-Fi 네트워크 (공유기 등)에 직접 연결된 네트워크를 선택해야 합니다. *보통은*  "Wi-Fi", "이더넷" 또는 "LAN"이라 되어있습니다. 또한 공유기에서 "AP 격리"가 꺼져 있어야합니다.[자세한 내용보기 (영문)](http://www.howtogeek.com/179089/lock-down-your-wi-fi-network-with-your-routers-wireless-isolation-option/).  
+만약 이렇게 해도 아직 안되신다면... 잠깐 방화벽이나 백신 (특히 V3 등의 제 3자 백신)을 꺼보세요. 그래도 문제가 지속된다면 시스템 관리자에게 연락 해 보세요.
 
 > 게임을 제대로 시작했지만 대시보드에는 "연결됬습니다. 주행을 기다리는 중..."이 표시됩니다. 뭐가 잘못됬죠?
 
-데스크탑의 서버 프로그램 창에서 "시뮬레이터에 연결됨" 상태 메시지가 정확히 뜨게 만들어주세요. 만약 "시뮬레이터가 실행중"이 대신 표시된다면 아마 telemetry 플러그인 (ets2-telemetry-server.dll) 설치가 잘못된 것 입니다. 만탹 "시뮬레이터가 실행중이 아님" 이라는 메시지가 뜨지만 실제로는 실행 중인 경우 아마 호환되지 않는 ETS2/ATS 버전을 실행 중일껍니다.
+데스크탑의 서버 어플리케이션에서 "시뮬레이터에 연결됨" 상태 메시지가 제대로 뜨게 만들어 주세요. 그 대신 "시뮬레이터가 실행중"가 뜬다면 Telemetry 플로그인 (ets2-telemetry-server.dll)이 잘못 설치된것 같네요. 본 어플리케이션의 [설치를 제거](#제거)한 뒤 다시 설치해주세요. 만약 이미 게임을 실행중인데 "시뮬레이터가 실행중이 아님" 이라는 메시지가 뜬다면 아마도 호환되지 않는 ETS2/ATS 버전을 실행 중 일꺼같습니다.
 
-> 대시보드 UI 애니메이션(속도계)가 종종 끊깁니다. 제 기기 사양이 충분하지 않은건가요? 무엇을 해야하죠?
+> 대시보드 UI 애니메이션(속도계)가 종종 끊깁니다. 제 기기 사양이 충분하지 않은건가요?
 
-HTML5 대시보드는 최근 브라우저와 빠른 인터넷 환경 (유선 연결 및 내부 Wi-Fi 통신. 같은 공유기 내 통신)에 최적화 되어있습니다. 아마 구형 기기나 구버전 웹브라우저에서는 문제를 겪을 수 있습니다.   
+HTML5 대시보드는 최신 브라우저와 빠른 인터넷 환경 (유선 연결 및 내부 Wi-Fi 통신. 같은 공유기 내 통신)에 최적화 되어있습니다. 아마 구형 기기나 구버전 웹브라우저에서는 문제를 겪을 수 있습니다.   
 
 몇몇 알려진 성능 예시 :   
 
-삼성 갤럭시 탭S (4.4.2)에서 매우 동작합니다만, 갤럭시 노트1이나 킨들 파이어HD는 부족한 GPU가 탑제됬거나 (한국용 LTE 지원 갤럭시 노트1) GPU 그래픽 가속이 꺼져있는 경우 제대로 동작하지 않습니다. 안드로이드 기기에서 최고의 성능을 내기 위해서는 기본 탑제된 앱 대신 Chrome 브라우저를 사용해 보세요 (하지만 대시보드를 사용하는 경우 설정에서 화면 꺼짐 시간 설정을 꺼야합니다).   
+삼성 갤럭시 탭S (4.4.2)에서 매우 동작합니다만, 갤럭시 노트1이나 킨들 파이어HD는 부족한 GPU가 탑제됬거나 (한국에서 출시된 갤럭시 노트1) GPU 그래픽 가속이 꺼져있는 경우 제대로 동작하지 않습니다. 안드로이드 기기에서 최고의 성능을 내기 위해서는 기본 탑제된 앱 대신 Chrome 브라우저를 사용해 보세요 (하지만 대시보드를 사용하는 경우 설정에서 화면 자동 꺼짐 시간 설정을 꺼야합니다).   
 
 iOS 8.0 이상 기기(아이폰6이나 아이패드 에어 이후 기기)에서는 부드럽게 잘 동작합니다. 하지만 iOS6.X 기기 (아이폰3GS, 아이팟 터치 4세대 이하)에서는 제대로 동작하지 않습니다. 만약 새 기기에서도 느린 현상이 나타난다면 앱을 모두 종료하고 다시시도 해주세요 (특히 사파리. 전원버튼을 꾹 눌러 전원 메뉴 상태에서 홈버튼을 5초간 꾹 누르면 모든 앱이 종료됩니다). 아마 이 방법이 크게 도와줄껍니다.   
 
@@ -148,9 +146,9 @@ iOS 8.0 이상 기기(아이폰6이나 아이패드 에어 이후 기기)에서�
 
 ## 대시보드 스킨 튜토리얼
 
-튜토리얼은 ZIP 안에 포함되어 있습니다. ("Dashboard Skin Tutorial.pdf" 영문 파일). 아니면 [여기]를 눌러 해당 파일만 보실 수 있습니다.(https://raw.githubusercontent.com/Funbit/ets2-telemetry-server/master/Dashboard%20Skin%20Tutorial.pdf).
+튜토리얼은 ZIP 안에 포함되어 있습니다. ("Dashboard Skin Tutorial.pdf" 영문 파일). 아니면 [여기](https://github.com/icaros7/ets2-kor-telemetry-server/blob/master/Dashboard%20Skin%20Tutorial.pdf)를 눌러 해당 파일만 보실 수 있습니다.
 
-## 지원
+## 기부
 
 이제 ETS2 Telemetry 웹 서버는 만드는데 엄청난 시간을 요구하는 꽤 복잡한 오픈 소스 프로젝트로 진화했습니다. 관심이 있다면 아래 버튼을 클릭하여 약간의 실질적인 지원을 원본 제작자(@Funbit)에게 줄수있습니다.
 
