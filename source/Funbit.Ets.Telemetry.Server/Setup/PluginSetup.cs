@@ -56,18 +56,36 @@ namespace Funbit.Ets.Telemetry.Server.Setup
 
                 if (!ets2State.IsPluginValid())
                 {
-                    ets2State.DetectPath();
-                    if (!ets2State.IsPathValid())
-                        ets2State.BrowserForValidPath(owner);
-                    ets2State.InstallPlugin();
+                    ets2State.DetectPathNum();
+                    for (; ets2State.try_num < ets2State.max_vdf; ets2State.try_num++)
+                    {
+                        ets2State.DetectPath2(ets2State.try_num);
+                        if (!ets2State.IsPathValid())
+                            continue;
+                        else if (ets2State.IsPathValid())
+                        {
+                            ets2State.InstallPlugin();
+                            break;
+                        }
+                    }
+                    ets2State.BrowserForValidPath(owner);
                 }
 
                 if (!atsState.IsPluginValid())
                 {
-                    atsState.DetectPath();
-                    if (!atsState.IsPathValid())
-                        atsState.BrowserForValidPath(owner);
-                    atsState.InstallPlugin();
+                    atsState.DetectPathNum();
+                    for (; atsState.try_num < atsState.max_vdf; atsState.try_num++)
+                    {
+                        atsState.DetectPath2(atsState.try_num);
+                        if (!atsState.IsPathValid())
+                            continue;
+                        else if (atsState.IsPathValid())
+                        {
+                            atsState.InstallPlugin();
+                            break;
+                        }
+                    }
+                    atsState.BrowserForValidPath(owner);
                 }
                 
                 Settings.Instance.Ets2GamePath = ets2State.GamePath;
@@ -114,6 +132,9 @@ namespace Funbit.Ets.Telemetry.Server.Setup
             const string TelemetryDllName = "ets2-telemetry-server.dll";
             const string TelemetryX64DllMd5 = "1e41e885881eda2886a30f06573fb20e";
             const string TelemetryX86DllMd5 = "f600b370e66f39546fcfb4977b95c933";
+            public int path_num = 0;
+            public int max_vdf = 0;
+            public int try_num = 0;
 
             readonly string _gameName;
 
@@ -240,6 +261,44 @@ namespace Funbit.Ets.Telemetry.Server.Setup
                 if (!string.IsNullOrEmpty(GamePath))
                     GamePath = Path.Combine(
                         GamePath.Replace('/', '\\'), @"SteamApps\common\" + GameDirectoryName);
+            }
+
+            public void DetectPath2(int try_n)
+            {
+                GamePath = GetDefaultSteamPath();
+                GamePath = GamePath.Replace('/', '\\');
+                if (try_num == 0)
+                {
+                    GamePath = Path.Combine(GamePath.Replace('/', '\\'), @"SteamApps\common\" + GameDirectoryName);
+                    return;
+                }
+                string LibraryFolders = File.ReadAllText(Path.Combine(GamePath, @"SteamApps\libraryfolders.vdf"));
+                string[] path = LibraryFolders.Split('"');
+                string SteamLibrary = "SteamLibrary";
+                if (System.Text.RegularExpressions.Regex.IsMatch(path[try_n], SteamLibrary, System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+                {
+                    GamePath = Path.Combine(path[try_n].Replace(@"\\", @"\"), @"SteamApps\common\" + GameDirectoryName);
+                }
+            }
+
+            public void DetectPathNum()
+            {
+                string SteamPath = GetDefaultSteamPath();
+                SteamPath = SteamPath.Replace('/', '\\');
+                if (File.Exists(Path.Combine(SteamPath, @"SteamApps\libraryfolders.vdf")))
+                {
+                    string LibraryFolders = File.ReadAllText(Path.Combine(SteamPath, @"SteamApps\libraryfolders.vdf"));
+                    string[] multi_path = LibraryFolders.Split('"');
+                    string SteamLibrary = "SteamLibrary";
+                    max_vdf = multi_path.Length;
+                    foreach (string s in multi_path)
+                    {
+                        if (System.Text.RegularExpressions.Regex.IsMatch(s, SteamLibrary, System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+                        {
+                            path_num++;
+                        }
+                    }
+                }
             }
 
             public void BrowserForValidPath(IWin32Window owner)

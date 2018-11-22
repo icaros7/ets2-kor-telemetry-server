@@ -120,8 +120,8 @@ namespace Funbit.Ets.Telemetry.Server
         {
             // log current version for debugging
             Log.InfoFormat("{0} ({1}) {2}에서 실행중", Environment.OSVersion, 
-                Environment.Is64BitOperatingSystem ? "64-bit" : "32-bit",
-                Program.UninstallMode ? "[UNINSTALL MODE]" : "");
+                Environment.Is64BitOperatingSystem ? "64비트" : "32비트",
+                Program.UninstallMode ? "[제거 모드]" : "");
             Text += @" " + AssemblyHelper.Version;
 
             // install or uninstall server if needed

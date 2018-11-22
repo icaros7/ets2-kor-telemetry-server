@@ -1,4 +1,4 @@
-## ETS2 Telemetry 웹 서버 3.2.6 + 모바일 대시보드 한글 버전
+## ETS2 Telemetry 웹 서버 3.2.7 + 모바일 대시보드 한글 버전
 
 이것은 [원본 ETS2 Telemetry 웹 서버](https://github.com/Funbit/ets2-telemetry-server) (@Funbit)을 한글화 및 일부 개선한 포크 입니다.
 
@@ -159,6 +159,9 @@ iOS 8.0 이상 기기(아이폰6이나 아이패드 에어 이후 기기)에서�
 감사합니다!
 
 ## 버전 체인지로그
+### 3.2.7
+- 스팀 라이브러리 검색을 통해 자동으로 설치 경로 탐색
+
 ### 3.2.6.1
 - 업데이트된 원본 플러그인 DLL MD5 누락 해결
 
@@ -192,6 +195,10 @@ iOS 8.0 이상 기기(아이폰6이나 아이패드 에어 이후 기기)에서�
 
 이전 버전 기록은 [원본 제작자 Funbit github (영문)](https://github.com/Funbit/ets2-telemetry-server)에서 보실 수 있습니다.
 
+### **알려진 버그**
+- 3.2.7~ // SteamLibrary.vdf 파일의 불필요 경로를 탐색 (로그 참조)
+- 3.2.5~ // 자가 트레일러 관련 표기 버그
+
 ## 한글화
 
 꽤 오래전에 사용하던 녀석인데 갑자기 유로트럭 하고 싶어 하다가 생각나서 다시 사용 중 이었습니다. 그러던중 그냥 한글화 한번 하고싶어서 해봤습니다.   
@@ -202,6 +209,10 @@ iOS 8.0 이상 기기(아이폰6이나 아이패드 에어 이후 기기)에서�
 원본 제작자
 
 [Funbit github (영문)](https://github.com/Funbit/ets2-telemetry-server)
+
+한글화
+
+[iCAROS7 github (영문)](https://github.com/icaros7/ets2-kor-telemetry-server)
 
 포럼
 
