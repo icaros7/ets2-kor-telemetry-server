@@ -356,6 +356,7 @@
 .game-nextRestStopTime,
 .navigation-estimatedTime,
 .navigation-estimatedDistance,
+._estimatedCom,
 ._estDis {
   color: #54d9a8;
 }
@@ -382,6 +383,7 @@
 .navigation-estimatedDistance,
 ._jobIncome,
 ._jobSource,
+._estimatedCom,
 ._jobDestionation {
   visibility: hidden;
 }
@@ -409,6 +411,7 @@
 .hasJob.yes .navigation-estimatedTime,
 .hasJob.yes ._jobSource,
 .hasJob.yes ._estimatedTime,
+.hasJob.yes ._estimatedCom,
 .hasJob.yes ._jobDestionation {
   visibility: visible;
 }
