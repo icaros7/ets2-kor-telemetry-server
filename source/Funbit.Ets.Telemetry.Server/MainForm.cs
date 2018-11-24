@@ -2,6 +2,7 @@
 using System.Configuration;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
@@ -11,6 +12,7 @@ using Funbit.Ets.Telemetry.Server.Controllers;
 using Funbit.Ets.Telemetry.Server.Data;
 using Funbit.Ets.Telemetry.Server.Helpers;
 using Funbit.Ets.Telemetry.Server.Setup;
+using IWshRuntimeLibrary;
 using Microsoft.Owin.Hosting;
 
 namespace Funbit.Ets.Telemetry.Server
@@ -260,7 +262,25 @@ namespace Funbit.Ets.Telemetry.Server
 
         private void 번역ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(this, @"한글화 : hominlab@minnote.net", @"한글화");
+        }
+
+        private void AddShortCutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string startupFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            var shell = new WshShell();
+            string shortCutLinkFilePath = startupFolderPath + @"Telemetry 서버.lnk";
+            var windowsApplicationShortcut = (IWshShortcut)shell.CreateShortcut(shortCutLinkFilePath);
+            windowsApplicationShortcut.Description = "ETS2/ATS Telemetry 웹 서버를 실행 합니다.";
+            windowsApplicationShortcut.WorkingDirectory = Application.StartupPath;
+            windowsApplicationShortcut.TargetPath = Application.ExecutablePath;
+            windowsApplicationShortcut.Save();
+            MessageBox.Show(shortCutLinkFilePath);
+            MessageBox.Show(@"바로가기가 바탕화면에 생성 되었습니다.", @"알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void TranslateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(this, @"한글화 : hominlab@minnote.net", @"한글화", MessageBoxButtons.OK ,MessageBoxIcon.Information);
         }
     }
 }
