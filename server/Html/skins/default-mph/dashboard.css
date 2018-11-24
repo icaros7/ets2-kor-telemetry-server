@@ -377,6 +377,7 @@
 .trailer-name,
 .navigation-speedLimit,
 .truck-parkBrakeOn,
+.truck-fuelAverageConsumption,
 ._truckWearInfo,
 ._trailerWearInfo,
 .job-remainingTime,
@@ -399,6 +400,7 @@
 .dashboard.game-connected.yes .navigation-speedLimit,
 .dashboard.game-connected.yes .truck-parkBrakeOn,
 .dashboard.game-connected.yes .truck-odometer,
+.dashboard.game-connected.yes .truck-fuelAverageConsumption,
 .dashboard.game-connected.yes .truck-speedRounded,
 .dashboard.game-connected.yes .truck-cruiseControlSpeedRounded:not([data-value="0"]) {
   visibility: visible;
