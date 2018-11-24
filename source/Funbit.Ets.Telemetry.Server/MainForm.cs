@@ -274,7 +274,6 @@ namespace Funbit.Ets.Telemetry.Server
             windowsApplicationShortcut.WorkingDirectory = Application.StartupPath;
             windowsApplicationShortcut.TargetPath = Application.ExecutablePath;
             windowsApplicationShortcut.Save();
-            MessageBox.Show(shortCutLinkFilePath);
             MessageBox.Show(@"바로가기가 바탕화면에 생성 되었습니다.", @"알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
