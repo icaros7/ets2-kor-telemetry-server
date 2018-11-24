@@ -447,7 +447,7 @@
                         var mnt = d.getUTCMinutes();
                         var o = dys > 1 ? dys + ' 일 ' : (dys != 0 ? dys + ' 일 ' : '');
                         if (hrs > 0)
-                            o += hrs > 1 ? hrs + ' 시간 ' : hrs + ' 시 ';
+                            o += hrs > 1 ? hrs + ' 시간 ' : hrs + ' 시간 ';
                         if (mnt > 0)
                             o += mnt > 1 ? mnt + ' 분' : mnt + ' 분';
                         if (!o)
@@ -465,7 +465,7 @@
                         var mnt = d.getUTCMinutes();
                         var o = dys > 1 ? dys + ' 일 ' : (dys != 0 ? dys + ' 일 ' : '');
                         if (hrs > 0)
-                            o += hrs > 1 ? hrs + ' 시간 ' : hrs + ' 시 ';
+                            o += hrs > 1 ? hrs + ' 시간 ' : hrs + ' 시간 ';
                         if (mnt > 0)
                             o += mnt > 1 ? mnt + ' 분' : mnt + ' 분';
                         if (!o)
