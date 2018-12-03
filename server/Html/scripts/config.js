@@ -29,7 +29,8 @@
                 Strings.couldNotConnectToServer = '서버에 연결 할 수 없습니다.';
                 Strings.connectedAndWaitingForDrive = '연결됬습니다. 주행을 기다리는 중...';
                 Strings.connectingToServer = '서버에 연결중...';
-				Strings.ownTrailler = "자가 트레일러";
+                Strings.ownTrailler = '자가 트레일러';
+                Strings.Arrived = '목적지에 도착';
                 return Strings;
             })();
             Telemetry.Strings = Strings;

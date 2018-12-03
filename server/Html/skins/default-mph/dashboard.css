@@ -356,6 +356,7 @@
 .game-nextRestStopTime,
 .navigation-estimatedTime,
 .navigation-estimatedDistance,
+._estimatedCom,
 ._estDis {
   color: #54d9a8;
 }
@@ -376,12 +377,14 @@
 .trailer-name,
 .navigation-speedLimit,
 .truck-parkBrakeOn,
+.truck-fuelAverageConsumption,
 ._truckWearInfo,
 ._trailerWearInfo,
 .job-remainingTime,
 .navigation-estimatedDistance,
 ._jobIncome,
 ._jobSource,
+._estimatedCom,
 ._jobDestionation {
   visibility: hidden;
 }
@@ -397,6 +400,7 @@
 .dashboard.game-connected.yes .navigation-speedLimit,
 .dashboard.game-connected.yes .truck-parkBrakeOn,
 .dashboard.game-connected.yes .truck-odometer,
+.dashboard.game-connected.yes .truck-fuelAverageConsumption,
 .dashboard.game-connected.yes .truck-speedRounded,
 .dashboard.game-connected.yes .truck-cruiseControlSpeedRounded:not([data-value="0"]) {
   visibility: visible;
@@ -409,6 +413,7 @@
 .hasJob.yes .navigation-estimatedTime,
 .hasJob.yes ._jobSource,
 .hasJob.yes ._estimatedTime,
+.hasJob.yes ._estimatedCom,
 .hasJob.yes ._jobDestionation {
   visibility: visible;
 }
