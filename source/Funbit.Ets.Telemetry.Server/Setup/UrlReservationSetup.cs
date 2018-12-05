@@ -23,8 +23,8 @@ namespace Funbit.Ets.Telemetry.Server.Setup
                 {
                     string port = ConfigurationManager.AppSettings["Port"];
                     string arguments = $@"http show urlacl url=http://+:{port}/";
-                    Log.Info("ACL 규칙 확인중...");
-                    string output = ProcessHelper.RunNetShell(arguments, "URL ACL 규칙 상태 확인 실패");
+                    Log.Info(StringLib.UrlReservation_CheckRule);
+                    string output = ProcessHelper.RunNetShell(arguments, StringLib.UrlReservation_FailedCheckRule);
                     _status = output.Contains(port) ? SetupStatus.Installed : SetupStatus.Uninstalled;    
                 }
             }
@@ -49,8 +49,8 @@ namespace Funbit.Ets.Telemetry.Server.Setup
                     "S-1-1-0").Translate(typeof(System.Security.Principal.NTAccount)).ToString();
                 string port = ConfigurationManager.AppSettings["Port"];
                 string arguments = string.Format("http add urlacl url=http://+:{0}/ user=\"\\{1}\"", port, everyone);
-                Log.Info("ACL 규칙을 추가중...");
-                ProcessHelper.RunNetShell(arguments, "URL ACL 규칙 추가 실패");
+                Log.Info(StringLib.UrlReservation_AddRule);
+                ProcessHelper.RunNetShell(arguments, StringLib.UrlReservation_FailedAddRule);
                 _status = SetupStatus.Installed;
             }
             catch (Exception ex)
@@ -74,8 +74,8 @@ namespace Funbit.Ets.Telemetry.Server.Setup
             {
                 string port = ConfigurationManager.AppSettings["Port"];
                 string arguments = $@"http delete urlacl url=http://+:{port}/";
-                Log.Info("ACL 규칙 제거중...");
-                ProcessHelper.RunNetShell(arguments, "URL ACL 규칙 제거 실패");
+                Log.Info(StringLib.UrlReservation_RmRule);
+                ProcessHelper.RunNetShell(arguments, StringLib.UrlReservation_FailedRmRule);
                 status = SetupStatus.Uninstalled;
             }
             catch (Exception ex)

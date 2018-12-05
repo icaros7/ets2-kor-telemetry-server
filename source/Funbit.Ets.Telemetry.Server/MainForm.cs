@@ -50,7 +50,7 @@ namespace Funbit.Ets.Telemetry.Server
             {
                 if (Program.UninstallMode && SetupManager.Steps.All(s => s.Status == SetupStatus.Uninstalled))
                 {
-                    MessageBox.Show(this, @"서버가 설치되어 있지 않습니다. 제거 할 수 없습니다.", @"완료",
+                    MessageBox.Show(this, StringLib.Uninstall_NotInstall, StringLib.Done,
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Environment.Exit(0);
                 }
@@ -69,7 +69,7 @@ namespace Funbit.Ets.Telemetry.Server
             catch (Exception ex)
             {
                 Log.Error(ex);
-                ex.ShowAsMessageBox(this, @"설치 오류");
+                ex.ShowAsMessageBox(this, StringLib.Error_Install);
             }
         }
 
@@ -114,17 +114,42 @@ namespace Funbit.Ets.Telemetry.Server
             catch (Exception ex)
             {
                 Log.Error(ex);
-                ex.ShowAsMessageBox(this, @"네트워크 오류", MessageBoxIcon.Exclamation);
+                ex.ShowAsMessageBox(this, StringLib.Error_Network, MessageBoxIcon.Exclamation);
             }
         }
         
         void MainForm_Load(object sender, EventArgs e)
         {
             // log current version for debugging
-            Log.InfoFormat("{0} ({1}) {2}에서 실행중", Environment.OSVersion, 
-                Environment.Is64BitOperatingSystem ? "64비트" : "32비트",
-                Program.UninstallMode ? "[제거 모드]" : "");
-            Text += @" " + AssemblyHelper.Version;
+            Log.InfoFormat("{0} ({1}) {2}", Environment.OSVersion, 
+                Environment.Is64BitOperatingSystem ? "64" + StringLib.CurrentVersion_Bit : "32" + StringLib.CurrentVersion_Bit,
+                Program.UninstallMode ? "[" + StringLib.CurrentVersion_UninstallMode + "]" : "" + StringLib.CurrentVersion_Running);
+
+            // Locale Apply
+
+            // Main Form Title
+            Text = StringLib.Title + @" " + AssemblyHelper.Version;
+            // ToolStripMenu_Sever
+            serverToolStripMenu.Text = StringLib.Menu_Server;
+            AddShortCutToolStripMenuItem.Text = StringLib.Menu_Server_ShortCut;
+            uninstallToolStripMenuItem.Text = StringLib.Menu_Server_Uninstall;
+
+            // ToolStripMenu_Help
+            helpToolStripMenuItem.Text = StringLib.Menu_Help;
+            helpToolStripMenu.Text = StringLib.Menu_Help;
+            donateToolStripMenuItem.Text = StringLib.Menu_Help_Donation;
+            aboutToolStripMenuItem.Text = StringLib.Menu_Help_About;
+            TranslateToolStripMenuItem.Text = StringLib.Menu_Help_Translate;
+
+            groupBox1.Text = StringLib.groupBox1;
+            statusTitleLabel.Text = StringLib.statusTitleLabel + @" :";
+            networkInterfaceTitleLabel.Text = StringLib.networkInterfaceTitleLabel + @" :";
+            serverIpTitleLabel.Text = StringLib.serverIpTitleLabel + @" :";
+            appUrlTitleLabel.Text = StringLib.appUrlTitleLabel + @" :";
+            apiEndpointUrlTitleLabel.Text = StringLib.apiEndpointUrlTitleLabel + @" :";
+
+            // status label
+            statusLabel.Text = StringLib.Checking;
 
             // install or uninstall server if needed
             Setup();
@@ -155,29 +180,29 @@ namespace Funbit.Ets.Telemetry.Server
             {
                 if (UseTestTelemetryData)
                 {
-                    statusLabel.Text = @"Ets2TestTelemetry.json에 연결됨";
+                    statusLabel.Text = @"Ets2TestTelemetry.json" + StringLib.statusLabel_ConnectedAt;
                     statusLabel.ForeColor = Color.DarkGreen;
                 } 
                 else if (Ets2ProcessHelper.IsEts2Running && Ets2TelemetryDataReader.Instance.IsConnected)
                 {
-                    statusLabel.Text = $"시뮬레이터에 연결됨 ({Ets2ProcessHelper.LastRunningGameName})";
+                    statusLabel.Text = $"{StringLib.statusLabel_ConnectedSim} ({Ets2ProcessHelper.LastRunningGameName})";
                     statusLabel.ForeColor = Color.DarkGreen;
                 }
                 else if (Ets2ProcessHelper.IsEts2Running)
                 {
-                    statusLabel.Text = $"시뮬레이터가 실행중 ({Ets2ProcessHelper.LastRunningGameName})";
+                    statusLabel.Text = $"{StringLib.statusLabel_RunningSim} ({Ets2ProcessHelper.LastRunningGameName})";
                     statusLabel.ForeColor = Color.Teal;
                 }
                 else
                 {
-                    statusLabel.Text = @"시뮬레이터가 실행중이 아님";
+                    statusLabel.Text = StringLib.statusLabel_NotRunningSim;
                     statusLabel.ForeColor = Color.FromArgb(240, 55, 30);
                 }
             }
             catch (Exception ex)
             {
                 Log.Error(ex);
-                ex.ShowAsMessageBox(this, @"프로세스 에러");
+                ex.ShowAsMessageBox(this, StringLib.Error_Process);
                 statusUpdateTimer.Enabled = false;
             }
         }
@@ -197,8 +222,8 @@ namespace Funbit.Ets.Telemetry.Server
             ShowInTaskbar = WindowState != FormWindowState.Minimized;
             if (!ShowInTaskbar && trayIcon.Tag == null)
             {
-                trayIcon.ShowBalloonTip(1000, @"ETS2/ATS Telemetry 서버", @"Double-click to restore.", ToolTipIcon.Info);
-                trayIcon.Tag = "이미 보여짐";
+                trayIcon.ShowBalloonTip(1000, StringLib.Title, StringLib.trayIcon_DoubleClick, ToolTipIcon.Info);
+                trayIcon.Tag = StringLib.trayIcon_Tag;
             }
         }
 
@@ -260,26 +285,22 @@ namespace Funbit.Ets.Telemetry.Server
 
         }
 
-        private void 번역ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
         private void AddShortCutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string startupFolderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             var shell = new WshShell();
-            string shortCutLinkFilePath = startupFolderPath + @"Telemetry 서버.lnk";
+            string shortCutLinkFilePath = startupFolderPath + @"\" + StringLib.AddShortCut_Name  + @".lnk";
             var windowsApplicationShortcut = (IWshShortcut)shell.CreateShortcut(shortCutLinkFilePath);
-            windowsApplicationShortcut.Description = "ETS2/ATS Telemetry 웹 서버를 실행 합니다.";
+            windowsApplicationShortcut.Description = StringLib.AddShortCut_Desciption;
             windowsApplicationShortcut.WorkingDirectory = Application.StartupPath;
             windowsApplicationShortcut.TargetPath = Application.ExecutablePath;
             windowsApplicationShortcut.Save();
-            MessageBox.Show(@"바로가기가 바탕화면에 생성 되었습니다.", @"알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(StringLib.AddShortCut_Done, StringLib.Information, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void TranslateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(this, @"한글화 : hominlab@minnote.net", @"한글화", MessageBoxButtons.OK ,MessageBoxIcon.Information);
+            MessageBox.Show(this, @"한국어 : hominlab@minnote.net", StringLib.Menu_Help_Translate, MessageBoxButtons.OK ,MessageBoxIcon.Information);
         }
     }
 }

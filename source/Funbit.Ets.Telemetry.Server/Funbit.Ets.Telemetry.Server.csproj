@@ -150,6 +150,11 @@
     <Compile Include="Helpers\Settings.cs" />
     <Compile Include="Helpers\Win32Uac.cs" />
     <Compile Include="Helpers\NetworkHelper.cs" />
+    <Compile Include="StringLib.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StringLib.resx</DependentUpon>
+    </Compile>
     <Compile Include="SetupForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -380,6 +385,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\app.ico" />
+    <EmbeddedResource Include="StringLib.en.resx" />
+    <EmbeddedResource Include="StringLib.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringLib.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="SetupForm.resx">
       <DependentUpon>SetupForm.cs</DependentUpon>
     </EmbeddedResource>

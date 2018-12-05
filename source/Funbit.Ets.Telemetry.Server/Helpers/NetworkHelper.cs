@@ -14,7 +14,7 @@ namespace Funbit.Ets.Telemetry.Server.Helpers
         {
             var interfaces = NetworkInterface.GetAllNetworkInterfaces();
 
-            Log.InfoFormat("다음과 같은 네트워크 인터페이스를 찾았습니다: {0}{1}", Environment.NewLine,
+            Log.InfoFormat(StringLib.NetworkHelper_GetAllNetInter+ ": {0}{1}", Environment.NewLine,
                 string.Join(", " + Environment.NewLine,
                     interfaces.Select(a => $"'{a.Id}': '{a.Name}' ({a.OperationalStatus})")));
 
@@ -32,7 +32,7 @@ namespace Funbit.Ets.Telemetry.Server.Helpers
 
             if (!foundInterfaces.Any())
                 throw new Exception(
-                    "시스템에 연결가능한 네트워크가 등록되있지 않습니다.");
+                    StringLib.NetworkHelper_Notfoundinter);
 
             return foundInterfaces;
         }

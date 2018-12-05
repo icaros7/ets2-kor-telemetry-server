@@ -21,7 +21,7 @@ namespace Funbit.Ets.Telemetry.Server.Setup
         {
             try
             {
-                Log.Info("플러그인 DLL 파일 확인중...");
+                Log.Info(StringLib.Plugin_CheckDLL);
                 
                 var ets2State = new GameState(Ets2, Settings.Instance.Ets2GamePath);
                 var atsState = new GameState(Ats, Settings.Instance.AtsGamePath);
@@ -168,7 +168,7 @@ namespace Funbit.Ets.Telemetry.Server.Setup
                 var baseScsPath = Path.Combine(GamePath, "base.scs");
                 var binPath = Path.Combine(GamePath, "bin");
                 bool validated = File.Exists(baseScsPath) && Directory.Exists(binPath);
-                Log.InfoFormat("{2} 경로 확인중 : '{0}' ... {1}", GamePath, validated ? "확인" : "실패", _gameName);
+                Log.InfoFormat("{2} {3} : '{0}' ... {1}", GamePath, validated ? StringLib.Plugin_Ok : StringLib.Plugin_Failed, _gameName, StringLib.Plugin_CheckPath);
                 return validated;
             }
 
@@ -192,10 +192,10 @@ namespace Funbit.Ets.Telemetry.Server.Setup
                 string x64DllFileName = GetTelemetryPluginDllFileName(GamePath, x64: true);
                 string x86DllFileName = GetTelemetryPluginDllFileName(GamePath, x64: false);
 
-                Log.InfoFormat("{1} x86 플러그인 DLL 파일을 복사중 : {0}", x86DllFileName, _gameName);
+                Log.InfoFormat("{1} x86 {3} : {0}", x86DllFileName, _gameName, StringLib.Plugin_CopyDLL);
                 File.Copy(LocalEts2X86TelemetryPluginDllFileName, x86DllFileName, true);
 
-                Log.InfoFormat("Copying {1} x64 플러그인 DLL 파일을 복사중 : {0}", x64DllFileName, _gameName);
+                Log.InfoFormat("{1} x64 {3} : {0}", x64DllFileName, _gameName, StringLib.Plugin_CopyDLL);
                 File.Copy(LocalEts2X64TelemetryPluginDllFileName, x64DllFileName, true);
             }
 
@@ -204,7 +204,7 @@ namespace Funbit.Ets.Telemetry.Server.Setup
                 if (GamePath == InstallationSkippedPath)
                     return;
 
-                Log.InfoFormat("{0}의 플러그인 DLL 파일을 백업중...", _gameName);
+                Log.InfoFormat("{0}{1}", _gameName, StringLib.Plugin_BackupDLL);
                 string x64DllFileName = GetTelemetryPluginDllFileName(GamePath, x64: true);
                 string x86DllFileName = GetTelemetryPluginDllFileName(GamePath, x64: false);
                 string x86BakFileName = Path.ChangeExtension(x86DllFileName, ".bak");
@@ -284,6 +284,10 @@ namespace Funbit.Ets.Telemetry.Server.Setup
             public void DetectPathNum()
             {
                 string SteamPath = GetDefaultSteamPath();
+                if (SteamPath == null)
+                {
+                    return;
+                }
                 SteamPath = SteamPath.Replace('/', '\\');
                 if (File.Exists(Path.Combine(SteamPath, @"SteamApps\libraryfolders.vdf")))
                 {
@@ -306,19 +310,19 @@ namespace Funbit.Ets.Telemetry.Server.Setup
                 while (!IsPathValid())
                 {
                     var result = MessageBox.Show(owner,
-                        _gameName + @"의 경로를 탐지하지 못했습니다. " + Environment.NewLine +
-                        @"만약 " + _gameName + @"를 설치하지 않았다면 [취소]를 눌러 넘깁니다." + Environment.NewLine +
-                        @"아니라면 [확인]을 눌러 경로를 직접 설정합니다." + Environment.NewLine + Environment.NewLine +
-                        @"예시 :" + Environment.NewLine + @"D:\STEAM\SteamApps\common\" + 
+                        _gameName + StringLib.Plugin_PathVaild1 + Environment.NewLine +
+                        StringLib.Plugin_PathVaild2 + _gameName + StringLib.Plugin_PathVaild3 + Environment.NewLine +
+                        StringLib.Plugin_PathVaild4 + Environment.NewLine + Environment.NewLine +
+                        StringLib.Plugin_PathVaild5 + Environment.NewLine + @"D:\STEAM\SteamApps\common\" + 
                         GameDirectoryName,
-                        @"경고", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+                        StringLib.Warning, MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
                     if (result == DialogResult.Cancel)
                     {
                         GamePath = InstallationSkippedPath;
                         return;
                     }
                     var browser = new FolderBrowserDialog();
-                    browser.Description = _gameName + @"의 경로가 선택됨";
+                    browser.Description = _gameName + StringLib.Plugin_BrowserDes;
                     browser.ShowNewFolderButton = false;
                     result = browser.ShowDialog(owner);
                     if (result == DialogResult.Cancel)
