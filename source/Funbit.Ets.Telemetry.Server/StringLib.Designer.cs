@@ -61,7 +61,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   ETS2/ATS Telemetry 서버를 실행 합니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Execute ETS2/ATS Telemetry Server.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string AddShortCut_Desciption {
             get {
@@ -70,7 +70,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   바로가기가 바탕화면에 생성 되었습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Shortcut was been installed successfully!과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string AddShortCut_Done {
             get {
@@ -79,7 +79,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   Telemetry 서버과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Telemetry Server과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string AddShortCut_Name {
             get {
@@ -88,7 +88,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   다른 ETS2/ATS Telemetry 서버가 이미 실행 중 입니다!!과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Another ETS2/ATS Telemetry Server instance is already running!과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string AnotherInstanceRunning {
             get {
@@ -97,7 +97,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   Telemetry API 주소과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Telemetry API URL과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string apiEndpointUrlTitleLabel {
             get {
@@ -106,7 +106,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   HTML5 앱 주소과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   HTML5 App URL과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string appUrlTitleLabel {
             get {
@@ -115,7 +115,16 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   비트과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Checking...과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Checking {
+            get {
+                return ResourceManager.GetString("Checking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   -Bit과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string CurrentVersion_Bit {
             get {
@@ -124,7 +133,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   에서 실행중과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///    running application on.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string CurrentVersion_Running {
             get {
@@ -133,7 +142,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   제거 모드과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   UNSTALL MODE과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string CurrentVersion_UninstallMode {
             get {
@@ -142,7 +151,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   완료과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Done과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Done {
             get {
@@ -151,7 +160,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   설치 오류과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Install error과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Error_Install {
             get {
@@ -160,7 +169,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   네트워크 오류과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Network error과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Error_Network {
             get {
@@ -169,7 +178,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   프로세스 에러과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Process error과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Error_Process {
             get {
@@ -178,7 +187,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   설정 에러과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Setup error과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Error_Setup {
             get {
@@ -187,7 +196,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   방화벽 규칙 추가중...과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Adding Firewall rule...과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Firewall_AddRule {
             get {
@@ -196,7 +205,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   방화벽 규칙 확인중...과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Checking Firewall rule...과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Firewall_CheckRule {
             get {
@@ -205,7 +214,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   방화벽 규칙 추가 실패과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Failed to add Firewall rule과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Firewall_FailedAddRule {
             get {
@@ -214,7 +223,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   방화벽 규칙 상태 확인 실패과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Failed to check Firewall rule status과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Firewall_FailedCheckRule {
             get {
@@ -223,7 +232,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   방화벽 규칙 제거 실패과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Failed to delete Firewall rule과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Firewall_FailedRmRule {
             get {
@@ -232,7 +241,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   방화벽 규칙 제거중...과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Deleting Firewall rule...과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Firewall_RmRule {
             get {
@@ -241,7 +250,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   ETS2 TELEMETRY 서버 (포트 과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   ETS2 TELEMETRY SERVER (PORT 과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Firewall_RuleName {
             get {
@@ -250,7 +259,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   윈도우 방화벽에 연결 할 수 없습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Cannot configure Windows Firewall.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Firewall_WFMissing1 {
             get {
@@ -259,7 +268,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   만약 제3자 소프트웨어 백신(V3, 카스퍼스키 등)을 사용중 이라면,과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   If you are using some 3rd-party firewall please과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Firewall_WFMissing2 {
             get {
@@ -268,7 +277,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   번 TCP 포트를 직접 열어주세요!과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   TCP port manually, open!과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Firewall_WFMissing3 {
             get {
@@ -277,7 +286,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   번 TCP 포트를 직접 닫아주세요!과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   TCP port manually, close!과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Firewall_WFMissing3_1 {
             get {
@@ -286,7 +295,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   설정 상태과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Setup status과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string groupBox {
             get {
@@ -295,7 +304,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   서버 상태과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Server Status과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string groupBox1 {
             get {
@@ -304,7 +313,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   도움말과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Help과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string helpLabel {
             get {
@@ -313,7 +322,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   알림과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Information과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Information {
             get {
@@ -322,7 +331,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   서버가 성공적으로 설치되었습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Server has been successfully installed.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Install_Mode_Fin1 {
             get {
@@ -331,7 +340,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   확인을 누르시면 서버가 시작됩니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Press OK to start the server.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Install_Mode_Fin2 {
             get {
@@ -340,7 +349,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   서버가 설치되었지만 오류가 있습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Server has been installed with errors.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Install_Mode_NotFin1 {
             get {
@@ -349,7 +358,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   확인을 누르시면 종료됩니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Press OK to start the server.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Install_Mode_NotFin2 {
             get {
@@ -358,7 +367,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   번 포트에 대한 방화벽 허용 규칙을 추가합니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///    port. Add friewall rule for과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Install_Status_firewall {
             get {
@@ -367,7 +376,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   설치과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Install과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Install_Status_okButton {
             get {
@@ -376,7 +385,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   ETS2/ATS telemetry 플로그인 DLL을 설치합니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Install ETS2/ATS telemetry plugin DLL과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Install_Status_plugin {
             get {
@@ -385,7 +394,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   에 대한 ACL 허용 규칙을 추가합니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   . Add ACL rule for과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Install_Status_urlReservation {
             get {
@@ -394,7 +403,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   설정 과정중엔 ETS2 혹은 ATS가 실행중이면 안됩니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   In order to proceed the ETS2/ATS game must not be running.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string IsEts2Running1 {
             get {
@@ -403,7 +412,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   게임을 우선 종료하시고, 다시시도 해주세요.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Please exit the game and try again.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string IsEts2Running2 {
             get {
@@ -412,7 +421,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   도움말과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Help과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Menu_Help {
             get {
@@ -421,7 +430,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   이 프로그램은...과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   About과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Menu_Help_About {
             get {
@@ -430,7 +439,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   원 제작자에게 기부과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Donate과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Menu_Help_Donation {
             get {
@@ -439,7 +448,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   번역과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Translate과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Menu_Help_Translate {
             get {
@@ -448,7 +457,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   서버과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Server과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Menu_Server {
             get {
@@ -457,7 +466,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   바탕화면에 바로가기 추가과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Add Shortcut at Desktop과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Menu_Server_ShortCut {
             get {
@@ -466,7 +475,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   설치 제거과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Uninstall과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Menu_Server_Uninstall {
             get {
@@ -475,7 +484,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   다음과 같은 네트워크 인터페이스를 찾았습니다과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Found following network interfaces과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string NetworkHelper_GetAllNetInter {
             get {
@@ -484,7 +493,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   시스템에 연결가능한 네트워크가 등록되있지 않습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   System does not have any registered network interfaces that are connected to a network.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string NetworkHelper_Notfoundinter {
             get {
@@ -493,7 +502,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   네트워크 인터페이스과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Network Interfaces과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string networkInterfaceTitleLabel {
             get {
@@ -502,7 +511,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   설치과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Install과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string okButton {
             get {
@@ -511,7 +520,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   의 플러그인 DLL 파일을 백업중...과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   &apos;s plugin dll file backing up...과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Plugin_BackupDLL {
             get {
@@ -520,7 +529,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   의 경로를 선택 해 주세요.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///    - Select game path과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Plugin_BrowserDes {
             get {
@@ -529,7 +538,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   플러그인 DLL 파일 확인중...과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Checking plugin DLL files...과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Plugin_CheckDLL {
             get {
@@ -538,7 +547,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   경로 확인중과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///    - Checking Path과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Plugin_CheckPath {
             get {
@@ -547,7 +556,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   플러그인 DLL 파일을 복사중과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///    - Copy Plugin DLL File과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Plugin_CopyDLL {
             get {
@@ -556,7 +565,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   실패과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Fail과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Plugin_Failed {
             get {
@@ -565,7 +574,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   확인과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   OK과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Plugin_Ok {
             get {
@@ -574,7 +583,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   의 경로를 탐색하지 못했습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   &apos;s game path, Could not detect과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Plugin_PathVaild1 {
             get {
@@ -583,7 +592,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   만약과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   If you do not have 과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Plugin_PathVaild2 {
             get {
@@ -592,7 +601,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   를 설치하지 않았다면 [취소]를 눌러 넘깁니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///    installed press [Cancel] to skip,과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Plugin_PathVaild3 {
             get {
@@ -601,7 +610,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   아니라면 [확인]을 눌러 경로를 직접 설정합니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   otherwise press [OK] to select path manually.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Plugin_PathVaild4 {
             get {
@@ -610,7 +619,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   예시과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   For example : 과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Plugin_PathVaild5 {
             get {
@@ -619,7 +628,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   실행 명령어과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Running command line과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string ProcessHelper_RunArgs {
             get {
@@ -628,7 +637,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   실행 실패한 프로세스과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Failed to start process과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string ProcessHelper_RunFailed {
             get {
@@ -637,7 +646,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   서버 주소과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Server IP과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string serverIpTitleLabel {
             get {
@@ -646,7 +655,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   서버 에러과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Server Error과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string StaticFileController_ISError {
             get {
@@ -655,7 +664,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   페이지를 찾을 수 없음!과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Page not found!과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string StaticFileController_NotFoud {
             get {
@@ -664,7 +673,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   에 연결됨과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///    Connected to과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string statusLabel_ConnectedAt {
             get {
@@ -673,7 +682,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   시뮬레이터에 연결됨과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Connected to the simulator과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string statusLabel_ConnectedSim {
             get {
@@ -682,7 +691,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   시뮬레이터가 실행중이 아님과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Simulator is not running과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string statusLabel_NotRunningSim {
             get {
@@ -691,7 +700,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   시뮬레이터가 실행중과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Simulator is running과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string statusLabel_RunningSim {
             get {
@@ -700,7 +709,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   상태과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Status과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string statusTitleLabel {
             get {
@@ -709,7 +718,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   ETS2/ATS Telemetry 서버과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   ETS2/ATS Telemetry Server과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Title {
             get {
@@ -718,7 +727,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   설정과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Setup과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Title_Setup {
             get {
@@ -727,7 +736,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   더블클릭하여 열기과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Double-click to restore과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string trayIcon_DoubleClick {
             get {
@@ -736,7 +745,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   이미 열려 있습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Already shown과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string trayIcon_Tag {
             get {
@@ -745,7 +754,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   서버가 성공적으로 제거되었습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Server has been successfully uninstalled.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Uninstall_Mode_Fin1 {
             get {
@@ -754,7 +763,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   확인을 누르면 종료됩니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Press OK to exit과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Uninstall_Mode_Fin2 {
             get {
@@ -763,7 +772,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   서버가 제거되었지만 오류가 있습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Server has been unstinalled with errors.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Uninstall_Mode_NotFin1 {
             get {
@@ -772,7 +781,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   확인을 누르시면 종료됩니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Press OK to exit.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Uninstall_Mode_NotFin2 {
             get {
@@ -781,7 +790,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   서버가 설치되어 있지 않습니다. 제거 할 수 없습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Server is not installed, nothing to uninstall.과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Uninstall_NotInstall {
             get {
@@ -790,7 +799,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   번 포트에 대한 방화벽 허용 규칙을 지웁니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///    port, Delete firewall rule for과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Uninstall_Status_firewall {
             get {
@@ -799,7 +808,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   설치 제거과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Uninstall과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Uninstall_Status_okButton {
             get {
@@ -808,7 +817,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   ETS2/ATS Telemetry 플러그인 DLL을 지웁니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Uninstall ETS2/ATS telemetry plugin DLL과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Uninstall_Status_plugin {
             get {
@@ -817,7 +826,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   에 대한 ACL 규칙을 지웁니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   , Delete ACL rule for과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Uninstall_Status_urlReservation {
             get {
@@ -826,7 +835,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   ACL 규칙을 추가중...과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Adding ACL rule...과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string UrlReservation_AddRule {
             get {
@@ -835,7 +844,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   ACL 규칙 확인중과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Checking ACL rule status...과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string UrlReservation_CheckRule {
             get {
@@ -844,7 +853,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   URL ACL 규칙 추가 실패과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Failed to add URL ACL과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string UrlReservation_FailedAddRule {
             get {
@@ -853,7 +862,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   URL ACL 규칙 상태 확인 실패과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Failed to check URL ACL status과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string UrlReservation_FailedCheckRule {
             get {
@@ -862,7 +871,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   URL ACL 규칙 제거 실패과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Failed to delete URL ACL과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string UrlReservation_FailedRmRule {
             get {
@@ -871,7 +880,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   ACL 규칙 제거중...과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Deleting ACL rule...과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string UrlReservation_RmRule {
             get {
@@ -880,7 +889,7 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
-        ///   경고과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   Warining과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Warning {
             get {

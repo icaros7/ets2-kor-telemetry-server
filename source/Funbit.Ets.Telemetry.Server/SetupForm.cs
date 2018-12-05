@@ -113,6 +113,10 @@ namespace Funbit.Ets.Telemetry.Server
                     _setupStatusImages.Add(step, urlReservationStatusImage);
                 SetStepStatus(step, step.Status);
             }
+
+            // Locale Apply
+            groupBox.Text = StringLib.groupBox;
+            helpLabel.Text = StringLib.helpLabel;
         }
 
         private void okButton_Click(object sender, EventArgs e)

@@ -284,6 +284,10 @@ namespace Funbit.Ets.Telemetry.Server.Setup
             public void DetectPathNum()
             {
                 string SteamPath = GetDefaultSteamPath();
+                if (SteamPath == null)
+                {
+                    return;
+                }
                 SteamPath = SteamPath.Replace('/', '\\');
                 if (File.Exists(Path.Combine(SteamPath, @"SteamApps\libraryfolders.vdf")))
                 {

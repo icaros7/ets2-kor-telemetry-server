@@ -148,6 +148,9 @@ namespace Funbit.Ets.Telemetry.Server
             appUrlTitleLabel.Text = StringLib.appUrlTitleLabel + @" :";
             apiEndpointUrlTitleLabel.Text = StringLib.apiEndpointUrlTitleLabel + @" :";
 
+            // status label
+            statusLabel.Text = StringLib.Checking;
+
             // install or uninstall server if needed
             Setup();
 
