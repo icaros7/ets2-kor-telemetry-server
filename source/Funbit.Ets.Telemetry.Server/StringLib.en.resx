@@ -313,6 +313,12 @@
   <data name="serverIpTitleLabel" xml:space="preserve">
     <value>Server IP</value>
   </data>
+  <data name="StaticFileController_ISError" xml:space="preserve">
+    <value>Server Error</value>
+  </data>
+  <data name="StaticFileController_NotFoud" xml:space="preserve">
+    <value>Page not found!</value>
+  </data>
   <data name="statusLabel_ConnectedAt" xml:space="preserve">
     <value> Connected to</value>
   </data>

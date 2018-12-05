@@ -646,6 +646,24 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
+        ///   서버 에러과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string StaticFileController_ISError {
+            get {
+                return ResourceManager.GetString("StaticFileController_ISError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   페이지를 찾을 수 없음!과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string StaticFileController_NotFoud {
+            get {
+                return ResourceManager.GetString("StaticFileController_NotFoud", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   에 연결됨과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string statusLabel_ConnectedAt {

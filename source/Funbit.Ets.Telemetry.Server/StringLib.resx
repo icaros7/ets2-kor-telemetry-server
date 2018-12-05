@@ -323,6 +323,12 @@
   <data name="ProcessHelper_RunFailed" xml:space="preserve">
     <value>실행 실패한 프로세스</value>
   </data>
+  <data name="StaticFileController_ISError" xml:space="preserve">
+    <value>서버 에러</value>
+  </data>
+  <data name="StaticFileController_NotFoud" xml:space="preserve">
+    <value>페이지를 찾을 수 없음!</value>
+  </data>
   <data name="statusLabel_ConnectedAt" xml:space="preserve">
     <value>에 연결됨</value>
   </data>
