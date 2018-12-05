@@ -88,6 +88,15 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
+        ///   다른 ETS2/ATS Telemetry 서버가 이미 실행 중 입니다!!과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string AnotherInstanceRunning {
+            get {
+                return ResourceManager.GetString("AnotherInstanceRunning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Telemetry API 주소과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string apiEndpointUrlTitleLabel {
@@ -462,6 +471,24 @@ namespace Funbit.Ets.Telemetry.Server {
         internal static string Menu_Server_Uninstall {
             get {
                 return ResourceManager.GetString("Menu_Server_Uninstall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   다음과 같은 네트워크 인터페이스를 찾았습니다과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string NetworkHelper_GetAllNetInter {
+            get {
+                return ResourceManager.GetString("NetworkHelper_GetAllNetInter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   시스템에 연결가능한 네트워크가 등록되있지 않습니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string NetworkHelper_Notfoundinter {
+            get {
+                return ResourceManager.GetString("NetworkHelper_Notfoundinter", resourceCulture);
             }
         }
         
