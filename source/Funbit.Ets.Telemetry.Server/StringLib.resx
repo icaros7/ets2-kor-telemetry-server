@@ -118,286 +118,286 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AddShortCut_Desciption" xml:space="preserve">
-    <value>Execute ETS2/ATS Telemetry Server.</value>
+    <value>ETS2/ATS Telemetry 서버를 실행 합니다.</value>
   </data>
   <data name="AddShortCut_Done" xml:space="preserve">
-    <value>Shortcut was been installed successfully!</value>
+    <value>바로가기가 바탕화면에 생성 되었습니다.</value>
   </data>
   <data name="AddShortCut_Name" xml:space="preserve">
-    <value>Telemetry Server</value>
+    <value>Telemetry 서버</value>
   </data>
   <data name="AnotherInstanceRunning" xml:space="preserve">
-    <value>Another ETS2/ATS Telemetry Server instance is already running!</value>
+    <value>다른 ETS2/ATS Telemetry 서버가 이미 실행 중 입니다!!</value>
   </data>
   <data name="apiEndpointUrlTitleLabel" xml:space="preserve">
-    <value>Telemetry API URL</value>
+    <value>Telemetry API 주소</value>
   </data>
   <data name="appUrlTitleLabel" xml:space="preserve">
-    <value>HTML5 App URL</value>
+    <value>HTML5 앱 주소</value>
   </data>
   <data name="Checking" xml:space="preserve">
-    <value>Checking...</value>
+    <value>확인중...</value>
   </data>
   <data name="CurrentVersion_Bit" xml:space="preserve">
-    <value>-Bit</value>
+    <value>비트</value>
   </data>
   <data name="CurrentVersion_Running" xml:space="preserve">
-    <value> running application on.</value>
+    <value>에서 실행중</value>
   </data>
   <data name="CurrentVersion_UninstallMode" xml:space="preserve">
-    <value>UNSTALL MODE</value>
+    <value>제거 모드</value>
   </data>
   <data name="Done" xml:space="preserve">
-    <value>Done</value>
+    <value>완료</value>
   </data>
   <data name="Error_Install" xml:space="preserve">
-    <value>Install error</value>
+    <value>설치 오류</value>
   </data>
   <data name="Error_Network" xml:space="preserve">
-    <value>Network error</value>
+    <value>네트워크 오류</value>
   </data>
   <data name="Error_Process" xml:space="preserve">
-    <value>Process error</value>
+    <value>프로세스 에러</value>
   </data>
   <data name="Error_Setup" xml:space="preserve">
-    <value>Setup error</value>
+    <value>설정 에러</value>
   </data>
   <data name="Firewall_AddRule" xml:space="preserve">
-    <value>Adding Firewall rule...</value>
+    <value>방화벽 규칙 추가중...</value>
   </data>
   <data name="Firewall_CheckRule" xml:space="preserve">
-    <value>Checking Firewall rule...</value>
+    <value>방화벽 규칙 확인중...</value>
   </data>
   <data name="Firewall_FailedAddRule" xml:space="preserve">
-    <value>Failed to add Firewall rule</value>
+    <value>방화벽 규칙 추가 실패</value>
   </data>
   <data name="Firewall_FailedCheckRule" xml:space="preserve">
-    <value>Failed to check Firewall rule status</value>
+    <value>방화벽 규칙 상태 확인 실패</value>
   </data>
   <data name="Firewall_FailedRmRule" xml:space="preserve">
-    <value>Failed to delete Firewall rule</value>
+    <value>방화벽 규칙 제거 실패</value>
   </data>
   <data name="Firewall_RmRule" xml:space="preserve">
-    <value>Deleting Firewall rule...</value>
+    <value>방화벽 규칙 제거중...</value>
   </data>
   <data name="Firewall_RuleName" xml:space="preserve">
-    <value>ETS2 TELEMETRY SERVER (PORT </value>
+    <value>ETS2 TELEMETRY 서버 (포트 </value>
   </data>
   <data name="Firewall_WFMissing1" xml:space="preserve">
-    <value>Cannot configure Windows Firewall.</value>
+    <value>윈도우 방화벽에 연결 할 수 없습니다.</value>
   </data>
   <data name="Firewall_WFMissing2" xml:space="preserve">
-    <value>If you are using some 3rd-party firewall please</value>
+    <value>만약 제3자 소프트웨어 백신(V3, 카스퍼스키 등)을 사용중 이라면,</value>
   </data>
   <data name="Firewall_WFMissing3" xml:space="preserve">
-    <value>TCP port manually, open!</value>
+    <value>번 TCP 포트를 직접 열어주세요!</value>
   </data>
   <data name="Firewall_WFMissing3_1" xml:space="preserve">
-    <value>TCP port manually, close!</value>
+    <value>번 TCP 포트를 직접 닫아주세요!</value>
   </data>
   <data name="groupBox" xml:space="preserve">
-    <value>Setup status</value>
+    <value>설정 상태</value>
     <comment>SetupForm GropBox</comment>
   </data>
   <data name="groupBox1" xml:space="preserve">
-    <value>Server Status</value>
+    <value>서버 상태</value>
   </data>
   <data name="helpLabel" xml:space="preserve">
-    <value>Help</value>
+    <value>도움말</value>
   </data>
   <data name="Information" xml:space="preserve">
-    <value>Information</value>
+    <value>알림</value>
   </data>
   <data name="Install_Mode_Fin1" xml:space="preserve">
-    <value>Server has been successfully installed.</value>
+    <value>서버가 성공적으로 설치되었습니다.</value>
   </data>
   <data name="Install_Mode_Fin2" xml:space="preserve">
-    <value>Press OK to start the server.</value>
+    <value>확인을 누르시면 서버가 시작됩니다.</value>
   </data>
   <data name="Install_Mode_NotFin1" xml:space="preserve">
-    <value>Server has been installed with errors.</value>
+    <value>서버가 설치되었지만 오류가 있습니다.</value>
   </data>
   <data name="Install_Mode_NotFin2" xml:space="preserve">
-    <value>Press OK to start the server.</value>
+    <value>확인을 누르시면 종료됩니다.</value>
   </data>
   <data name="Install_Status_firewall" xml:space="preserve">
-    <value> port. Add friewall rule for</value>
+    <value>번 포트에 대한 방화벽 허용 규칙을 추가합니다.</value>
   </data>
   <data name="Install_Status_okButton" xml:space="preserve">
-    <value>Install</value>
+    <value>설치</value>
   </data>
   <data name="Install_Status_plugin" xml:space="preserve">
-    <value>Install ETS2/ATS telemetry plugin DLL</value>
+    <value>ETS2/ATS telemetry 플로그인 DLL을 설치합니다.</value>
   </data>
   <data name="Install_Status_urlReservation" xml:space="preserve">
-    <value>. Add ACL rule for</value>
+    <value>에 대한 ACL 허용 규칙을 추가합니다.</value>
   </data>
   <data name="IsEts2Running1" xml:space="preserve">
-    <value>In order to proceed the ETS2/ATS game must not be running.</value>
+    <value>설정 과정중엔 ETS2 혹은 ATS가 실행중이면 안됩니다.</value>
   </data>
   <data name="IsEts2Running2" xml:space="preserve">
-    <value>Please exit the game and try again.</value>
+    <value>게임을 우선 종료하시고, 다시시도 해주세요.</value>
   </data>
   <data name="Menu_Help" xml:space="preserve">
-    <value>Help</value>
+    <value>도움말</value>
   </data>
   <data name="Menu_Help_About" xml:space="preserve">
-    <value>About</value>
+    <value>이 프로그램은...</value>
   </data>
   <data name="Menu_Help_Donation" xml:space="preserve">
-    <value>Donate</value>
+    <value>원 제작자에게 기부</value>
   </data>
   <data name="Menu_Help_Translate" xml:space="preserve">
-    <value>Translate</value>
+    <value>번역</value>
   </data>
   <data name="Menu_Server" xml:space="preserve">
-    <value>Server</value>
+    <value>서버</value>
   </data>
   <data name="Menu_Server_ShortCut" xml:space="preserve">
-    <value>Add Shortcut at Desktop</value>
+    <value>바탕화면에 바로가기 추가</value>
   </data>
   <data name="Menu_Server_Uninstall" xml:space="preserve">
-    <value>Uninstall</value>
+    <value>설치 제거</value>
   </data>
   <data name="NetworkHelper_GetAllNetInter" xml:space="preserve">
-    <value>Found following network interfaces</value>
+    <value>다음과 같은 네트워크 인터페이스를 찾았습니다</value>
   </data>
   <data name="NetworkHelper_Notfoundinter" xml:space="preserve">
-    <value>System does not have any registered network interfaces that are connected to a network.</value>
+    <value>시스템에 연결가능한 네트워크가 등록되있지 않습니다.</value>
   </data>
   <data name="networkInterfaceTitleLabel" xml:space="preserve">
-    <value>Network Interfaces</value>
+    <value>네트워크 인터페이스</value>
   </data>
   <data name="okButton" xml:space="preserve">
-    <value>Install</value>
+    <value>설치</value>
   </data>
   <data name="Plugin_BackupDLL" xml:space="preserve">
-    <value>'s plugin dll file backing up...</value>
+    <value>의 플러그인 DLL 파일을 백업중...</value>
   </data>
   <data name="Plugin_BrowserDes" xml:space="preserve">
-    <value> - Select game path</value>
+    <value>의 경로를 선택 해 주세요.</value>
   </data>
   <data name="Plugin_CheckDLL" xml:space="preserve">
-    <value>Checking plugin DLL files...</value>
+    <value>플러그인 DLL 파일 확인중...</value>
   </data>
   <data name="Plugin_CheckPath" xml:space="preserve">
-    <value> - Checking Path</value>
+    <value>경로 확인중</value>
   </data>
   <data name="Plugin_CopyDLL" xml:space="preserve">
-    <value> - Copy Plugin DLL File</value>
+    <value>플러그인 DLL 파일을 복사중</value>
   </data>
   <data name="Plugin_Failed" xml:space="preserve">
-    <value>Fail</value>
+    <value>실패</value>
   </data>
   <data name="Plugin_Ok" xml:space="preserve">
-    <value>OK</value>
+    <value>확인</value>
   </data>
   <data name="Plugin_PathVaild1" xml:space="preserve">
-    <value>'s game path, Could not detect</value>
+    <value>의 경로를 탐색하지 못했습니다.</value>
   </data>
   <data name="Plugin_PathVaild2" xml:space="preserve">
-    <value>If you do not have </value>
+    <value>만약</value>
   </data>
   <data name="Plugin_PathVaild3" xml:space="preserve">
-    <value> installed press [Cancel] to skip,</value>
+    <value>를 설치하지 않았다면 [취소]를 눌러 넘깁니다.</value>
   </data>
   <data name="Plugin_PathVaild4" xml:space="preserve">
-    <value>otherwise press [OK] to select path manually.</value>
+    <value>아니라면 [확인]을 눌러 경로를 직접 설정합니다.</value>
   </data>
   <data name="Plugin_PathVaild5" xml:space="preserve">
-    <value>For example : </value>
+    <value>예시</value>
   </data>
   <data name="ProcessHelper_RunArgs" xml:space="preserve">
-    <value>Running command line</value>
+    <value>실행 명령어</value>
   </data>
   <data name="ProcessHelper_RunFailed" xml:space="preserve">
-    <value>Failed to start process</value>
+    <value>실행 실패한 프로세스</value>
   </data>
   <data name="serverIpTitleLabel" xml:space="preserve">
-    <value>Server IP</value>
+    <value>서버 주소</value>
   </data>
   <data name="StaticFileController_ISError" xml:space="preserve">
-    <value>Server Error</value>
+    <value>서버 에러</value>
   </data>
   <data name="StaticFileController_NotFoud" xml:space="preserve">
-    <value>Page not found!</value>
+    <value>페이지를 찾을 수 없음!</value>
   </data>
   <data name="statusLabel_ConnectedAt" xml:space="preserve">
-    <value> Connected to</value>
+    <value>에 연결됨</value>
   </data>
   <data name="statusLabel_ConnectedSim" xml:space="preserve">
-    <value>Connected to the simulator</value>
+    <value>시뮬레이터에 연결됨</value>
   </data>
   <data name="statusLabel_NotRunningSim" xml:space="preserve">
-    <value>Simulator is not running</value>
+    <value>시뮬레이터가 실행중이 아님</value>
   </data>
   <data name="statusLabel_RunningSim" xml:space="preserve">
-    <value>Simulator is running</value>
+    <value>시뮬레이터가 실행중</value>
   </data>
   <data name="statusTitleLabel" xml:space="preserve">
-    <value>Status</value>
+    <value>상태</value>
   </data>
   <data name="Title" xml:space="preserve">
-    <value>ETS2/ATS Telemetry Server</value>
+    <value>ETS2/ATS Telemetry 서버</value>
     <comment>Main Form Title</comment>
   </data>
   <data name="Title_Setup" xml:space="preserve">
-    <value>Setup</value>
+    <value>설정</value>
     <comment>Setup Form Title</comment>
   </data>
   <data name="trayIcon_DoubleClick" xml:space="preserve">
-    <value>Double-click to restore</value>
+    <value>더블클릭하여 열기</value>
     <comment>Double-click to restore</comment>
   </data>
   <data name="trayIcon_Tag" xml:space="preserve">
-    <value>Already shown</value>
+    <value>이미 열려 있습니다.</value>
   </data>
   <data name="Uninstall_Mode_Fin1" xml:space="preserve">
-    <value>Server has been successfully uninstalled.</value>
+    <value>서버가 성공적으로 제거되었습니다.</value>
   </data>
   <data name="Uninstall_Mode_Fin2" xml:space="preserve">
-    <value>Press OK to exit</value>
+    <value>확인을 누르면 종료됩니다.</value>
   </data>
   <data name="Uninstall_Mode_NotFin1" xml:space="preserve">
-    <value>Server has been unstinalled with errors.</value>
+    <value>서버가 제거되었지만 오류가 있습니다.</value>
   </data>
   <data name="Uninstall_Mode_NotFin2" xml:space="preserve">
-    <value>Press OK to exit.</value>
+    <value>확인을 누르시면 종료됩니다.</value>
   </data>
   <data name="Uninstall_NotInstall" xml:space="preserve">
-    <value>Server is not installed, nothing to uninstall.</value>
+    <value>서버가 설치되어 있지 않습니다. 제거 할 수 없습니다.</value>
   </data>
   <data name="Uninstall_Status_firewall" xml:space="preserve">
-    <value> port, Delete firewall rule for</value>
+    <value>번 포트에 대한 방화벽 허용 규칙을 지웁니다.</value>
   </data>
   <data name="Uninstall_Status_okButton" xml:space="preserve">
-    <value>Uninstall</value>
+    <value>설치 제거</value>
   </data>
   <data name="Uninstall_Status_plugin" xml:space="preserve">
-    <value>Uninstall ETS2/ATS telemetry plugin DLL</value>
+    <value>ETS2/ATS Telemetry 플러그인 DLL을 지웁니다.</value>
   </data>
   <data name="Uninstall_Status_urlReservation" xml:space="preserve">
-    <value>, Delete ACL rule for</value>
+    <value>에 대한 ACL 규칙을 지웁니다.</value>
   </data>
   <data name="UrlReservation_AddRule" xml:space="preserve">
-    <value>Adding ACL rule...</value>
+    <value>ACL 규칙을 추가중...</value>
   </data>
   <data name="UrlReservation_CheckRule" xml:space="preserve">
-    <value>Checking ACL rule status...</value>
+    <value>ACL 규칙 확인중</value>
   </data>
   <data name="UrlReservation_FailedAddRule" xml:space="preserve">
-    <value>Failed to add URL ACL</value>
+    <value>URL ACL 규칙 추가 실패</value>
   </data>
   <data name="UrlReservation_FailedCheckRule" xml:space="preserve">
-    <value>Failed to check URL ACL status</value>
+    <value>URL ACL 규칙 상태 확인 실패</value>
   </data>
   <data name="UrlReservation_FailedRmRule" xml:space="preserve">
-    <value>Failed to delete URL ACL</value>
+    <value>URL ACL 규칙 제거 실패</value>
   </data>
   <data name="UrlReservation_RmRule" xml:space="preserve">
-    <value>Deleting ACL rule...</value>
+    <value>ACL 규칙 제거중...</value>
   </data>
   <data name="Warning" xml:space="preserve">
-    <value>Warining</value>
+    <value>경고</value>
   </data>
 </root>

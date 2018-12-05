@@ -385,7 +385,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\app.ico" />
-    <EmbeddedResource Include="StringLib.ko-KR.resx" />
+    <EmbeddedResource Include="StringLib.en.resx" />
     <EmbeddedResource Include="StringLib.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>StringLib.Designer.cs</LastGenOutput>
