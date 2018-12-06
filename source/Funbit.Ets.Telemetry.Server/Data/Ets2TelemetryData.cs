@@ -2,6 +2,7 @@
 using System.Text;
 using Funbit.Ets.Telemetry.Server.Data.Reader;
 using Funbit.Ets.Telemetry.Server.Helpers;
+using System.Globalization;
 
 namespace Funbit.Ets.Telemetry.Server.Data
 {
@@ -59,6 +60,7 @@ namespace Funbit.Ets.Telemetry.Server.Data
         public DateTime NextRestStopTime => Ets2TelemetryData.MinutesToDate(_rawData.Struct.nextRestStop);
         public string Version => $"{_rawData.Struct.ets2_version_major}.{_rawData.Struct.ets2_version_minor}";
         public string TelemetryPluginVersion => _rawData.Struct.ets2_telemetry_plugin_revision.ToString();
+        public string ServerLang => CultureInfo.CurrentUICulture.Name;
     }
 
     class Ets2Vector : IEts2Vector
