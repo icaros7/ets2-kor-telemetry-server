@@ -87,13 +87,16 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
 		data.job.income = "0";
 		data.job.remainingTime = 'own'
     };
+    /*
     // Fix sometimes show 0 value in fuelAverageConsumption
+    // This method cause timeScale value error
     if (data.truck.fuelAverageConsumption != 0) {
         localStorage.setItem("FAC",data.truck.fuelAverageConsumption);
     }
     else {
         data.truck.fuelAverageConsumption = localStorage.getItem("FAC");
     }
+    */
     // return changed data to the core for rendering
     return data;
 };
