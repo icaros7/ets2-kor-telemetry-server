@@ -400,4 +400,7 @@
   <data name="Warning" xml:space="preserve">
     <value>Warining</value>
   </data>
+  <data name="Context_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
 </root>

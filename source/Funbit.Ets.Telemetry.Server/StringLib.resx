@@ -400,4 +400,7 @@
   <data name="Warning" xml:space="preserve">
     <value>경고</value>
   </data>
+  <data name="Context_Close" xml:space="preserve">
+    <value>종료</value>
+  </data>
 </root>

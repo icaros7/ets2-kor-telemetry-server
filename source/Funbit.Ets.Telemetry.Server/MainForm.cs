@@ -14,6 +14,8 @@ using Funbit.Ets.Telemetry.Server.Helpers;
 using Funbit.Ets.Telemetry.Server.Setup;
 using IWshRuntimeLibrary;
 using Microsoft.Owin.Hosting;
+using System.Globalization;
+using System.Threading;
 
 namespace Funbit.Ets.Telemetry.Server
 {
@@ -37,6 +39,38 @@ namespace Funbit.Ets.Telemetry.Server
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void FormInitialize()
+        {
+            // Locale Apply
+
+            // Main Form Title
+            Text = StringLib.Title + @" " + AssemblyHelper.Version;
+            // ToolStripMenu_Sever
+            serverToolStripMenu.Text = StringLib.Menu_Server;
+            AddShortCutToolStripMenuItem.Text = StringLib.Menu_Server_ShortCut;
+            uninstallToolStripMenuItem.Text = StringLib.Menu_Server_Uninstall;
+
+            // ToolStripMenu_Help
+            helpToolStripMenuItem.Text = StringLib.Menu_Help;
+            helpToolStripMenu.Text = StringLib.Menu_Help;
+            donateToolStripMenuItem.Text = StringLib.Menu_Help_Donation;
+            aboutToolStripMenuItem.Text = StringLib.Menu_Help_About;
+            TranslateToolStripMenuItem.Text = StringLib.Menu_Help_Translate;
+
+            groupBox1.Text = StringLib.groupBox1;
+            statusTitleLabel.Text = StringLib.statusTitleLabel + @" :";
+            networkInterfaceTitleLabel.Text = StringLib.networkInterfaceTitleLabel + @" :";
+            serverIpTitleLabel.Text = StringLib.serverIpTitleLabel + @" :";
+            appUrlTitleLabel.Text = StringLib.appUrlTitleLabel + @" :";
+            apiEndpointUrlTitleLabel.Text = StringLib.apiEndpointUrlTitleLabel + @" :";
+
+            // status label
+            statusLabel.Text = StringLib.Checking;
+
+            // Context Menu
+            closeToolStripMenuItem.Text = StringLib.Context_Close;
         }
 
         static string IpToEndpointUrl(string host)
@@ -124,38 +158,15 @@ namespace Funbit.Ets.Telemetry.Server
             Log.InfoFormat("{0} ({1}) {2}", Environment.OSVersion, 
                 Environment.Is64BitOperatingSystem ? "64" + StringLib.CurrentVersion_Bit : "32" + StringLib.CurrentVersion_Bit,
                 Program.UninstallMode ? "[" + StringLib.CurrentVersion_UninstallMode + "]" : "" + StringLib.CurrentVersion_Running);
-
-            // Locale Apply
-
-            // Main Form Title
-            Text = StringLib.Title + @" " + AssemblyHelper.Version;
-            // ToolStripMenu_Sever
-            serverToolStripMenu.Text = StringLib.Menu_Server;
-            AddShortCutToolStripMenuItem.Text = StringLib.Menu_Server_ShortCut;
-            uninstallToolStripMenuItem.Text = StringLib.Menu_Server_Uninstall;
-
-            // ToolStripMenu_Help
-            helpToolStripMenuItem.Text = StringLib.Menu_Help;
-            helpToolStripMenu.Text = StringLib.Menu_Help;
-            donateToolStripMenuItem.Text = StringLib.Menu_Help_Donation;
-            aboutToolStripMenuItem.Text = StringLib.Menu_Help_About;
-            TranslateToolStripMenuItem.Text = StringLib.Menu_Help_Translate;
-
-            groupBox1.Text = StringLib.groupBox1;
-            statusTitleLabel.Text = StringLib.statusTitleLabel + @" :";
-            networkInterfaceTitleLabel.Text = StringLib.networkInterfaceTitleLabel + @" :";
-            serverIpTitleLabel.Text = StringLib.serverIpTitleLabel + @" :";
-            appUrlTitleLabel.Text = StringLib.appUrlTitleLabel + @" :";
-            apiEndpointUrlTitleLabel.Text = StringLib.apiEndpointUrlTitleLabel + @" :";
-
-            // status label
-            statusLabel.Text = StringLib.Checking;
+            
 
             // install or uninstall server if needed
             Setup();
 
-            // start WebApi server
             Start();
+
+            // Apply Locale
+            FormInitialize();
         }
 
         void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -301,6 +312,18 @@ namespace Funbit.Ets.Telemetry.Server
         private void TranslateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(this, @"한국어 : hominlab@minnote.net", StringLib.Menu_Help_Translate, MessageBoxButtons.OK ,MessageBoxIcon.Information);
+        }
+
+        private void Lang_ko_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("ko");
+            FormInitialize();
+        }
+
+        private void Lang_en_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+            FormInitialize();
         }
     }
 }

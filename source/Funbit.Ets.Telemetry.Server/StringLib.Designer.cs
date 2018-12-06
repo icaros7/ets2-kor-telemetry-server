@@ -124,6 +124,15 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
+        ///   종료과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Context_Close {
+            get {
+                return ResourceManager.GetString("Context_Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   비트과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string CurrentVersion_Bit {
