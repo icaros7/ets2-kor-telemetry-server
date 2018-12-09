@@ -401,18 +401,18 @@
 .dashboard.game-connected.yes .truck-odometer,
 .dashboard.game-connected.yes .truck-fuelAverageConsumption,
 .dashboard.game-connected.yes .truck-speedRounded,
+.dashboard.game-connected.yes ._estimatedCom,
+.dashboard.game-connected.yes .navigation-estimatedDistance,
 .dashboard.game-connected.yes .truck-cruiseControlSpeedRounded:not([data-value="0"]) {
   visibility: visible;
 }
 .hasJob.yes .trailer-mass,
 .hasJob.yes .trailer-name,
 .hasJob.yes .job-remainingTime,
-.hasJob.yes .navigation-estimatedDistance,
 .hasJob.yes ._jobIncome,
 .hasJob.yes .navigation-estimatedTime,
 .hasJob.yes ._jobSource,
 .hasJob.yes ._estimatedTime,
-.hasJob.yes ._estimatedCom,
 .hasJob.yes ._jobDestionation {
   visibility: visible;
 }
