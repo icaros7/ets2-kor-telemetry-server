@@ -69,8 +69,8 @@ Funbit.Ets.Telemetry.Dashboard.prototype.filter = function (data, utils) {
 	var wearSumList = [data.truck.wearEngine * 100, data.truck.wearTransmission * 100,  data.truck.wearCabin * 100, data.truck.wearChassis * 100, data.truck.wearWheels * 100];
 	var wearSumPercent = Math.max.apply(null, wearSumList);
     wearSumPercent = Math.min(wearSumPercent, 100);
-    data.truck.wearSum = Math.round(wearSumPercent) + '%';
-    data.trailer.wear = Math.round(data.trailer.wear * 100) + '%';
+    data.truck.wearSum = Math.floor(wearSumPercent) + '%';
+    data.trailer.wear = Math.floor(data.trailer.wear * 100) + '%';
 	// convert estimatedDistance to estimatedDistance / 1000
 	data.navigation.estimatedDistance = Math.floor(data.navigation.estimatedDistance / 1000) + 'Km';
 	// retarderBrake to retarderBrake / retarderStepCount
