@@ -165,6 +165,16 @@ namespace Funbit.Ets.Telemetry.Server
 
             Start();
 
+            // Check Last Settings
+            if (Properties.Settings.Default.Lang == 0)
+            {
+                Lang_ko_ToolStripMenuItem.PerformClick();
+            }
+            else if (Properties.Settings.Default.Lang == 1)
+            {
+                Lang_en_ToolStripMenuItem.PerformClick();
+            }
+
             // Apply Locale
             FormInitialize();
         }
@@ -317,12 +327,16 @@ namespace Funbit.Ets.Telemetry.Server
         private void Lang_ko_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("ko");
+            Properties.Settings.Default.Lang = 0;
+            Properties.Settings.Default.Save();
             FormInitialize();
         }
 
         private void Lang_en_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+            Properties.Settings.Default.Lang = 1;
+            Properties.Settings.Default.Save();
             FormInitialize();
         }
     }
