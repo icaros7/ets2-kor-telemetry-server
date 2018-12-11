@@ -154,6 +154,11 @@ namespace Funbit.Ets.Telemetry.Server
         
         void MainForm_Load(object sender, EventArgs e)
         {
+            // Check Last Settings
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Settings.Instance.LastLang);
+            // Apply Locale
+            FormInitialize();
+
             // log current version for debugging
             Log.InfoFormat("{0} ({1}) {2}", Environment.OSVersion, 
                 Environment.Is64BitOperatingSystem ? "64" + StringLib.CurrentVersion_Bit : "32" + StringLib.CurrentVersion_Bit,
@@ -164,19 +169,6 @@ namespace Funbit.Ets.Telemetry.Server
             Setup();
 
             Start();
-
-            // Check Last Settings
-            if (Properties.Settings.Default.Lang == 0)
-            {
-                Lang_ko_ToolStripMenuItem.PerformClick();
-            }
-            else if (Properties.Settings.Default.Lang == 1)
-            {
-                Lang_en_ToolStripMenuItem.PerformClick();
-            }
-
-            // Apply Locale
-            FormInitialize();
         }
 
         void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -326,17 +318,21 @@ namespace Funbit.Ets.Telemetry.Server
 
         private void Lang_ko_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("ko");
-            Properties.Settings.Default.Lang = 0;
-            Properties.Settings.Default.Save();
-            FormInitialize();
+            ChangeLang("ko", Lang_ko_ToolStripMenuItem.Text);
         }
 
         private void Lang_en_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-            Properties.Settings.Default.Lang = 1;
-            Properties.Settings.Default.Save();
+            ChangeLang("en", Lang_en_ToolStripMenuItem.Text);
+        }
+
+        private void ChangeLang(string lang, string lang_button)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
+            Settings.Instance.LastLang = lang;
+            Settings.Instance.Save();
+            MessageBox.Show(StringLib.Settings_Lang_LogInfo, StringLib.Information, MessageBoxButtons.OK ,MessageBoxIcon.Information);
+            Log.InfoFormat(StringLib.Settings_Lang_1 + lang_button + StringLib.Settings_Lang_2);
             FormInitialize();
         }
     }

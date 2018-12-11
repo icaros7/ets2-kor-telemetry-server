@@ -15,6 +15,7 @@ namespace Funbit.Ets.Telemetry.Server.Helpers
 
         public bool FirewallSetupHadErrors { get; set; }
         public bool UrlReservationSetupHadErrors { get; set; }
+        public string LastLang { get; set; }
 
         #endregion
 
