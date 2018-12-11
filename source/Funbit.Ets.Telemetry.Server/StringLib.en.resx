@@ -403,4 +403,13 @@
   <data name="Context_Close" xml:space="preserve">
     <value>Close</value>
   </data>
+  <data name="Settings_Lang_1" xml:space="preserve">
+    <value>Change language to </value>
+  </data>
+  <data name="Settings_Lang_2" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="Settings_Lang_LogInfo" xml:space="preserve">
+    <value>The log will be displayed in the previous language until the program is restarted.</value>
+  </data>
 </root>

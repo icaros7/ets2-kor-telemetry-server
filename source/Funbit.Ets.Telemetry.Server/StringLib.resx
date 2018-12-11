@@ -403,4 +403,13 @@
   <data name="Context_Close" xml:space="preserve">
     <value>종료</value>
   </data>
+  <data name="Settings_Lang_1" xml:space="preserve">
+    <value>언어를 </value>
+  </data>
+  <data name="Settings_Lang_2" xml:space="preserve">
+    <value>로 바꿉니다.</value>
+  </data>
+  <data name="Settings_Lang_LogInfo" xml:space="preserve">
+    <value>로그의 경우 프로그램 재시작 전까지 이전 언어로 표기됩니다.</value>
+  </data>
 </root>

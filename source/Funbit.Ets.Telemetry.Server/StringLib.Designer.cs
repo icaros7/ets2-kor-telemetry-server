@@ -664,6 +664,33 @@ namespace Funbit.Ets.Telemetry.Server {
         }
         
         /// <summary>
+        ///   언어를 과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Settings_Lang_1 {
+            get {
+                return ResourceManager.GetString("Settings_Lang_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   로 바꿉니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Settings_Lang_2 {
+            get {
+                return ResourceManager.GetString("Settings_Lang_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   로그의 경우 프로그램 재시작 전까지 이전 언어로 표기됩니다.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Settings_Lang_LogInfo {
+            get {
+                return ResourceManager.GetString("Settings_Lang_LogInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   서버 에러과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string StaticFileController_ISError {
