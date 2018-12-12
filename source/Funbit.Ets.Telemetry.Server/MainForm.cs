@@ -155,7 +155,14 @@ namespace Funbit.Ets.Telemetry.Server
         void MainForm_Load(object sender, EventArgs e)
         {
             // Check Last Settings
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Settings.Instance.LastLang);
+            if (Settings.Instance.LastLang == null)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ko");
+            }
+            else
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(Settings.Instance.LastLang);
+            }
             // Apply Locale
             FormInitialize();
 
