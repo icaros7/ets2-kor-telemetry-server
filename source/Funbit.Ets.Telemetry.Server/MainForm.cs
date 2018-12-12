@@ -158,6 +158,8 @@ namespace Funbit.Ets.Telemetry.Server
             if (Settings.Instance.LastLang == null)
             {
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo("ko");
+                Settings.Instance.LastLang = "ko";
+                Settings.Instance.Save();
             }
             else
             {
